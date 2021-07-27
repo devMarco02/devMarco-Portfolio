@@ -1,0 +1,281 @@
+body {
+  font-family: $ff-primary;
+  font-weight: $fw-medium;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $dark-blue;
+
+  @include mq(medium) {
+    font-size: 1.15rem;
+    line-height: 1.65rem;
+  }
+
+  @include mq(xlarge) {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  @include mq(wide) {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+  @include mq(xwide) {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+  @include mq(xxwide) {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+strong {
+  font-weight: $fw-semi-bold;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: $fw-reg;
+  line-height: 2rem;
+  text-align: center;
+
+  @include mq(xsmall) {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+  }
+  @include mq(small) {
+    font-size: 3.3rem;
+    line-height: 3.3rem;
+  }
+  @include mq(medium) {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  @include mq(xlarge) {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+  }
+  @include mq(xxlarge) {
+    font-size: 4.2rem;
+    line-height: 4.2rem;
+  }
+  @include mq(xxxlarge) {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+
+h3 {
+  font-weight: $fw-semi-bold;
+  line-height: initial;
+  font-size: 1.25rem;
+  @include mq(small) {
+    font-size: 1.75rem;
+  }
+  // @include mq(medium) {
+  //   font-size: 1.75rem;
+  // }
+
+  @include mq(xlarge) {
+    font-size: 2rem;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-size: 1rem;
+  color: $grey-dark-blue-2;
+  font-family: $ff-primary;
+  font-weight: $fw-medium;
+  @include mq(xlarge) {
+    font-size: 1.25rem;
+  }
+}
+
+.btn {
+  letter-spacing: 0.15em;
+  font-family: $ff-secondary;
+  font-weight: $fw-semi-bold;
+  line-height: initial;
+  color: $light-red;
+  font-size: 0.625rem;
+
+  &--green {
+    color: $darker-blue-green;
+  }
+  @include mq(small) {
+    font-weight: $fw-bold;
+    font-size: 0.8rem;
+  }
+  @include mq(xlarge) {
+    font-size: 1rem;
+  }
+}
+
+//===SECTIONS
+
+//SIDEBAR
+.navbar {
+  text-align: center;
+  color: $light-grey-yellow;
+  font-family: $ff-secondary;
+}
+
+.hero {
+  &__name {
+    font-size: 3rem;
+    font-weight: $fw-medium;
+    line-height: 3rem;
+    //galaxy fold
+    @include mq(xxxsmall) {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+    @include mq(xxsmall) {
+      font-size: 3.125rem;
+      line-height: 3.125rem;
+    }
+    @include mq(xsmall) {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+    }
+    @include mq(small) {
+      font-size: 5.25rem;
+      line-height: 5.25rem;
+    }
+    @include mq(medium) {
+      font-size: 6rem;
+      line-height: 6rem;
+    }
+    @include mq(xlarge) {
+      font-size: 6.25rem;
+      line-height: 6.25rem;
+    }
+    @include mq(xxlarge) {
+      font-size: 7rem;
+      line-height: 7rem;
+    }
+    @include mq(wide) {
+      font-size: 8rem;
+      line-height: 8rem;
+    }
+    @include mq(wide) {
+      font-size: 8.5rem;
+      line-height: 8.5rem;
+    }
+    @include mq(xwide) {
+      font-size: 10rem;
+      line-height: 10rem;
+    }
+    @include mq(xxwide) {
+      font-size: 13rem;
+      line-height: 13rem;
+    }
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    @include mq(xxsmall) {
+      font-size: 1rem;
+    }
+    @include mq(xsmall) {
+      font-size: 1.3rem;
+    }
+    @include mq(small) {
+      font-size: 1.53rem;
+    }
+    @include mq(medium) {
+      font-size: 1.74rem;
+    }
+    @include mq(xlarge) {
+      font-size: 1.82rem;
+    }
+    @include mq(xxlarge) {
+      font-size: 2.03rem;
+    }
+    @include mq(wide) {
+      font-size: 2.325rem;
+    }
+    @include mq(xwide) {
+      font-size: 2.9rem;
+    }
+    @include mq(xxwide) {
+      font-size: 3.75rem;
+    }
+  }
+}
+
+//SKILLS
+.skills {
+  &__card-title {
+    @include mq(xlarge) {
+      font-size: 1.5rem;
+    }
+    @include mq(xxlarge) {
+      font-size: 2rem;
+    }
+  }
+
+  &__level-list {
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.08rem;
+    @include mq(small) {
+      line-height: 12px;
+      font-size: 12px;
+      font-weight: $fw-semi-bold;
+    }
+  }
+
+  &__tools-list {
+    font-size: 1rem;
+    line-height: 1rem;
+    @include mq(small) {
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__card-body {
+    line-height: 1.5rem;
+  }
+}
+
+//ABOUT
+.about {
+  &__title {
+    @include mq(xlarge) {
+      text-align: start;
+    }
+  }
+  &__body {
+    line-height: 1.5rem;
+  }
+}
+
+//CONTACT
+.contact {
+  &__title {
+    text-align: center;
+  }
+
+  &__details-item {
+    line-height: 1rem;
+    @include mq(xlarge) {
+      line-height: 1.25rem;
+    }
+    strong {
+      color: $light-red;
+    }
+  }
+
+  &__copyright {
+    font-family: "Roboto", sans-serif;
+    font-weight: $fw-reg;
+    text-align: center;
+    font-size: 0.75rem;
+    @include mq(xlarge) {
+      font-size: 0.875rem;
+    }
+  }
+}

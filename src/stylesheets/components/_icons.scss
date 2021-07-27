@@ -1,0 +1,14 @@
+.arrow-btn {
+  width: 10px;
+  height: auto;
+  @include mq(xsmall) {
+    width: 15px;
+  }
+  @include mq(medium) {
+    width: 18px;
+  }
+  @include mq(xxxlarge) {
+    width: initial;
+    height: initial;
+  }
+}

@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@400;500;600;700&family=Lato:wght@400;700&family=Roboto&display=swap");
+
+///===FONTS
+$ff-primary: "Darker Grotesque", sans-serif;
+$ff-secondary: "Lato", sans-serif;
+
+$fw-reg: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+//===COLORS
+// primary
+$light-blue-green: #49f1c1;
+$darker-blue-green: #05c790; //buttons
+$dark-blue: #1f2833;
+$light-red: #ff4d5a;
+
+// neutral
+$darkest-blue-green: #42b091; //gradient
+$grey-dark-blue: #586371; //monitor
+$grey-dark-blue-2: #455a72; //placeholder
+$light-grey-yellow: #e7e3d4;
+$light-grey-97: hsl(0, 0%, 97%);
+$light-grey-95: hsl(0, 0%, 95%);
+$light-grey-93: hsl(0, 0%, 93%);
+
+//box-shadow
+$bs-card: 5px 5px 10px 0 #e5e5e5;
+
+///===BREAKPOINTS
+$breakpoints: (
+  //galaxy fold
+  xxxsmall: 280px,
+  xxsmall: 350px,
+  xsmall: 500px,
+  small: 650px,
+  medium: 768px,
+  large: 834px,
+  xlarge: 1024px,
+  xxlarge: 1200px,
+  xxxlarge: 1440px,
+  // xxxxlarge: 1536px,
+  wide: 1600px,
+  xwide: 1920px,
+  xxwide: 2560px
+);

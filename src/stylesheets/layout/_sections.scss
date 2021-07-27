@@ -1,0 +1,33 @@
+section {
+  height: 100vh;
+  width: 100%;
+  padding: 0 10%;
+  min-height: 568px;
+  max-height: 768px;
+  @include mq(xxsmall) {
+    min-height: 640px;
+  }
+  @include mq(xsmall) {
+    max-height: 900px;
+  }
+  @include mq(small) {
+    max-height: 1080px;
+  }
+  @include mq(large) {
+    padding: 0 7.5%;
+  }
+  @include mq(xxlarge) {
+    min-height: 700px;
+  }
+  @include mq(wide) {
+    min-height: 864px;
+  }
+  @include mq(xwide) {
+    min-height: 1000px;
+    max-height: 1200px;
+  }
+  @include mq(xxwide) {
+    min-height: 1200px;
+    max-height: 1440px;
+  }
+}

@@ -1,0 +1,384 @@
+//===TOP DIVIDER
+.top-divider {
+  position: relative;
+  width: 100%;
+  height: 15.625vh;
+  max-height: 70px;
+
+  @include mq(xxsmall) {
+    max-height: 100px;
+  }
+  @include mq(xsmall) {
+    max-height: 140px;
+  }
+  @include mq(xlarge) {
+    height: 22.2222vh;
+    max-height: 160px;
+  }
+  @include mq(xxxlarge) {
+    max-height: 200px;
+  }
+
+  &__shadow {
+    @include absolute($right: 0, $top: -1px);
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    padding-left: 2rem;
+  }
+}
+
+//===PORTFOLIO
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  position: relative; //tanggalin ang 100vh,gawing auto height
+  @include mq(xsmall) {
+    min-height: 720px;
+  }
+  @include mq(small) {
+    min-height: 820px;
+  }
+  @include mq(medium) {
+    min-height: 920px;
+  }
+  @include mq(large) {
+    min-height: 820px;
+  }
+  @include mq(xlarge) {
+    min-height: 720px;
+    flex-direction: row;
+    align-items: center;
+  }
+  @include mq(xxlarge) {
+    min-height: 768px;
+  }
+  @include mq(wide) {
+    min-height: 864px;
+  }
+  @include mq(xwide) {
+    min-height: 1000px;
+  }
+  @include mq(xxwide) {
+    min-height: 1200px;
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  &__title {
+    margin-top: 14vh;
+    @include mq(large) {
+      margin-top: 3rem;
+    }
+    @include mq(xlarge) {
+      @include absolute($top: 12.4444vh);
+      margin: 0;
+    }
+  }
+
+  &__slider {
+    z-index: 2;
+    position: absolute;
+    top: 30.46875%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 10vw;
+    height: 60.9375%;
+    @include mq(large) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0;
+      width: 85%;
+    }
+    @include mq(xlarge) {
+      height: 41.6666%;
+      min-height: 375px;
+      max-height: 425px;
+    }
+    @include mq(wide) {
+      max-height: 440px;
+    }
+    @include mq(xwide) {
+      max-height: 455px;
+    }
+    @include mq(xxwide) {
+      max-height: 545px;
+      width: 100%;
+    }
+  }
+
+  &__project {
+    @include absolute($top: 0, $left: 0);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    width: 100%;
+    padding: 0 10vw;
+    opacity: 0;
+    transition: transform ease-out 900ms, opacity ease-in 900ms;
+    @include mq(large) {
+      padding: 0;
+    }
+    @include mq(xlarge) {
+      padding: 0;
+      display: grid;
+      grid-template-columns: auto max-content;
+      // height: 375px;
+      height: 100%;
+      align-items: center;
+    }
+
+    &--active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    &--next {
+      z-index: 2;
+      transform: translateX(100%);
+    }
+
+    &--last {
+      transform: translateX(-100%);
+      z-index: 2;
+    }
+  }
+
+  &__left-grid {
+    order: 2;
+    @include mq(xlarge) {
+      order: initial;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 2rem 0;
+    }
+    @include mq(xxlarge) {
+    }
+  }
+
+  &__right-grid {
+    width: 90.2777%;
+    max-width: 280px;
+    margin: 0 auto 56px;
+    order: 1;
+    @include mq(xsmall) {
+      max-width: 370px;
+    }
+    @include mq(small) {
+      max-width: 470px;
+    }
+    @include mq(medium) {
+      max-width: 600px;
+    }
+    @include mq(xlarge) {
+      order: initial;
+      padding-right: 3.5vw;
+      width: 45vw;
+      margin: 0;
+    }
+    @include mq(wide) {
+      max-width: 750px;
+    }
+    @include mq(xwide) {
+      max-width: 800px;
+    }
+    @include mq(xxwide) {
+      max-width: 950px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    // @include mq(xlarge) {
+    //   width: auto;
+    //   max-width: 50vw;
+    // }
+  }
+
+  &__vertical-line {
+    display: none;
+    @include mq(xlarge) {
+      display: block;
+      background: $light-blue-green;
+      width: 24px;
+      height: 100%;
+      border-radius: 12px;
+    }
+  }
+
+  &__text-container {
+    @include mq(xlarge) {
+      padding: 0 2vw 0 4vw;
+      min-width: 240px;
+    }
+  }
+
+  &__project-title {
+    margin-bottom: 1rem;
+    @include mq(xlarge) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__project-description {
+    height: 20vh;
+    min-height: 75px;
+    max-height: 75px;
+    overflow-y: hidden;
+    @include mq(large) {
+      height: unset;
+      max-height: unset;
+      // max-height: unset;
+    }
+  }
+
+  &__blobs {
+    width: 72.2222%;
+    max-width: 280px;
+    height: auto;
+    @include absolute($left: 50%, $top: -41px);
+    transform: translateX(-50%);
+    @include mq(xsmall) {
+      max-width: 370px;
+      top: -55px;
+    }
+    @include mq(small) {
+      max-width: 470px;
+      top: -70px;
+    }
+    @include mq(medium) {
+      max-width: 600px;
+    }
+    @include mq(xlarge) {
+      width: unset;
+      max-width: unset;
+      height: unset;
+      left: unset;
+      right: 7.5vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .two-lines {
+      transform: translateY(-40px);
+
+      .line-one {
+        stroke-width: 3;
+      }
+      .line-two {
+        stroke-width: 2.5;
+      }
+    }
+
+    .hook,
+    .zigzag {
+      display: none;
+    }
+  }
+
+  &__btns-container {
+    @include absolute($top: 0, $left: 50%);
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 500;
+    // max-width: 280px;
+    // @include mq(xsmall) {
+    //   max-width: 370px;
+    // }
+    // @include mq(small) {
+    //   max-width: 470px;
+    // }
+    // @include mq(medium) {
+    //   max-width: 600px;
+    // }
+    @include mq(large) {
+      width: 100%;
+    }
+    @include mq(xlarge) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__arrow-btn {
+    @include absolute($top: 50%);
+    transform: translateY(-50%);
+    z-index: 600;
+    transition: opacity 500ms linear;
+    @include mq(xlarge) {
+      top: 50%;
+    }
+
+    &--left {
+      left: 0px;
+      transform: translate(-100%, -50%);
+      @include mq(xlarge) {
+        left: -3.75%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &--right {
+      right: 0px;
+      transform: translate(100%, -50%);
+      @include mq(xlarge) {
+        right: -3.75%;
+        transform: translate(50%, -50%);
+      }
+    }
+  }
+
+  &__dots-nav {
+    @include absolute($right: 50%, $top: 165px);
+    transform: translateX(-50%);
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    width: max-content;
+    @include mq(xlarge) {
+      top: unset;
+      right: unset;
+      left: 50%;
+      bottom: -20%;
+    }
+  }
+
+  &__view-btn {
+    @include absolute($left: 50%, $bottom: 1rem);
+    transform: translateX(-50%);
+    @include mq(xlarge) {
+      bottom: 2rem;
+    }
+  }
+}
+
+//===BOTTOM DIVIDER
+.bottom-divider {
+  height: 50px;
+  width: 100%;
+  display: grid;
+  align-items: flex-end;
+  justify-content: center;
+  @include mq(xlarge) {
+    height: 200px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  &__line {
+    width: 69.4444vw;
+    height: 1px;
+    background: #bfbfbf;
+    @include mq(xlarge) {
+      width: 69.4444vw;
+      height: 1px;
+      background: #bfbfbf;
+    }
+  }
+}

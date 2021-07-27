@@ -1,0 +1,89 @@
+.btn {
+  cursor: pointer;
+  background: transparent;
+  width: max-content;
+  padding: 10px 15px;
+  border: solid 2px $light-red;
+  border-radius: 18px;
+
+  &--green {
+    border: solid 2px $darker-blue-green;
+  }
+
+  &--dl {
+    display: flex;
+    align-items: center;
+
+    .btn__icon {
+      margin-left: 10px;
+      width: auto;
+      height: 12px;
+      @include mq(large) {
+        height: unset;
+      }
+    }
+  }
+
+  @include mq(small) {
+    padding: 12px 18px;
+    border: solid 2.5px $light-red;
+    border-radius: 22.1px;
+
+    &--green {
+      border: solid 2.5px $darker-blue-green;
+    }
+  }
+
+  @include mq(large) {
+    padding: 16px 24px;
+    border-radius: 27.7px;
+  }
+}
+
+.contact__btn {
+  cursor: pointer;
+  width: max-content;
+  border: none;
+  background: none;
+}
+
+.contact__send-btn {
+  width: 144px;
+  height: auto;
+  @include mq(large) {
+    width: unset;
+  }
+}
+
+.portfolio {
+  &__arrow-btn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    // @include mq(large) {
+    //   width: 20px;
+    //   height: 32px;
+    // }
+  }
+
+  &__indicator {
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background: #808080;
+    margin: 0.5rem;
+    transition: linear 500ms;
+
+    &--active {
+      background: #49f1c1;
+    }
+
+    @include mq(large) {
+      width: 15px;
+      height: 15px;
+      margin: 0.75rem;
+    }
+  }
+}

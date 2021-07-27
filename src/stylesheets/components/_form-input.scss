@@ -1,0 +1,12 @@
+input,
+textarea {
+  border: none;
+  background: white;
+  box-shadow: 0 10px 25px 0 #e5e5e5;
+  padding: 0.75rem;
+  border-radius: 3.75px;
+  @include mq(medium) {
+    padding: 1rem;
+    border-radius: 5px;
+  }
+}

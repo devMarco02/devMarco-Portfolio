@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.home-page {
+  @include mq(large) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10%;
+    width: 90%;
+    overflow-x: hidden;
+  }
+  // @include mq(xxxxxlarge) {
+  //   margin: 0 auto;
+  // }
+}

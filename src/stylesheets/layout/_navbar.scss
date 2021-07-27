@@ -1,0 +1,48 @@
+.navbar {
+  @include fixed($top: 0, $left: 0, $right: 0);
+  flex-direction: column;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+  min-height: 240px;
+  clip-path: inset(0% 0% 77.5% 0%);
+  transition: clip-path 0.5s ease-in-out;
+  @include mq(large) {
+    justify-content: space-between;
+    clip-path: unset;
+    bottom: 0;
+    right: unset;
+    padding: 1rem;
+    width: 10vw;
+    height: 100vh;
+    // max-width: 150px;
+
+    &__nav {
+      margin: 0;
+      position: absolute;
+      top: 50vh;
+      transform: translateY(-50%);
+    }
+  }
+
+  &:hover {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+
+  &__logo {
+    height: 9vh;
+    min-height: 54px;
+    margin-right: auto;
+  }
+
+  &__nav {
+    margin-bottom: auto;
+    width: 100%;
+  }
+
+  &__list > * + * {
+    margin-top: 1rem;
+  }
+}

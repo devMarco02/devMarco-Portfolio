@@ -1,0 +1,57 @@
+.hero {
+  position: relative;
+
+  &__container-text {
+    @include absolute($top: 18.4375%);
+    @include mq(xxxlarge) {
+      top: 27%;
+    }
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 8px;
+    @include mq(small) {
+      margin-bottom: 10px;
+    }
+    @include mq(large) {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    @include mq(small) {
+      margin-bottom: 5rem;
+    }
+    @include mq(large) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__objects {
+    @include absolute($right: -2px, $bottom: 0);
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 60%;
+
+    @include mq(small) {
+      max-height: 65%;
+    }
+
+    @include mq(large) {
+      max-height: 70%;
+    }
+
+    @include mq(xlarge) {
+      max-height: 80%;
+    }
+
+    @include mq(xxxlarge) {
+      max-height: unset;
+      height: 90.1111%;
+      width: auto;
+    }
+  }
+}
