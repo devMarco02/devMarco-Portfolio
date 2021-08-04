@@ -34,12 +34,14 @@ const Skills = () => {
         <SkillsCardDescription />
 
         <SkillsCardTools />
+
+        <Dots classNm="skills__dots" />
+
+        <ZigzagBig classNm="skills__zigzag-big" />
       </div>
 
       <SkillsLeftTriangle />
       <SkillsRightTriangle />
-      <ZigzagBig classNm="skills__zigzag-big" />
-      <Dots classNm="skills__dots" />
       <ThreeLines classNm="skills__three-lines" />
     </section>
   );

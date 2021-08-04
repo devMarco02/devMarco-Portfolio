@@ -32,16 +32,15 @@
 .portfolio {
   display: flex;
   flex-direction: column;
-  position: relative; //tanggalin ang 100vh,gawing auto height
+  position: relative;
+  min-height: 640px;
   @include mq(xsmall) {
     min-height: 720px;
   }
   @include mq(small) {
-    min-height: 820px;
+    min-height: 900px;
   }
-  @include mq(medium) {
-    min-height: 920px;
-  }
+
   @include mq(large) {
     min-height: 820px;
   }
@@ -50,11 +49,8 @@
     flex-direction: row;
     align-items: center;
   }
-  @include mq(xxlarge) {
-    min-height: 768px;
-  }
   @include mq(wide) {
-    min-height: 864px;
+    min-height: 900px;
   }
   @include mq(xwide) {
     min-height: 1000px;
@@ -67,6 +63,8 @@
   }
 
   &__title {
+    position: relative;
+    z-index: 5;
     margin-top: 14vh;
     @include mq(large) {
       margin-top: 3rem;
@@ -87,10 +85,13 @@
     padding: 0 10vw;
     height: 60.9375%;
     @include mq(large) {
+      padding: 0;
+      top: 25%;
+      width: 85%;
+    }
+    @include mq(xlarge) {
       top: 50%;
       transform: translate(-50%, -50%);
-      padding: 0;
-      width: 85%;
     }
     @include mq(xlarge) {
       height: 41.6666%;
@@ -98,13 +99,16 @@
       max-height: 425px;
     }
     @include mq(wide) {
+      min-height: 420px;
       max-height: 440px;
     }
     @include mq(xwide) {
       max-height: 455px;
+      min-height: 455px;
     }
     @include mq(xxwide) {
       max-height: 545px;
+      min-height: 545px;
       width: 100%;
     }
   }
@@ -156,8 +160,6 @@
       align-items: center;
       padding: 2rem 0;
     }
-    @include mq(xxlarge) {
-    }
   }
 
   &__right-grid {
@@ -171,10 +173,8 @@
     @include mq(small) {
       max-width: 470px;
     }
-    @include mq(medium) {
-      max-width: 600px;
-    }
     @include mq(xlarge) {
+      max-width: 600px;
       order: initial;
       padding-right: 3.5vw;
       width: 45vw;
@@ -194,10 +194,6 @@
   &__img {
     width: 100%;
     height: auto;
-    // @include mq(xlarge) {
-    //   width: auto;
-    //   max-width: 50vw;
-    // }
   }
 
   &__vertical-line {
@@ -230,10 +226,9 @@
     min-height: 75px;
     max-height: 75px;
     overflow-y: hidden;
-    @include mq(large) {
-      height: unset;
+    @media screen and (min-height: 731px), (min-width: 650px) {
+      height: auto;
       max-height: unset;
-      // max-height: unset;
     }
   }
 
@@ -251,17 +246,24 @@
       max-width: 470px;
       top: -70px;
     }
-    @include mq(medium) {
-      max-width: 600px;
-    }
     @include mq(xlarge) {
-      width: unset;
-      max-width: unset;
+      width: 52.9411%;
+      max-width: 545px;
       height: unset;
       left: unset;
-      right: 7.5vw;
+      right: 0;
       top: 50%;
       transform: translateY(-50%);
+    }
+    @include mq(wide) {
+      max-width: 695px;
+    }
+    @include mq(xwide) {
+      max-width: 700px;
+      transform: translateY(-48%);
+    }
+    @include mq(xxwide) {
+      max-width: 850px;
     }
 
     .two-lines {

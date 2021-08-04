@@ -62,21 +62,44 @@ h2 {
     font-size: 5rem;
     line-height: 5rem;
   }
+  @include mq(wide) {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+  @include mq(xwide) {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+  @include mq(xxwide) {
+    font-size: 7.5rem;
+    line-height: 7.5rem;
+  }
 }
 
 h3 {
   font-weight: $fw-semi-bold;
   line-height: initial;
   font-size: 1.25rem;
+  @include mq(xsmall) {
+    font-size: 1.5rem;
+  }
   @include mq(small) {
     font-size: 1.75rem;
   }
-  // @include mq(medium) {
-  //   font-size: 1.75rem;
-  // }
-
   @include mq(xlarge) {
+    font-size: 1.8rem;
+  }
+  @include mq(xxxlarge) {
     font-size: 2rem;
+  }
+  @include mq(wide) {
+    font-size: 2.25rem;
+  }
+  @include mq(xwide) {
+    font-size: 2.5rem;
+  }
+  @include mq(xxwide) {
+    font-size: 3rem;
   }
 }
 
@@ -209,10 +232,22 @@ textarea::placeholder {
 .skills {
   &__card-title {
     @include mq(xlarge) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+    }
+    @include mq(xxlarge) {
+      font-size: 1.8rem;
     }
     @include mq(xxlarge) {
       font-size: 2rem;
+    }
+    @include mq(wide) {
+      font-size: 2.25rem;
+    }
+    @include mq(xwide) {
+      font-size: 2.5rem;
+    }
+    @include mq(xxwide) {
+      font-size: 3rem;
     }
   }
 
@@ -225,6 +260,18 @@ textarea::placeholder {
       font-size: 12px;
       font-weight: $fw-semi-bold;
     }
+    @include mq(wide) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+    @include mq(xwide) {
+      font-size: 16px;
+      line-height: 16px;
+    }
+    @include mq(xxwide) {
+      font-size: 18px;
+      line-height: 18px;
+    }
   }
 
   &__tools-list {
@@ -234,10 +281,29 @@ textarea::placeholder {
       font-size: 1.25rem;
       line-height: 1.25rem;
     }
+    @include mq(wide) {
+      font-size: 23px;
+      line-height: 23px;
+    }
+    @include mq(xwide) {
+      font-size: 26px;
+      line-height: 26px;
+      // font-weight: $fw-semi-bold;
+    }
+    @include mq(xxwide) {
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 
   &__card-body {
     line-height: 1.5rem;
+    @include mq(xwide) {
+      line-height: 1.8rem;
+    }
+    @include mq(xxwide) {
+      line-height: 2.1rem;
+    }
   }
 }
 

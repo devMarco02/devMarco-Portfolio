@@ -66,7 +66,7 @@
     @include mq(wide) {
       max-width: 1200px;
     }
-    @include mq(wide) {
+    @include mq(xwide) {
       max-width: 1400px;
     }
   }
