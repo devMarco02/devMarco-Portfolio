@@ -43,17 +43,20 @@
 
   @include mq(large) {
     min-height: 820px;
+    max-width: 780px;
   }
   @include mq(xlarge) {
+    max-width: unset;
     min-height: 720px;
     flex-direction: row;
     align-items: center;
   }
   @include mq(wide) {
-    min-height: 900px;
+    min-height: 834px;
   }
   @include mq(xwide) {
     min-height: 1000px;
+    max-width: 1900px;
   }
   @include mq(xxwide) {
     min-height: 1200px;
@@ -70,7 +73,7 @@
       margin-top: 3rem;
     }
     @include mq(xlarge) {
-      @include absolute($top: 12.4444vh);
+      @include absolute($top: 12vh);
       margin: 0;
     }
   }
@@ -90,21 +93,23 @@
       width: 85%;
     }
     @include mq(xlarge) {
+      height: 41.6666%;
+      min-height: 375px;
+      max-height: 375px;
       top: 50%;
       transform: translate(-50%, -50%);
     }
-    @include mq(xlarge) {
-      height: 41.6666%;
-      min-height: 375px;
+    @include mq(xxxlarge) {
+      min-height: 320px;
       max-height: 425px;
     }
     @include mq(wide) {
-      min-height: 420px;
+      min-height: 380px;
       max-height: 440px;
     }
     @include mq(xwide) {
-      max-height: 455px;
-      min-height: 455px;
+      max-height: 415px;
+      min-height: 415px;
     }
     @include mq(xxwide) {
       max-height: 545px;
@@ -168,23 +173,32 @@
     margin: 0 auto 56px;
     order: 1;
     @include mq(xsmall) {
+      max-width: 350px;
+      margin-bottom: 64px;
+    }
+    @media screen and (min-width: 500px) and (min-height: 800px) {
       max-width: 370px;
+      margin-bottom: 72px;
     }
     @include mq(small) {
-      max-width: 470px;
+      max-width: 420px;
+      margin-bottom: 80px;
     }
     @include mq(xlarge) {
-      max-width: 600px;
+      max-width: 500px;
       order: initial;
       padding-right: 3.5vw;
       width: 45vw;
       margin: 0;
     }
+    @include mq(xxxlarge) {
+      max-width: 550px;
+    }
     @include mq(wide) {
-      max-width: 750px;
+      max-width: 650px;
     }
     @include mq(xwide) {
-      max-width: 800px;
+      max-width: 720px;
     }
     @include mq(xxwide) {
       max-width: 950px;
@@ -239,28 +253,33 @@
     @include absolute($left: 50%, $top: -41px);
     transform: translateX(-50%);
     @include mq(xsmall) {
-      max-width: 370px;
+      max-width: 350px;
       top: -55px;
     }
+    @media screen and (min-width: 500px) and (min-height: 800px) {
+      max-width: 370px;
+    }
     @include mq(small) {
-      max-width: 470px;
-      top: -70px;
+      max-width: 420px;
+      top: -65px;
     }
     @include mq(xlarge) {
       width: 52.9411%;
-      max-width: 545px;
+      max-width: 460px;
       height: unset;
       left: unset;
       right: 0;
       top: 50%;
       transform: translateY(-50%);
     }
+    @include mq(xxxlarge) {
+      max-width: 500px;
+    }
     @include mq(wide) {
-      max-width: 695px;
+      max-width: 580px;
     }
     @include mq(xwide) {
-      max-width: 700px;
-      transform: translateY(-48%);
+      max-width: 650px;
     }
     @include mq(xxwide) {
       max-width: 850px;
@@ -336,17 +355,15 @@
   }
 
   &__dots-nav {
-    @include absolute($right: 50%, $top: 165px);
+    @include absolute($left: 25%, $bottom: -20%);
     transform: translateX(-50%);
     z-index: 50;
     display: flex;
     justify-content: center;
     width: max-content;
     @include mq(xlarge) {
-      top: unset;
-      right: unset;
       left: 50%;
-      bottom: -20%;
+      bottom: -25%;
     }
   }
 

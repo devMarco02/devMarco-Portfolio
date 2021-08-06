@@ -59,12 +59,12 @@ h2 {
     line-height: 4.2rem;
   }
   @include mq(xxxlarge) {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
   }
   @include mq(wide) {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
   @include mq(xwide) {
     font-size: 6rem;
@@ -126,11 +126,23 @@ textarea::placeholder {
     color: $darker-blue-green;
   }
   @include mq(small) {
-    font-weight: $fw-bold;
     font-size: 0.8rem;
+  }
+  @include mq(medium) {
+    font-weight: $fw-bold;
+    font-size: 0.9rem;
   }
   @include mq(xlarge) {
     font-size: 1rem;
+  }
+  @include mq(wide) {
+    font-size: 1.2rem;
+  }
+  @include mq(xwide) {
+    font-size: 1.25rem;
+  }
+  @include mq(xxwide) {
+    font-size: 1.5rem;
   }
 }
 

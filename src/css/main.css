@@ -473,14 +473,14 @@ h2 {
 }
 @media (min-width: 1440px) {
   h2 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
   }
 }
 @media (min-width: 1600px) {
   h2 {
-    font-size: 5.5rem;
-    line-height: 5.5rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
 }
 @media (min-width: 1920px) {
@@ -564,13 +564,33 @@ textarea::placeholder {
 }
 @media (min-width: 650px) {
   .btn {
-    font-weight: 700;
     font-size: 0.8rem;
+  }
+}
+@media (min-width: 768px) {
+  .btn {
+    font-weight: 700;
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1024px) {
   .btn {
     font-size: 1rem;
+  }
+}
+@media (min-width: 1600px) {
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1920px) {
+  .btn {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 2560px) {
+  .btn {
+    font-size: 1.5rem;
   }
 }
 
@@ -1272,9 +1292,24 @@ textarea::placeholder {
   position: absolute;
   top: 18.4375%;
 }
+@media (min-width: 834px) {
+  .hero__container-text {
+    top: 15%;
+  }
+}
 @media (min-width: 1440px) {
   .hero__container-text {
+    top: 26%;
+  }
+}
+@media (min-width: 1600px) {
+  .hero__container-text {
     top: 27%;
+  }
+}
+@media (min-width: 1920px) {
+  .hero__container-text {
+    top: 26%;
   }
 }
 .hero__name {
@@ -1331,8 +1366,7 @@ textarea::placeholder {
 @media (min-width: 1440px) {
   .hero__objects {
     max-height: unset;
-    height: 90.1111%;
-    width: auto;
+    height: 90%;
   }
 }
 
@@ -1392,10 +1426,12 @@ textarea::placeholder {
 @media (min-width: 834px) {
   .portfolio {
     min-height: 820px;
+    max-width: 780px;
   }
 }
 @media (min-width: 1024px) {
   .portfolio {
+    max-width: unset;
     min-height: 720px;
     flex-direction: row;
     align-items: center;
@@ -1403,12 +1439,13 @@ textarea::placeholder {
 }
 @media (min-width: 1600px) {
   .portfolio {
-    min-height: 900px;
+    min-height: 834px;
   }
 }
 @media (min-width: 1920px) {
   .portfolio {
     min-height: 1000px;
+    max-width: 1900px;
   }
 }
 @media (min-width: 2560px) {
@@ -1432,7 +1469,7 @@ textarea::placeholder {
 @media (min-width: 1024px) {
   .portfolio__title {
     position: absolute;
-    top: 12.4444vh;
+    top: 12vh;
     margin: 0;
   }
 }
@@ -1455,27 +1492,29 @@ textarea::placeholder {
 }
 @media (min-width: 1024px) {
   .portfolio__slider {
+    height: 41.6666%;
+    min-height: 375px;
+    max-height: 375px;
     top: 50%;
     transform: translate(-50%, -50%);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
   .portfolio__slider {
-    height: 41.6666%;
-    min-height: 375px;
+    min-height: 320px;
     max-height: 425px;
   }
 }
 @media (min-width: 1600px) {
   .portfolio__slider {
-    min-height: 420px;
+    min-height: 380px;
     max-height: 440px;
   }
 }
 @media (min-width: 1920px) {
   .portfolio__slider {
-    max-height: 455px;
-    min-height: 455px;
+    max-height: 415px;
+    min-height: 415px;
   }
 }
 @media (min-width: 2560px) {
@@ -1544,31 +1583,44 @@ textarea::placeholder {
 }
 @media (min-width: 500px) {
   .portfolio__right-grid {
+    max-width: 350px;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 500px) and (min-height: 800px) {
+  .portfolio__right-grid {
     max-width: 370px;
+    margin-bottom: 72px;
   }
 }
 @media (min-width: 650px) {
   .portfolio__right-grid {
-    max-width: 470px;
+    max-width: 420px;
+    margin-bottom: 80px;
   }
 }
 @media (min-width: 1024px) {
   .portfolio__right-grid {
-    max-width: 600px;
+    max-width: 500px;
     order: initial;
     padding-right: 3.5vw;
     width: 45vw;
     margin: 0;
   }
 }
+@media (min-width: 1440px) {
+  .portfolio__right-grid {
+    max-width: 550px;
+  }
+}
 @media (min-width: 1600px) {
   .portfolio__right-grid {
-    max-width: 750px;
+    max-width: 650px;
   }
 }
 @media (min-width: 1920px) {
   .portfolio__right-grid {
-    max-width: 800px;
+    max-width: 720px;
   }
 }
 @media (min-width: 2560px) {
@@ -1629,20 +1681,25 @@ textarea::placeholder {
 }
 @media (min-width: 500px) {
   .portfolio__blobs {
-    max-width: 370px;
+    max-width: 350px;
     top: -55px;
+  }
+}
+@media screen and (min-width: 500px) and (min-height: 800px) {
+  .portfolio__blobs {
+    max-width: 370px;
   }
 }
 @media (min-width: 650px) {
   .portfolio__blobs {
-    max-width: 470px;
-    top: -70px;
+    max-width: 420px;
+    top: -65px;
   }
 }
 @media (min-width: 1024px) {
   .portfolio__blobs {
     width: 52.9411%;
-    max-width: 545px;
+    max-width: 460px;
     height: unset;
     left: unset;
     right: 0;
@@ -1650,15 +1707,19 @@ textarea::placeholder {
     transform: translateY(-50%);
   }
 }
+@media (min-width: 1440px) {
+  .portfolio__blobs {
+    max-width: 500px;
+  }
+}
 @media (min-width: 1600px) {
   .portfolio__blobs {
-    max-width: 695px;
+    max-width: 580px;
   }
 }
 @media (min-width: 1920px) {
   .portfolio__blobs {
-    max-width: 700px;
-    transform: translateY(-48%);
+    max-width: 650px;
   }
 }
 @media (min-width: 2560px) {
@@ -1732,8 +1793,8 @@ textarea::placeholder {
 }
 .portfolio__dots-nav {
   position: absolute;
-  top: 165px;
-  right: 50%;
+  bottom: -20%;
+  left: 25%;
   transform: translateX(-50%);
   z-index: 50;
   display: flex;
@@ -1742,10 +1803,8 @@ textarea::placeholder {
 }
 @media (min-width: 1024px) {
   .portfolio__dots-nav {
-    top: unset;
-    right: unset;
     left: 50%;
-    bottom: -20%;
+    bottom: -25%;
   }
 }
 .portfolio__view-btn {
@@ -1808,6 +1867,7 @@ section {
 @media (min-width: 650px) {
   section {
     max-height: 1080px;
+    min-height: 700px;
   }
 }
 @media (min-width: 834px) {
@@ -1815,14 +1875,16 @@ section {
     padding: 0 7.5%;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1440px) {
   section {
-    min-height: 700px;
+    min-height: 720px;
+    max-height: 900px;
   }
 }
 @media (min-width: 1600px) {
   section {
     min-height: 864px;
+    max-height: 1050px;
   }
 }
 @media (min-width: 1920px) {
@@ -2502,12 +2564,62 @@ section {
   cursor: pointer;
   background: transparent;
   width: max-content;
-  padding: 10px 15px;
+  padding: 10px 16px;
   border: solid 2px #ff4d5a;
   border-radius: 18px;
 }
+@media (min-width: 650px) {
+  .btn {
+    padding: 14px 22px;
+    border-width: 2.2px;
+    border-radius: 23.8px;
+  }
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 16px 26px;
+    border-width: 2.5px;
+    border-radius: 27.3px;
+  }
+}
+@media (min-width: 1024px) {
+  .btn {
+    padding: 18px 30px;
+    border-radius: 30.1px;
+  }
+}
+@media (min-width: 1440px) {
+  .btn {
+    border-width: 3.15px;
+  }
+}
+@media (min-width: 1600px) {
+  .btn {
+    border-width: 3.2px;
+    padding: 22px 36px;
+    border-radius: 36.1px;
+  }
+}
+@media (min-width: 1920px) {
+  .btn {
+    border-width: 3.25px;
+    padding: 24px 40px;
+    border-radius: 39.25px;
+  }
+}
+@media (min-width: 2560px) {
+  .btn {
+    padding: 28px 46px;
+    border-radius: 45.65px;
+  }
+}
 .btn--green {
-  border: solid 2px #05c790;
+  border-color: #05c790;
+}
+@media (min-width: 650px) {
+  .btn--green {
+    border-width: 2.5px;
+  }
 }
 .btn--dl {
   display: flex;
@@ -2521,22 +2633,6 @@ section {
 @media (min-width: 834px) {
   .btn--dl .btn__icon {
     height: unset;
-  }
-}
-@media (min-width: 650px) {
-  .btn {
-    padding: 12px 18px;
-    border: solid 2.5px #ff4d5a;
-    border-radius: 22.1px;
-  }
-  .btn--green {
-    border: solid 2.5px #05c790;
-  }
-}
-@media (min-width: 834px) {
-  .btn {
-    padding: 16px 24px;
-    border-radius: 27.7px;
   }
 }
 
@@ -2575,11 +2671,39 @@ section {
 .portfolio__indicator--active {
   background: #49f1c1;
 }
-@media (min-width: 834px) {
+@media (min-width: 500px) {
   .portfolio__indicator {
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+    margin: 0.7rem;
+  }
+}
+@media (min-width: 650px) {
+  .portfolio__indicator {
+    width: 12px;
+    height: 12px;
     margin: 0.75rem;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio__indicator {
+    width: 13px;
+    height: 13px;
+    margin: 0.9rem;
+  }
+}
+@media (min-width: 1600px) {
+  .portfolio__indicator {
+    width: 14px;
+    height: 14px;
+    margin: 1rem;
+  }
+}
+@media (min-width: 2560px) {
+  .portfolio__indicator {
+    width: 18px;
+    height: 18px;
+    margin: 1.5rem;
   }
 }
 
@@ -2608,6 +2732,11 @@ textarea {
     width: 15px;
   }
 }
+@media (min-width: 650px) {
+  .arrow-btn {
+    width: 18px;
+  }
+}
 @media (min-width: 768px) {
   .arrow-btn {
     width: 18px;
@@ -2615,8 +2744,22 @@ textarea {
 }
 @media (min-width: 1440px) {
   .arrow-btn {
-    width: initial;
-    height: initial;
+    width: 20px;
+  }
+}
+@media (min-width: 1600px) {
+  .arrow-btn {
+    width: 24px;
+  }
+}
+@media (min-width: 1600px) {
+  .arrow-btn {
+    width: 28px;
+  }
+}
+@media (min-width: 2560px) {
+  .arrow-btn {
+    width: 36px;
   }
 }
 

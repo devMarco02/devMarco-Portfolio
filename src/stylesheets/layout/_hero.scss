@@ -3,8 +3,17 @@
 
   &__container-text {
     @include absolute($top: 18.4375%);
+    @include mq(large) {
+      top: 15%;
+    }
     @include mq(xxxlarge) {
+      top: 26%;
+    }
+    @include mq(wide) {
       top: 27%;
+    }
+    @include mq(xwide) {
+      top: 26%;
     }
   }
 
@@ -50,8 +59,7 @@
 
     @include mq(xxxlarge) {
       max-height: unset;
-      height: 90.1111%;
-      width: auto;
+      height: 90%;
     }
   }
 }

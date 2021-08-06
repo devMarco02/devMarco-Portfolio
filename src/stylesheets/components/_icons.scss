@@ -4,11 +4,22 @@
   @include mq(xsmall) {
     width: 15px;
   }
+  @include mq(small) {
+    width: 18px;
+  }
   @include mq(medium) {
     width: 18px;
   }
   @include mq(xxxlarge) {
-    width: initial;
-    height: initial;
+    width: 20px;
+  }
+  @include mq(wide) {
+    width: 24px;
+  }
+  @include mq(wide) {
+    width: 28px;
+  }
+  @include mq(xxwide) {
+    width: 36px;
   }
 }

@@ -12,15 +12,18 @@ section {
   }
   @include mq(small) {
     max-height: 1080px;
+    min-height: 700px;
   }
   @include mq(large) {
     padding: 0 7.5%;
   }
-  @include mq(xxlarge) {
-    min-height: 700px;
+  @include mq(xxxlarge) {
+    min-height: 720px;
+    max-height: 900px;
   }
   @include mq(wide) {
     min-height: 864px;
+    max-height: 1050px;
   }
   @include mq(xwide) {
     min-height: 1000px;
