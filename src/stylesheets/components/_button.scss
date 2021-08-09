@@ -58,6 +58,26 @@
       }
     }
   }
+
+  &--send {
+    width: 144px;
+    height: auto;
+    @include mq(small) {
+      width: 165px;
+    }
+    @include mq(medium) {
+      width: 200px;
+    }
+    @include mq(wide) {
+      width: 220px;
+    }
+    @include mq(xwide) {
+      width: 250px;
+    }
+    @include mq(xwide) {
+      width: 265px;
+    }
+  }
 }
 
 .contact__btn {
@@ -65,14 +85,6 @@
   width: max-content;
   border: none;
   background: none;
-}
-
-.contact__send-btn {
-  width: 144px;
-  height: auto;
-  @include mq(large) {
-    width: unset;
-  }
 }
 
 .portfolio {

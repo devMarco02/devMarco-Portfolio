@@ -52,7 +52,7 @@
     align-items: center;
   }
   @include mq(wide) {
-    min-height: 834px;
+    min-height: 864px;
   }
   @include mq(xwide) {
     min-height: 1000px;

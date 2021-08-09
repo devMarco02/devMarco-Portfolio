@@ -76,7 +76,7 @@ export const SendButton = () => {
   return (
     <button className="contact__btn">
       <svg
-        className="send-btn contact__send-btn"
+        className="btn--send"
         width="176"
         height="45"
         viewBox="0 0 176 45"

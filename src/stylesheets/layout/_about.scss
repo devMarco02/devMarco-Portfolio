@@ -1,20 +1,25 @@
 .about-section-container {
   width: 100%;
-
   @include mq(xlarge) {
     height: 144.4444vh;
     min-height: 1010px;
-    max-height: 1560px;
+    max-height: 1300px;
   }
 
   @include mq(xxxlarge) {
-    min-height: 1100px;
+    min-height: 1040px;
   }
   @include mq(wide) {
     min-height: 1250px;
+    max-height: 1515px;
   }
   @include mq(xwide) {
-    min-height: 1515px;
+    min-height: 1444px;
+    max-height: 1733px;
+  }
+  @include mq(xxwide) {
+    min-height: 1735px;
+    max-height: 2080px;
   }
 }
 
@@ -58,69 +63,90 @@
     flex-direction: column;
     z-index: 50;
     @include mq(xxlarge) {
-      max-width: 920px;
+      max-width: 1000px;
     }
     @include mq(xxxlarge) {
       max-width: 1050px;
     }
     @include mq(wide) {
-      max-width: 1200px;
+      max-width: 1350px;
     }
     @include mq(xwide) {
-      max-width: 1400px;
+      max-width: 1500px;
+    }
+    @include mq(xxwide) {
+      max-width: 1800px;
     }
   }
 
   &__title {
-    margin-top: 19.5vh;
+    margin-top: 19vh;
+    margin-bottom: 4rem;
     @include mq(xsmall) {
       margin-top: 160px;
+      margin-bottom: 5rem;
     }
     @include mq(small) {
       margin-top: 200px;
     }
     @include mq(large) {
-      margin-top: 240px;
+      margin-top: 220px;
+      margin-bottom: 6rem;
     }
     @include mq(xlarge) {
       margin-top: 0;
+      margin-bottom: 2.5rem;
     }
   }
 
   &__img-container {
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     position: relative;
+    padding: 0 1% 2% 1%;
     @include mq(xsmall) {
+      margin-bottom: 4rem;
       max-width: 420px;
       margin-left: auto;
       margin-right: auto;
     }
     @include mq(small) {
       max-width: 480px;
-      margin-bottom: 3rem;
+      margin-bottom: 5rem;
     }
     @include mq(xlarge) {
       position: absolute;
       right: 0;
       top: 50%;
       margin: 0;
-      max-width: 400px;
+      margin-right: 1rem;
+      max-width: 380px;
       transform: translateY(-50%);
     }
     @include mq(xxlarge) {
-      max-width: 480px;
+      max-width: 440px;
+      margin-right: 1.5rem;
     }
     @include mq(xxxlarge) {
-      max-width: 550px;
+      max-width: 500px;
+    }
+    @include mq(wide) {
+      max-width: 580px;
+    }
+    @include mq(xwide) {
+      max-width: 660px;
+    }
+    @include mq(xxwide) {
+      max-width: 770px;
     }
   }
 
   &__blobs {
-    width: 100%;
+    width: 105%;
     height: auto;
-    @include absolute($top: 0, $left: 0);
+    @include absolute($top: 50%, $left: 0);
+    transform: translateY(-50%);
   }
 
   &__marco-img {
@@ -130,14 +156,10 @@
     z-index: 5;
   }
 
-  &__title,
   &__body {
     margin-bottom: 3rem;
-  }
-
-  &__body {
     @include mq(xlarge) {
-      width: 45%;
+      width: 48%;
     }
   }
 
@@ -157,6 +179,21 @@
       width: auto;
       @include absolute($bottom: -22.2222%);
       z-index: 2;
+    }
+    @media screen and (min-width: 1024px) and (max-height: 770px) {
+      transform: translateX(-5%);
+    }
+    @media screen and (min-width: 1440px) and (max-height: 800px) {
+      transform: translateX(-5%);
+    }
+    @media screen and (min-width: 1600px) and (max-height: 960px) {
+      transform: translateX(-5%);
+    }
+    @media screen and (min-width: 1920px) and (max-height: 1080px) {
+      transform: translateX(-5%);
+    }
+    @media screen and (min-width: 2560px) and (max-height: 1300px) {
+      transform: translateX(-5%);
     }
   }
 
