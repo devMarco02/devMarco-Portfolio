@@ -4,7 +4,6 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   color: $dark-blue;
-
   @include mq(medium) {
     font-size: 1.15rem;
     line-height: 1.65rem;
@@ -104,14 +103,32 @@ h3 {
 }
 
 input::placeholder,
-textarea::placeholder {
+textarea::placeholder,
+input,
+textarea {
   font-size: 1rem;
-  color: $grey-dark-blue-2;
   font-family: $ff-primary;
   font-weight: $fw-medium;
+  @include mq(medium) {
+    font-size: 1.15rem;
+  }
   @include mq(xlarge) {
     font-size: 1.25rem;
   }
+  @include mq(wide) {
+    font-size: 1.4rem;
+  }
+  @include mq(xwide) {
+    font-size: 1.75rem;
+  }
+  @include mq(xxwide) {
+    font-size: 2rem;
+  }
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: $grey-dark-blue-2;
 }
 
 .btn {
@@ -125,18 +142,21 @@ textarea::placeholder {
   &--green {
     color: $darker-blue-green;
   }
+  @include mq(xsmall) {
+    font-size: 0.7rem;
+  }
   @include mq(small) {
     font-size: 0.8rem;
   }
   @include mq(medium) {
     font-weight: $fw-bold;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
   @include mq(xlarge) {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
   @include mq(wide) {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
   @include mq(xwide) {
     font-size: 1.25rem;
@@ -144,6 +164,28 @@ textarea::placeholder {
   @include mq(xxwide) {
     font-size: 1.5rem;
   }
+
+  // @include mq(medium) {
+  //   font-size: 1.15rem;
+  //   line-height: 1.65rem;
+  // }
+
+  // @include mq(xlarge) {
+  //   font-size: 1.25rem;
+  //   line-height: 1.75rem;
+  // }
+  // @include mq(wide) {
+  //   font-size: 1.4rem;
+  //   line-height: 1.9rem;
+  // }
+  // @include mq(xwide) {
+  //   font-size: 1.75rem;
+  //   line-height: 2.25rem;
+  // }
+  // @include mq(xxwide) {
+  //   font-size: 2rem;
+  //   line-height: 2.5rem;
+  // }
 }
 
 //===SECTIONS
@@ -349,8 +391,20 @@ textarea::placeholder {
     font-weight: $fw-reg;
     text-align: center;
     font-size: 0.75rem;
+    @include mq(medium) {
+      font-size: 0.85rem;
+    }
     @include mq(xlarge) {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
+    }
+    @include mq(wide) {
+      font-size: 1.05rem;
+    }
+    @include mq(xwide) {
+      font-size: 1.15rem;
+    }
+    @include mq(xxwide) {
+      font-size: 1.4rem;
     }
   }
 }
