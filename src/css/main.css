@@ -2849,9 +2849,40 @@ section {
   width: auto;
   height: 12px;
 }
+@media (min-width: 500px) {
+  .btn--dl .btn__icon {
+    height: 13.6px;
+  }
+}
+@media (min-width: 650px) {
+  .btn--dl .btn__icon {
+    height: 15.2px;
+  }
+}
+@media (min-width: 768px) {
+  .btn--dl .btn__icon {
+    height: 16.8px;
+  }
+}
 @media (min-width: 834px) {
   .btn--dl .btn__icon {
-    height: unset;
+    height: 18.4px;
+  }
+}
+@media (min-width: 1600px) {
+  .btn--dl .btn__icon {
+    height: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .btn--dl .btn__icon {
+    height: 24px;
+  }
+}
+@media (min-width: 2560px) {
+  .btn--dl .btn__icon {
+    height: 28.8px;
+    margin-left: 16px;
   }
 }
 .btn--send {

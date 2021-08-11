@@ -1,13 +1,14 @@
+import { Link } from "react-router-dom";
 import {
   AboutGreyShapes,
   AboutTopGreyShapes,
   AboutBottomGreyShapes,
 } from "../components/GreyShapes";
 import Blobs from "../components/Blobs";
-import { Button } from "../components/Button";
+import { Button as a } from "../components/Button";
 import { DownloadIcon } from "../components/Icons";
 import marco from "../images/marco.png";
-
+import resume from "../downloadable/Marco-Resume-2021.pdf";
 const About = () => {
   return (
     <>
@@ -42,15 +43,15 @@ const About = () => {
               <br /> <br />
               <strong>Let's work together.</strong>
             </p>
-            <Button
-              classNm="about__btn btn--green btn--dl"
-              text={"DOWNLOAD CV"}
+            <Link
+              to={resume}
+              className="btn about__btn btn--green btn--dl"
+              target="_blank"
+              download="marco-alpay-resume-2021.pdf"
             >
+              DOWNLOAD CV
               <DownloadIcon />
-            </Button>
-            {/* <div className="about__right-grid">
-            <Blobs classNm="about__blobs" />
-          </div> */}
+            </Link>
           </div>
 
           <AboutGreyShapes />
