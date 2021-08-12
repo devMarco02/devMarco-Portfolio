@@ -1,3 +1,6 @@
+import emailjs from "emailjs-com";
+import { useState, useEffect, useRef } from "react";
+
 import { SendButton } from "../components/Button";
 import { Dots, ZigzagBig } from "../components/BackgroundShapes";
 import {
@@ -6,6 +9,30 @@ import {
 } from "../components/GreyShapes";
 
 const Contact = () => {
+  //===CHECK INPUT
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "gmail",
+        "template_84k2hhr",
+        e.target,
+        "user_1vTitN9ZIwcUQCPXC08Ih"
+      )
+      .then(
+        (res) => {
+          console.log(res.text);
+          alert("Email sent");
+        },
+        (err) => {
+          console.log(err.text);
+          alert(err.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
     <section className="contact" id="contact">
       <h2 className="contact__title">
@@ -13,25 +40,31 @@ const Contact = () => {
       </h2>
       <div className="contact__container">
         <div className="contact__left-grid">
-          <form className="contact__form">
+          <form className="contact__form" onSubmit={sendEmail}>
             <h3 className="contact__form-title">Contact Me</h3>
             <input
               type="text"
               className="contact__input contact__input--name"
               id="name"
               placeholder="Your Name"
+              name="name"
+              required
             />
             <input
-              type="email"
               className="contact__input contact__input--email"
               id="email"
+              name="email"
               placeholder="Your Email"
+              type="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             />
             <input
               type="text"
               className="contact__input contact__input--subject"
               id="subject"
               placeholder="Subject"
+              name="subject"
             />
             <textarea
               className="contact__input contact__input--textarea"
@@ -39,6 +72,7 @@ const Contact = () => {
               cols="30"
               rows="8"
               placeholder="Write a Message"
+              name="message"
             ></textarea>
 
             <SendButton />
