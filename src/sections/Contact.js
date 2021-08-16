@@ -9,7 +9,6 @@ import {
 } from "../components/GreyShapes";
 
 const Contact = () => {
-  //===CHECK INPUT
   const sendEmail = (e) => {
     e.preventDefault();
 
