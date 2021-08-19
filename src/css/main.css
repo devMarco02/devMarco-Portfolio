@@ -2015,7 +2015,7 @@ textarea::placeholder {
 }
 .portfolio__btns-container {
   pointer-events: none;
-  transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
   position: absolute;
   top: 0;
   left: 50%;

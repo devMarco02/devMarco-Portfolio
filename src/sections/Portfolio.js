@@ -21,6 +21,14 @@ const Portfolio = () => {
   let leftIsVisible = true;
   let rightIsVisible = true;
 
+  //setsize once image loaded
+  const loaded = () => {
+    const project1 = sliderRef.current.firstChild;
+    const rightGrid = project1.lastChild;
+    setSize(rightGrid.firstChild.clientHeight);
+    setOpacity(1);
+  };
+
   //ARROW BUTTON FUNCTIONS
   const slideRight = () => {
     if (index < 2) {
@@ -52,19 +60,12 @@ const Portfolio = () => {
     rightIsVisible = true;
   }
 
-  //===GET & SET SIZE
-  //set size once
+  //run once
   useEffect(() => {
     setModal(modalRef.current);
-    console.log(modal);
-    setTimeout(() => {
-      const project1 = sliderRef.current.firstChild;
-      const rightGrid = project1.lastChild;
-      setSize(rightGrid.firstChild.clientHeight);
-      setOpacity(1);
-    }, 500);
   }, []);
 
+  //===GET & SET SIZE
   //set size everytime window size changes
   useEffect(() => {
     const windowResize = () => {
@@ -100,6 +101,7 @@ const Portfolio = () => {
         {/* PROJECTS */}
         <div className="portfolio__slider" ref={sliderRef}>
           <FeaturedProject
+            loaded={loaded}
             indexValue={index}
             ref={imgRef}
             modal={modal}

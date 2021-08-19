@@ -2,7 +2,10 @@ import React from "react";
 import data from "../data/featuredProjectsData";
 
 const FeaturedProject = React.forwardRef(
-  ({ indexValue, modal, modalImg, modalTitle, modalDesc, modalBtn }, ref) => {
+  (
+    { indexValue, modal, modalImg, modalTitle, modalDesc, modalBtn, loaded },
+    ref
+  ) => {
     const viewProject = (e) => {
       const rightGrid = e.target.parentNode;
       const leftGrid = rightGrid.previousSibling;
@@ -41,6 +44,7 @@ const FeaturedProject = React.forwardRef(
               </div>
               <div className="portfolio__right-grid">
                 <img
+                  onLoad={loaded}
                   onClick={viewProject}
                   src={image}
                   alt="project thumbnail"
