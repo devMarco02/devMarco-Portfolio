@@ -62,7 +62,7 @@ const Portfolio = () => {
       const rightGrid = project1.lastChild;
       setSize(rightGrid.firstChild.clientHeight);
       setOpacity(1);
-    }, 200);
+    }, 500);
   }, []);
 
   //set size everytime window size changes
