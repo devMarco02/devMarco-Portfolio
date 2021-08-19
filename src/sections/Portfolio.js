@@ -1,15 +1,23 @@
 import { TopDivider, BottomDivider } from "../components/Divider";
 import FeaturedProject from "../components/FeaturedProject";
-import data from "../data/featuredProjectsData";
 import { ArrowButton, IndicatorButton } from "../components/Button";
 import Blobs from "../components/Blobs";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import Modal from "../components/Modal";
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0); //index of project list
   const [size, setSize] = useState(0);
+  const [modal, setModal] = useState();
+  const [opacity, setOpacity] = useState(0);
+  const modalRef = useRef(null);
+  const modalImgRef = useRef(null);
+  const modalTitleRef = useRef(null);
+  const modalDescRef = useRef(null);
+  const modalBtnRef = useRef(null);
   const imgRef = useRef(null);
+  const sliderRef = useRef(null);
   let leftIsVisible = true;
   let rightIsVisible = true;
 
@@ -44,24 +52,42 @@ const Portfolio = () => {
     rightIsVisible = true;
   }
 
-  //===GET IMAGE SIZE
+  //===GET & SET SIZE
   //set size once
   useEffect(() => {
-    setSize(imgRef.current.clientHeight);
+    setModal(modalRef.current);
+    console.log(modal);
+    setTimeout(() => {
+      const project1 = sliderRef.current.firstChild;
+      const rightGrid = project1.lastChild;
+      setSize(rightGrid.firstChild.clientHeight);
+      setOpacity(1);
+    }, 200);
   }, []);
 
   //set size everytime window size changes
-  const windowResize = () => {
-    setSize(imgRef.current.clientHeight);
-  };
-
   useEffect(() => {
-    window.addEventListener("resize", windowResize);
+    const windowResize = () => {
+      const project1 = sliderRef.current.firstChild;
+      const rightGrid = project1.lastChild;
+      setSize(rightGrid.firstChild.clientHeight);
+    };
 
+    window.addEventListener("resize", windowResize);
     return () => {
       window.removeEventListener("resize", windowResize);
     };
   }, [size]);
+
+  //EXIT MODAL
+  const exitModal = (e) => {
+    if (
+      e.target.classList.contains("portfolio__modal") ||
+      e.target.classList.contains("portfolio__modal-close")
+    ) {
+      modalRef.current.classList.remove("open");
+    }
+  };
 
   return (
     <>
@@ -72,12 +98,23 @@ const Portfolio = () => {
         </h2>
 
         {/* PROJECTS */}
-        <div className="portfolio__slider">
-          <FeaturedProject data={data} indexValue={index} ref={imgRef} />
+        <div className="portfolio__slider" ref={sliderRef}>
+          <FeaturedProject
+            indexValue={index}
+            ref={imgRef}
+            modal={modal}
+            modalImg={modalImgRef.current}
+            modalTitle={modalTitleRef.current}
+            modalDesc={modalDescRef.current}
+            modalBtn={modalBtnRef.current}
+          />
 
           <div
             className="portfolio__btns-container"
-            style={{ height: `${size}px` }}
+            style={{
+              height: `${size}px`,
+              opacity: `${opacity}`,
+            }}
           >
             {/* ARROWS */}
             <ArrowButton
@@ -109,6 +146,17 @@ const Portfolio = () => {
         <Link to="/portfolio-all" className="btn portfolio__view-btn">
           VIEW ALL
         </Link>
+
+        <Modal
+          exitModal={exitModal}
+          ref={{
+            modalRef: modalRef,
+            modalImgRef: modalImgRef,
+            modalTitleRef: modalTitleRef,
+            modalDescRef: modalDescRef,
+            modalBtnRef: modalBtnRef,
+          }}
+        />
       </section>
       <BottomDivider />
     </>

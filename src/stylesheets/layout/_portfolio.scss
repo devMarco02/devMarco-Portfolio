@@ -141,16 +141,19 @@
     }
 
     &--active {
+      pointer-events: all;
       opacity: 1;
       transform: translateX(0);
     }
 
     &--next {
+      pointer-events: none;
       z-index: 2;
       transform: translateX(100%);
     }
 
     &--last {
+      pointer-events: none;
       transform: translateX(-100%);
       z-index: 2;
     }
@@ -163,7 +166,6 @@
       height: 100%;
       display: flex;
       align-items: center;
-      padding: 2rem 0;
     }
   }
 
@@ -172,6 +174,8 @@
     max-width: 280px;
     margin: 0 auto 56px;
     order: 1;
+    display: flex;
+    justify-content: center;
     @include mq(xsmall) {
       max-width: 350px;
       margin-bottom: 64px;
@@ -206,25 +210,29 @@
   }
 
   &__img {
+    cursor: pointer;
     width: 100%;
     height: auto;
   }
 
-  &__vertical-line {
-    display: none;
-    @include mq(xlarge) {
-      display: block;
-      background: $light-blue-green;
-      width: 24px;
-      height: 100%;
-      border-radius: 12px;
-    }
-  }
-
   &__text-container {
+    position: relative;
     @include mq(xlarge) {
-      padding: 0 2vw 0 4vw;
+      padding: 0 2vw 1rem 4vw;
       min-width: 240px;
+    }
+
+    &::before {
+      content: "";
+      @include absolute($top: 0, $left: 0);
+      background: $light-blue-green;
+      width: 4px;
+      height: 100%;
+      border-radius: 2px;
+      display: none;
+      @include mq(xlarge) {
+        display: block;
+      }
     }
   }
 
@@ -303,20 +311,12 @@
   }
 
   &__btns-container {
+    pointer-events: none;
+    transition: opacity 0.25s ease-in-out;
     @include absolute($top: 0, $left: 50%);
     transform: translateX(-50%);
     width: 80%;
     z-index: 500;
-    // max-width: 280px;
-    // @include mq(xsmall) {
-    //   max-width: 370px;
-    // }
-    // @include mq(small) {
-    //   max-width: 470px;
-    // }
-    // @include mq(medium) {
-    //   max-width: 600px;
-    // }
     @include mq(large) {
       width: 100%;
     }
@@ -327,6 +327,7 @@
   }
 
   &__arrow-btn {
+    pointer-events: all;
     @include absolute($top: 50%);
     transform: translateY(-50%);
     z-index: 600;
@@ -373,6 +374,130 @@
     @include mq(xlarge) {
       bottom: 2rem;
     }
+  }
+
+  &__modal {
+    background: rgba(31, 40, 51, 0.9);
+    pointer-events: none;
+    opacity: 0;
+    @include fixed($top: 0, $left: 0);
+    z-index: 1000;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+
+    &.open {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+
+  &__modal-container {
+    width: 80%;
+    height: 100%;
+    @include absolute($left: 50%, $top: 0);
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mq(small) {
+      max-width: 535px;
+    }
+    @include mq(medium) {
+      max-width: unset;
+      width: auto;
+    }
+    @include mq(xxwide) {
+      max-width: 1370px;
+    }
+  }
+
+  &__modal-close {
+    width: 100%;
+    height: 15%;
+    min-height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include mq(large) {
+      height: 10%;
+      min-height: 3rem;
+    }
+  }
+
+  &__modal-close-icon {
+    pointer-events: none;
+    opacity: 0.8;
+    transition: 0.2s ease-in-out;
+    &:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    @include mq(large) {
+      display: none;
+    }
+  }
+
+  &__modal-img {
+    width: 100%;
+    margin-bottom: 2rem;
+    @include mq(small) {
+      max-width: 535px;
+    }
+    @include mq(medium) {
+      width: auto;
+      height: 50%;
+      max-width: unset;
+      max-height: 320px;
+      // min-height: 300px;
+    }
+    @include mq(large) {
+      max-height: 340px;
+      // min-height: 300px;
+    }
+    @include mq(xlarge) {
+      max-height: 400px;
+      // min-height: 300px;
+    }
+    @include mq(xxlarge) {
+      max-height: 480px;
+      // min-height: 300px;
+    }
+    @include mq(xxxlarge) {
+      max-height: 550px;
+      min-height: 300px;
+    }
+    @include mq(wide) {
+      max-height: 600px;
+      // min-height: 300px;
+    }
+    @include mq(xwide) {
+      max-height: 650px;
+      // min-height: 300px;
+    }
+    @include mq(xxwide) {
+      max-height: 768px;
+      // min-height: 300px;
+    }
+  }
+
+  &__modal-title {
+    color: $light-blue-green;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  &__modal-description {
+    color: white;
+    margin-bottom: 2rem;
+    @include mq(xxxlarge) {
+      min-width: 720px;
+    }
+  }
+
+  &__modal-btn {
+    margin-top: auto;
+    margin-bottom: 2.5vh;
   }
 }
 

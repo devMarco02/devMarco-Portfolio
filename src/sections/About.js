@@ -5,7 +5,6 @@ import {
   AboutBottomGreyShapes,
 } from "../components/GreyShapes";
 import Blobs from "../components/Blobs";
-import { Button as a } from "../components/Button";
 import { DownloadIcon } from "../components/Icons";
 import marco from "../images/marco.png";
 import resume from "../downloadable/Marco-Resume-2021.pdf";
@@ -22,11 +21,7 @@ const About = () => {
               About <strong>Me</strong>
             </h2>
             <div className="about__img-container">
-              <img
-                className="about__marco-img"
-                src={marco}
-                alt="Marco Alpay's Picture"
-              />
+              <img className="about__marco-img" src={marco} alt="Marco Alpay" />
               <Blobs classNm="about__blobs" />
             </div>
             <p className="about__body">

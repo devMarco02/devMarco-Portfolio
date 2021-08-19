@@ -1,5 +1,3 @@
-import { Children } from "react";
-
 const Blobs = ({ classNm }) => {
   return (
     <svg

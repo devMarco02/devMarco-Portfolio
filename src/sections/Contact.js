@@ -1,6 +1,4 @@
 import emailjs from "emailjs-com";
-import { useState, useEffect, useRef } from "react";
-
 import { SendButton } from "../components/Button";
 import { Dots, ZigzagBig } from "../components/BackgroundShapes";
 import {

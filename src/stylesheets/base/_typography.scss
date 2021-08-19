@@ -131,17 +131,13 @@ textarea::placeholder {
   color: $grey-dark-blue-2;
 }
 
-.btn {
-  letter-spacing: 0.15em;
+.btn,
+.portfolio__modal-close {
   font-family: $ff-secondary;
   font-weight: $fw-semi-bold;
   line-height: initial;
-  color: $light-red;
   font-size: 0.625rem;
 
-  &--green {
-    color: $darker-blue-green;
-  }
   @include mq(xsmall) {
     font-size: 0.7rem;
   }
@@ -163,6 +159,15 @@ textarea::placeholder {
   }
   @include mq(xxwide) {
     font-size: 1.5rem;
+  }
+}
+
+.btn {
+  letter-spacing: 0.15em;
+  color: $light-red;
+
+  &--green {
+    color: $darker-blue-green;
   }
 }
 
