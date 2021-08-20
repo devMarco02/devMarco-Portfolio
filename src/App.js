@@ -20,7 +20,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/#/portfolio" component={PortfolioPage} />
+          <Route path="/portfolio" component={PortfolioPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>
