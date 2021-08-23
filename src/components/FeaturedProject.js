@@ -6,23 +6,21 @@ const FeaturedProject = React.forwardRef(
     { indexValue, modal, modalImg, modalTitle, modalDesc, modalBtn, loaded },
     ref
   ) => {
-    const viewProject = (e) => {
-      const rightGrid = e.target.parentNode;
-      const leftGrid = rightGrid.previousSibling;
-      const textContainer = leftGrid.lastChild;
-      const title = textContainer.firstChild.innerText;
-      const desc = textContainer.lastChild.innerText;
+    const viewProject = (targetId) => {
+      const project = data.find((project) => project.id === targetId);
+      const { title, description, dataOriginal, dataLink } = project;
       modal.classList.add("open");
-      modalImg.src = e.target.getAttribute("data-original");
+      modalImg.src = dataOriginal;
       modalTitle.innerHTML = title;
-      modalDesc.innerHTML = desc;
-      modalBtn.href = e.target.getAttribute("data-link");
+      modalDesc.innerHTML = description;
+      modalBtn.href = dataLink;
     };
 
     return (
       <>
         {data.map((project, index) => {
-          const { title, description, image, dataOriginal, dataLink } = project;
+          const { id, title, description, image, dataOriginal, dataLink } =
+            project;
           let position = "portfolio__project--next";
 
           if (indexValue === index) {
@@ -33,7 +31,7 @@ const FeaturedProject = React.forwardRef(
           }
 
           return (
-            <article key={index} className={`portfolio__project ${position}`}>
+            <article key={id} className={`portfolio__project ${position}`}>
               <div className="portfolio__left-grid">
                 <div className="portfolio__text-container">
                   <h3 className="portfolio__project-title">{title}</h3>
@@ -45,7 +43,7 @@ const FeaturedProject = React.forwardRef(
               <div className="portfolio__right-grid">
                 <img
                   onLoad={loaded}
-                  onClick={viewProject}
+                  onClick={() => viewProject(id)}
                   src={image}
                   alt="project thumbnail"
                   className="portfolio__img"

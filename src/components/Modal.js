@@ -5,6 +5,16 @@ const Modal = React.forwardRef(({ exitModal }, ref) => {
   const { modalRef, modalImgRef, modalTitleRef, modalDescRef, modalBtnRef } =
     ref;
 
+  // //EXIT MODAL
+  // const exitModal = (e) => {
+  //   if (
+  //     e.target.classList.contains("portfolio__modal") ||
+  //     e.target.classList.contains("portfolio__modal-close")
+  //   ) {
+  //     modalRef.current.classList.remove("open");
+  //   }
+  // };
+
   return (
     <article className="portfolio__modal" ref={modalRef} onClick={exitModal}>
       <div className="portfolio__modal-container">

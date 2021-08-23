@@ -7,6 +7,7 @@ import full3 from "./../images/project-img/full/sample3.png";
 
 const featuredProjectsData = [
   {
+    id: "1",
     title: "Animalandia",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
@@ -15,6 +16,7 @@ const featuredProjectsData = [
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
+    id: "2",
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
@@ -22,6 +24,7 @@ const featuredProjectsData = [
     dataOriginal: full2,
   },
   {
+    id: "3",
     title: "Galunay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",

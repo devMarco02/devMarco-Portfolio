@@ -144,7 +144,6 @@ const Portfolio = () => {
         </div>
 
         {/* VIEW ALL */}
-        {/* <Button classNm="portfolio__view-btn" text="VIEW ALL" /> */}
         <Link to="/portfolio" className="btn portfolio__view-btn">
           VIEW ALL
         </Link>

@@ -5,11 +5,6 @@ import Navbar from "./Navbar";
 import PortfolioPage from "./pages/PortfolioPage";
 import Home from "./pages/Home";
 import NotFoundPage from "./pages/NotFoundPage";
-import About from "./sections/About";
-import Portfolio from "./sections/Portfolio";
-import Skills from "./sections/Skills";
-import Contact from "./sections/Contact";
-import Hero from "./sections/Hero";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
