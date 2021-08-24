@@ -1,5 +1,6 @@
 import React from "react";
 import { Close } from "./Icons";
+import { Link } from "react-router-dom";
 
 const Modal = React.forwardRef(({ exitModal }, ref) => {
   const { modalRef, modalImgRef, modalTitleRef, modalDescRef, modalBtnRef } =
@@ -28,15 +29,15 @@ const Modal = React.forwardRef(({ exitModal }, ref) => {
         <p className="portfolio__modal-description" ref={modalDescRef}>
           description
         </p>
-        <a
-          href="https://devmarco02.netlify.app/"
+        <Link
+          to="https://devmarco02.netlify.app/"
           className="btn btn--green portfolio__modal-btn"
           target="_blank"
           rel="noopener noreferrer"
           ref={modalBtnRef}
         >
           VISIT SITE
-        </a>
+        </Link>
       </div>
     </article>
   );
