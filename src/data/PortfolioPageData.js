@@ -31,17 +31,9 @@ const PortfolioPageData = [
     image: thumbnail3,
     dataOriginal: full3,
   },
+
   {
     id: "4",
-    title: "Animalandia",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail1,
-    dataOriginal: full1,
-    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
-  },
-  {
-    id: "10",
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
@@ -67,6 +59,15 @@ const PortfolioPageData = [
   },
   {
     id: "7",
+    title: "Animalandia",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
+    image: thumbnail1,
+    dataOriginal: full1,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
+  },
+  {
+    id: "8",
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
@@ -74,12 +75,36 @@ const PortfolioPageData = [
     dataOriginal: full2,
   },
   {
-    id: "8",
+    id: "9",
     title: "Galunay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail3,
     dataOriginal: full3,
+  },
+  {
+    id: "10",
+    title: "Balonji",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
+    image: thumbnail2,
+    dataOriginal: full2,
+  },
+  {
+    id: "11",
+    title: "Balonji",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
+    image: thumbnail2,
+    dataOriginal: full2,
+  },
+  {
+    id: "12",
+    title: "Balonji",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
+    image: thumbnail2,
+    dataOriginal: full2,
   },
 ];
 

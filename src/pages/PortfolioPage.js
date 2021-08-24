@@ -3,7 +3,7 @@ import Modal from "../components/Modal";
 
 import data from "./../data/PortfolioPageData";
 
-const PortfolioPage = ({}) => {
+const PortfolioPage = () => {
   const modalRef = useRef(null);
   const modalImgRef = useRef(null);
   const modalTitleRef = useRef(null);
@@ -36,16 +36,13 @@ const PortfolioPage = ({}) => {
         {data.map((project) => {
           const { id, title, image } = project;
           return (
-            <article
+            <div
               key={id}
-              className="portfolio-page__project"
+              className="portfolio-page__img-container"
               onClick={() => viewProject(id)}
             >
-              <div className="portfolio-page__img-container">
-                <img className="portfolio-page__img" src={image} alt={title} />
-              </div>
-              <h3>{title}</h3>
-            </article>
+              <img className="portfolio-page__img" src={image} alt={title} />
+            </div>
           );
         })}
       </div>
