@@ -1,23 +1,24 @@
-import { useRef } from "react";
+import { useState } from "react";
 import Modal from "../components/Modal";
 
 import data from "./../data/PortfolioPageData";
 
 const PortfolioPage = () => {
-  const modalRef = useRef(null);
-  const modalImgRef = useRef(null);
-  const modalTitleRef = useRef(null);
-  const modalDescRef = useRef(null);
-  const modalBtnRef = useRef(null);
+  const [modal, setModal] = useState(false);
+  const [src, setSrc] = useState("");
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [link, setLink] = useState("");
 
-  const viewProject = (targetId) => {
+  const openProject = (targetId) => {
     const project = data.find((project) => project.id === targetId);
     const { title, description, dataOriginal, dataLink } = project;
-    modalRef.current.classList.add("open");
-    modalImgRef.current.src = dataOriginal;
-    modalTitleRef.current.innerHTML = title;
-    modalDescRef.current.innerHTML = description;
-    modalBtnRef.current.href = dataLink;
+    setModal(true);
+    setSrc(dataOriginal);
+    setTitle(title);
+    setDesc(description);
+    setLink(dataLink);
+    console.log(dataLink);
   };
 
   //EXIT MODAL
@@ -26,7 +27,7 @@ const PortfolioPage = () => {
       e.target.classList.contains("portfolio__modal") ||
       e.target.classList.contains("portfolio__modal-close")
     ) {
-      modalRef.current.classList.remove("open");
+      setModal(false);
     }
   };
 
@@ -39,23 +40,23 @@ const PortfolioPage = () => {
             <div
               key={id}
               className="portfolio-page__img-container"
-              onClick={() => viewProject(id)}
+              onClick={() => openProject(id)}
             >
               <img className="portfolio-page__img" src={image} alt={title} />
             </div>
           );
         })}
       </div>
-      <Modal
-        exitModal={exitModal}
-        ref={{
-          modalRef: modalRef,
-          modalImgRef: modalImgRef,
-          modalTitleRef: modalTitleRef,
-          modalDescRef: modalDescRef,
-          modalBtnRef: modalBtnRef,
-        }}
-      />
+
+      {modal && (
+        <Modal
+          exitModal={exitModal}
+          src={src}
+          title={title}
+          desc={desc}
+          link={link}
+        />
+      )}
     </main>
   );
 };

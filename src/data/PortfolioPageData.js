@@ -22,6 +22,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "3",
@@ -30,6 +31,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail3,
     dataOriginal: full3,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
 
   {
@@ -39,6 +41,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "5",
@@ -47,6 +50,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail3,
     dataOriginal: full3,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "6",
@@ -73,6 +77,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "9",
@@ -81,6 +86,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail3,
     dataOriginal: full3,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "10",
@@ -89,6 +95,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "11",
@@ -97,6 +104,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "12",
@@ -105,6 +113,7 @@ const PortfolioPageData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
 ];
 

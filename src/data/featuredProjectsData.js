@@ -22,6 +22,7 @@ const featuredProjectsData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail2,
     dataOriginal: full2,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {
     id: "3",
@@ -30,6 +31,7 @@ const featuredProjectsData = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
     image: thumbnail3,
     dataOriginal: full3,
+    dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
 ];
 

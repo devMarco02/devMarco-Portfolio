@@ -5,21 +5,31 @@ import Blobs from "../components/Blobs";
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
+import data from "./../data/featuredProjectsData";
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0); //index of project list
   const [size, setSize] = useState(0);
-  const [modal, setModal] = useState();
   const [opacity, setOpacity] = useState(0);
-  const modalRef = useRef(null);
-  const modalImgRef = useRef(null);
-  const modalTitleRef = useRef(null);
-  const modalDescRef = useRef(null);
-  const modalBtnRef = useRef(null);
+  const [modal, setModal] = useState(false);
+  const [src, setSrc] = useState("");
+  const [title, setTitle] = useState("");
+  const [desc, setDesc] = useState("");
+  const [link, setLink] = useState("");
   const imgRef = useRef(null);
   const sliderRef = useRef(null);
   let leftIsVisible = true;
   let rightIsVisible = true;
+
+  const openProject = (targetId) => {
+    const project = data.find((project) => project.id === targetId);
+    const { title, description, dataOriginal, dataLink } = project;
+    setModal(true);
+    setSrc(dataOriginal);
+    setTitle(title);
+    setDesc(description);
+    setLink(dataLink);
+  };
 
   //setsize once image loaded
   const loaded = () => {
@@ -60,11 +70,6 @@ const Portfolio = () => {
     rightIsVisible = true;
   }
 
-  //run once
-  useEffect(() => {
-    setModal(modalRef.current);
-  }, []);
-
   //===GET & SET SIZE
   //set size everytime window size changes
   useEffect(() => {
@@ -86,7 +91,7 @@ const Portfolio = () => {
       e.target.classList.contains("portfolio__modal") ||
       e.target.classList.contains("portfolio__modal-close")
     ) {
-      modalRef.current.classList.remove("open");
+      setModal(false);
     }
   };
 
@@ -101,14 +106,10 @@ const Portfolio = () => {
         {/* PROJECTS */}
         <div className="portfolio__slider" ref={sliderRef}>
           <FeaturedProject
+            openProject={openProject}
             loaded={loaded}
             indexValue={index}
             ref={imgRef}
-            modal={modal}
-            modalImg={modalImgRef.current}
-            modalTitle={modalTitleRef.current}
-            modalDesc={modalDescRef.current}
-            modalBtn={modalBtnRef.current}
           />
 
           <div
@@ -148,16 +149,15 @@ const Portfolio = () => {
           VIEW ALL
         </Link>
 
-        <Modal
-          exitModal={exitModal}
-          ref={{
-            modalRef: modalRef,
-            modalImgRef: modalImgRef,
-            modalTitleRef: modalTitleRef,
-            modalDescRef: modalDescRef,
-            modalBtnRef: modalBtnRef,
-          }}
-        />
+        {modal && (
+          <Modal
+            exitModal={exitModal}
+            src={src}
+            title={title}
+            desc={desc}
+            link={link}
+          />
+        )}
       </section>
       <BottomDivider />
     </>

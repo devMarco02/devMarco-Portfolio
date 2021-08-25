@@ -2096,8 +2096,6 @@ textarea::placeholder {
 }
 .portfolio__modal {
   background: rgba(31, 40, 51, 0.9);
-  pointer-events: none;
-  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -2105,10 +2103,7 @@ textarea::placeholder {
   height: 100vh;
   width: 100vw;
   overflow-y: scroll;
-}
-.portfolio__modal.open {
   pointer-events: all;
-  opacity: 1;
 }
 .portfolio__modal-container {
   width: 80%;

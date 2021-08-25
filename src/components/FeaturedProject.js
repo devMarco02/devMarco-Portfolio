@@ -2,20 +2,7 @@ import React from "react";
 import data from "../data/featuredProjectsData";
 
 const FeaturedProject = React.forwardRef(
-  (
-    { indexValue, modal, modalImg, modalTitle, modalDesc, modalBtn, loaded },
-    ref
-  ) => {
-    const viewProject = (targetId) => {
-      const project = data.find((project) => project.id === targetId);
-      const { title, description, dataOriginal, dataLink } = project;
-      modal.classList.add("open");
-      modalImg.src = dataOriginal;
-      modalTitle.innerHTML = title;
-      modalDesc.innerHTML = description;
-      modalBtn.href = dataLink;
-    };
-
+  ({ indexValue, loaded, openProject }, ref) => {
     return (
       <>
         {data.map((project, index) => {
@@ -43,9 +30,9 @@ const FeaturedProject = React.forwardRef(
               <div className="portfolio__right-grid">
                 <img
                   onLoad={loaded}
-                  onClick={() => viewProject(id)}
+                  onClick={() => openProject(id)}
                   src={image}
-                  alt="project thumbnail"
+                  alt={title}
                   className="portfolio__img"
                   data-original={dataOriginal}
                   data-link={dataLink}
