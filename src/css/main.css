@@ -1894,6 +1894,7 @@ textarea::placeholder {
   }
 }
 .portfolio__img {
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.25);
   cursor: pointer;
   width: 100%;
   height: auto;
@@ -2115,6 +2116,7 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2.5rem;
 }
 @media (min-width: 650px) {
   .portfolio__modal-container {
@@ -2162,7 +2164,7 @@ textarea::placeholder {
 }
 .portfolio__modal-img {
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 4vh;
 }
 @media (min-width: 650px) {
   .portfolio__modal-img {
@@ -2220,15 +2222,12 @@ textarea::placeholder {
 }
 .portfolio__modal-description {
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 5vh;
 }
 @media (min-width: 1440px) {
   .portfolio__modal-description {
     min-width: 720px;
   }
-}
-.portfolio__modal-btn {
-  margin-bottom: 2.5vh;
 }
 
 .bottom-divider {

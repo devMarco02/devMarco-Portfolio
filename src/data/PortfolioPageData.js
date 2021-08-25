@@ -1,9 +1,11 @@
-import thumbnail1 from "./../images/project-img/preview/sample1-preview.png";
-import thumbnail2 from "./../images/project-img/preview/sample2-preview.png";
-import thumbnail3 from "./../images/project-img/preview/sample3-preview.png";
-import full1 from "./../images/project-img/full/sample1.png";
-import full2 from "./../images/project-img/full/sample2.png";
-import full3 from "./../images/project-img/full/sample3.png";
+import thumbnail1 from "./../images/project-img/preview/apparel-coming-soon-thumbnail.png";
+import thumbnail2 from "./../images/project-img/preview/stats-preview-card-thumbnail.png";
+import thumbnail3 from "./../images/project-img/preview/social-proof-thumbnail.png";
+import thumbnail5 from "./../images/project-img/preview/3-column-preview-card-thumbnail.png";
+import full1 from "./../images/project-img/full/apparel-coming-soon.png";
+import full2 from "./../images/project-img/full/stats-preview-card.png";
+import full3 from "./../images/project-img/full/social-proof.png";
+import full5 from "./../images/project-img/full/3-column-preview-card.png";
 
 const PortfolioPageData = [
   {
@@ -75,8 +77,8 @@ const PortfolioPageData = [
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail2,
-    dataOriginal: full2,
+    image: thumbnail5,
+    dataOriginal: full5,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
   {

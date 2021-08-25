@@ -210,6 +210,7 @@
   }
 
   &__img {
+    box-shadow: $bs-thumbnail;
     cursor: pointer;
     width: 100%;
     height: auto;
@@ -394,6 +395,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2.5rem;
     @include mq(small) {
       max-width: 535px;
     }
@@ -434,7 +436,7 @@
 
   &__modal-img {
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 4vh;
     @include mq(small) {
       max-width: 535px;
     }
@@ -483,15 +485,10 @@
 
   &__modal-description {
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: 5vh;
     @include mq(xxxlarge) {
       min-width: 720px;
     }
-  }
-
-  &__modal-btn {
-    // margin-top: auto;
-    margin-bottom: 2.5vh;
   }
 }
 

@@ -1,9 +1,9 @@
-import thumbnail1 from "./../images/project-img/preview/sample1-preview.png";
-import thumbnail2 from "./../images/project-img/preview/sample2-preview.png";
-import thumbnail3 from "./../images/project-img/preview/sample3-preview.png";
-import full1 from "./../images/project-img/full/sample1.png";
-import full2 from "./../images/project-img/full/sample2.png";
-import full3 from "./../images/project-img/full/sample3.png";
+import thumbnail1 from "./../images/project-img/preview/apparel-coming-soon-thumbnail.png";
+import thumbnail2 from "./../images/project-img/preview/stats-preview-card-thumbnail.png";
+import thumbnail3 from "./../images/project-img/preview/social-proof-thumbnail.png";
+import full1 from "./../images/project-img/full/apparel-coming-soon.png";
+import full2 from "./../images/project-img/full/stats-preview-card.png";
+import full3 from "./../images/project-img/full/social-proof.png";
 
 const featuredProjectsData = [
   {
