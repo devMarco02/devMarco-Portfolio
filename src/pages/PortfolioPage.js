@@ -18,7 +18,6 @@ const PortfolioPage = () => {
     setTitle(title);
     setDesc(description);
     setLink(dataLink);
-    console.log(dataLink);
   };
 
   //EXIT MODAL

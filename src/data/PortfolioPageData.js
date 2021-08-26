@@ -1,7 +1,15 @@
 import thumbnail1 from "./../images/project-img/preview/apparel-coming-soon-thumbnail.png";
-import thumbnail2 from "./../images/project-img/preview/stats-preview-card-thumbnail.png";
+import thumbnail2 from "./../images/project-img/preview/stats-preview-card-thumbnail2.png";
 import thumbnail3 from "./../images/project-img/preview/social-proof-thumbnail.png";
+import thumbnail4 from "./../images/project-img/preview/apparel-coming-soon-thumbnail2.png";
 import thumbnail5 from "./../images/project-img/preview/3-column-preview-card-thumbnail.png";
+import thumbnail6 from "./../images/project-img/preview/article-preview-thumbnail.png";
+import thumbnail7 from "./../images/project-img/preview/FAQ-accordion-thumbnail.png";
+import thumbnail8 from "./../images/project-img/preview/four-card-feature-thumbnail.png";
+import thumbnail9 from "./../images/project-img/preview/profile-card-component-thumbnail.png";
+import thumbnail10 from "./../images/project-img/preview/testimonials-slider-thumbnail.png";
+import thumbnail11 from "./../images/project-img/preview/sample1-preview.png";
+import thumbnail12 from "./../images/project-img/preview/sample2-preview.png";
 import full1 from "./../images/project-img/full/apparel-coming-soon.png";
 import full2 from "./../images/project-img/full/stats-preview-card.png";
 import full3 from "./../images/project-img/full/social-proof.png";
@@ -41,7 +49,7 @@ const PortfolioPageData = [
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail2,
+    image: thumbnail4,
     dataOriginal: full2,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -50,7 +58,7 @@ const PortfolioPageData = [
     title: "Galunay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail3,
+    image: thumbnail5,
     dataOriginal: full3,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -59,7 +67,7 @@ const PortfolioPageData = [
     title: "Animalandia",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail1,
+    image: thumbnail6,
     dataOriginal: full1,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -68,7 +76,7 @@ const PortfolioPageData = [
     title: "Animalandia",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail1,
+    image: thumbnail7,
     dataOriginal: full1,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -77,7 +85,7 @@ const PortfolioPageData = [
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail5,
+    image: thumbnail8,
     dataOriginal: full5,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -86,7 +94,7 @@ const PortfolioPageData = [
     title: "Galunay",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail3,
+    image: thumbnail9,
     dataOriginal: full3,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -95,7 +103,7 @@ const PortfolioPageData = [
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail2,
+    image: thumbnail10,
     dataOriginal: full2,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -104,7 +112,7 @@ const PortfolioPageData = [
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail2,
+    image: thumbnail11,
     dataOriginal: full2,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },
@@ -113,7 +121,7 @@ const PortfolioPageData = [
     title: "Balonji",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sequi libero perspiciatis! Beatae itaque totam animi nulla magni quas nostrum?",
-    image: thumbnail2,
+    image: thumbnail12,
     dataOriginal: full2,
     dataLink: "https://devmarco02-apparel-coming-soon.netlify.app",
   },

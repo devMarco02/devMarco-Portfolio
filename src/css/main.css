@@ -3326,8 +3326,57 @@ textarea {
   }
 }
 .portfolio-page__img-container {
+  position: relative;
   overflow: hidden;
   cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container {
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container::before, .portfolio-page__img-container::after {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: all 0.3s ease-out;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container::before {
+    content: "VIEW PROJECT";
+    font-family: "Open Sans", sans-serif;
+    z-index: 2;
+    text-align: center;
+    font-size: 0.5rem;
+    font-weight: bold;
+    line-height: 0.8rem;
+    letter-spacing: 3px;
+    width: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container::after {
+    content: "";
+    width: 85px;
+    height: 85px;
+    background: #49f1c1;
+    border-radius: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container:hover, .portfolio-page__img-container:active {
+    opacity: 1;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container:hover::after, .portfolio-page__img-container:hover::before, .portfolio-page__img-container:active::after, .portfolio-page__img-container:active::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 .portfolio-page__img {
   object-fit: cover;
@@ -3335,8 +3384,10 @@ textarea {
   height: 100%;
   transition: all 0.3s ease-out;
 }
-.portfolio-page__img:hover {
-  transform: scale(1.05);
+@media (min-width: 1024px) {
+  .portfolio-page__img:hover {
+    transform: scale(1.1);
+  }
 }
 
 .not-found-page {

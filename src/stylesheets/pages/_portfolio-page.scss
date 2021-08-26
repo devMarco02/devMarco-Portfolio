@@ -58,8 +58,61 @@
   }
 
   &__img-container {
+    position: relative;
     overflow: hidden;
     cursor: pointer;
+    @include mq(xlarge) {
+      opacity: 0.5;
+      transition: all 0.3s ease-out;
+    }
+
+    &::before,
+    &::after {
+      @include mq(xlarge) {
+        pointer-events: none;
+        @include absolute($top: 50%, $left: 50%);
+        transform: translate(-50%, -50%) scale(0);
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    &::before {
+      @include mq(xlarge) {
+        content: "VIEW PROJECT";
+        font-family: "Open Sans", sans-serif;
+        z-index: 2;
+        text-align: center;
+        font-size: 0.5rem;
+        font-weight: bold;
+        line-height: 0.8rem;
+        letter-spacing: 3px;
+        width: 80px;
+      }
+    }
+
+    &::after {
+      @include mq(xlarge) {
+        content: "";
+        width: 85px;
+        height: 85px;
+        background: $light-blue-green;
+        border-radius: 50%;
+      }
+    }
+
+    &:hover,
+    &:active {
+      @include mq(xlarge) {
+        opacity: 1;
+      }
+
+      &::after,
+      &::before {
+        @include mq(xlarge) {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
   }
 
   &__img {
@@ -69,7 +122,9 @@
     transition: all 0.3s ease-out;
 
     &:hover {
-      transform: scale(1.05);
+      @include mq(xlarge) {
+        transform: scale(1.1);
+      }
     }
   }
 }
