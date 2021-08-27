@@ -12,22 +12,30 @@
   }
 
   &__container {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     width: 100%;
+    @include mq(xsmall) {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    @include mq(medium) {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
     @include mq(large) {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
       height: 100vh;
-      min-height: 640px;
+      min-height: 700px;
       max-height: 1000px;
     }
     @include mq(xlarge) {
-      min-height: 700px;
-      max-height: 749px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      min-height: 640px;
+      max-height: 690px;
     }
     @include mq(xxlarge) {
       grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
       max-height: 810px;
-      min-height: 640px;
     }
     @include mq(xxxlarge) {
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -55,62 +63,58 @@
     @media screen and (min-width: 3150px) {
       grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     }
+
+    &--gap {
+      gap: 0.25rem;
+    }
   }
 
   &__img-container {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    @include mq(xlarge) {
-      opacity: 0.5;
-      transition: all 0.3s ease-out;
+    opacity: 0.5;
+    transition: all 0.3s ease-out;
+
+    &--opaque {
+      opacity: 1;
     }
 
     &::before,
     &::after {
-      @include mq(xlarge) {
-        pointer-events: none;
-        @include absolute($top: 50%, $left: 50%);
-        transform: translate(-50%, -50%) scale(0);
-        transition: all 0.3s ease-out;
-      }
+      pointer-events: none;
+      @include absolute($top: 50%, $left: 50%);
+      transform: translate(-50%, -50%) scale(0);
+      transition: all 0.3s ease-out;
     }
 
     &::before {
-      @include mq(xlarge) {
-        content: "VIEW PROJECT";
-        font-family: "Open Sans", sans-serif;
-        z-index: 2;
-        text-align: center;
-        font-size: 0.5rem;
-        font-weight: bold;
-        line-height: 0.8rem;
-        letter-spacing: 3px;
-        width: 80px;
-      }
+      content: "VIEW PROJECT";
+      font-family: "Open Sans", sans-serif;
+      z-index: 2;
+      text-align: center;
+      font-size: 0.5rem;
+      font-weight: bold;
+      line-height: 0.8rem;
+      letter-spacing: 3px;
+      width: 80px;
     }
 
     &::after {
-      @include mq(xlarge) {
-        content: "";
-        width: 85px;
-        height: 85px;
-        background: $light-blue-green;
-        border-radius: 50%;
-      }
+      content: "";
+      width: 85px;
+      height: 85px;
+      background: $light-blue-green;
+      border-radius: 50%;
     }
 
     &:hover,
     &:active {
-      @include mq(xlarge) {
-        opacity: 1;
-      }
+      opacity: 1;
 
       &::after,
       &::before {
-        @include mq(xlarge) {
-          transform: translate(-50%, -50%) scale(1);
-        }
+        transform: translate(-50%, -50%) scale(1);
       }
     }
   }
@@ -122,9 +126,7 @@
     transition: all 0.3s ease-out;
 
     &:hover {
-      @include mq(xlarge) {
-        transform: scale(1.1);
-      }
+      transform: scale(1.1);
     }
   }
 }
