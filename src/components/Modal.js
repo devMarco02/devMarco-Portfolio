@@ -47,6 +47,7 @@ const Modal = ({ exitModal, src, title, desc, link }) => {
           className="btn btn--green portfolio__modal-btn"
           target="_blank"
           rel="noopener noreferrer"
+          onMouseDown={(e) => e.preventDefault()}
         >
           VISIT SITE
         </a>

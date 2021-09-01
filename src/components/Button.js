@@ -5,7 +5,10 @@ import { ArrowLeft, ArrowRight } from "./Icons";
 
 export const Button = ({ classNm, text = "text", children }) => {
   return (
-    <button className={`btn ${classNm}`}>
+    <button
+      className={`btn ${classNm}`}
+      onMouseDown={(e) => e.preventDefault()}
+    >
       {text}
       {children}
     </button>
@@ -37,6 +40,7 @@ export const ArrowButton = ({ classNm, func, isVisible, isLeft = true }) => {
       className={classNm}
       onClick={func}
       style={{ opacity: `${opacity}`, cursor: `${cursor}` }}
+      onMouseDown={(e) => e.preventDefault()}
     >
       {isLeft ? <ArrowLeft /> : <ArrowRight />}
     </button>
@@ -59,6 +63,7 @@ export const IndicatorButton = ({ func, index, order }) => {
       <button
         className={`portfolio__indicator ${index === order && active}`}
         onClick={func}
+        onMouseDown={(e) => e.preventDefault()}
       ></button>
     </>
   );
@@ -74,7 +79,7 @@ IndicatorButton.propTypes = {
 
 export const SendButton = () => {
   return (
-    <button className="contact__btn">
+    <button className="contact__btn" onMouseDown={(e) => e.preventDefault()}>
       <svg
         className="btn--send"
         width="176"

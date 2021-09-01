@@ -175,9 +175,18 @@ textarea::placeholder {
 
 //SIDEBAR
 .navbar {
-  text-align: center;
-  color: $light-grey-yellow;
-  font-family: $ff-secondary;
+  &__item {
+    text-align: center;
+    color: $light-grey-yellow;
+    font-family: $ff-secondary;
+
+    a {
+      transition: all 150ms linear;
+      @include on-event {
+        color: white;
+      }
+    }
+  }
 }
 
 .hero {

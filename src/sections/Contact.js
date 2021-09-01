@@ -1,4 +1,6 @@
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
+import Message from "../components/Message";
 import { SendButton } from "../components/Button";
 import { Dots, ZigzagBig } from "../components/BackgroundShapes";
 import {
@@ -7,6 +9,8 @@ import {
 } from "../components/GreyShapes";
 
 const Contact = () => {
+  const [message, setMessage] = useState(true);
+  const [text, setText] = useState("Message sent");
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -20,15 +24,25 @@ const Contact = () => {
       .then(
         (res) => {
           console.log(res.text);
-          alert("Email sent");
+          setMessage(true);
+          setText(res.text);
         },
         (err) => {
           console.log(err.text);
-          alert(err.text);
+          setMessage(true);
+          setText(err.text);
         }
       );
     e.target.reset();
   };
+
+  useEffect(() => {
+    if (message) {
+      setTimeout(() => {
+        setMessage(false);
+      }, 5000);
+    }
+  });
 
   return (
     <section className="contact" id="contact">
@@ -106,6 +120,7 @@ const Contact = () => {
       <ContactTriangleRight />
 
       <footer className="contact__copyright">Copyright 2021 devMarco</footer>
+      {message && <Message text={text} close={() => setMessage(false)} />}
     </section>
   );
 };

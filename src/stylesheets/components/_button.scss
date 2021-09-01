@@ -1,4 +1,5 @@
 .btn {
+  transition: all 0.25s ease-in-out;
   cursor: pointer;
   background: transparent;
   width: max-content;
@@ -39,11 +40,27 @@
     border-radius: 41.8px;
   }
 
+  @include on-event {
+    background: $light-red;
+    color: white;
+  }
+
   &--green {
     // border: solid 2px $darker-blue-green;
     border-color: $darker-blue-green;
     @include mq(small) {
       border-width: 2.5px;
+    }
+
+    @include on-event {
+      background: $darker-blue-green;
+      border-color: $darker-blue-green;
+
+      .btn__icon {
+        path {
+          fill: white;
+        }
+      }
     }
   }
 
@@ -77,6 +94,10 @@
         height: 28.8px;
         margin-left: 16px;
       }
+
+      path {
+        transition: all 0.25s ease-in-out;
+      }
     }
   }
 
@@ -109,6 +130,10 @@
   width: max-content;
   border: none;
   background: none;
+
+  @include on-event {
+    opacity: 0.8;
+  }
 }
 
 .portfolio {
@@ -116,10 +141,6 @@
     cursor: pointer;
     border: none;
     background: none;
-    // @include mq(large) {
-    //   width: 20px;
-    //   height: 32px;
-    // }
   }
 
   &__indicator {
@@ -130,7 +151,7 @@
     height: 8px;
     background: #808080;
     margin: 0.5rem;
-    transition: linear 500ms;
+    transition: background-color linear 500ms, transform 150ms linear;
 
     &--active {
       background: #49f1c1;
@@ -159,6 +180,10 @@
       width: 18px;
       height: 18px;
       margin: 1.5rem;
+    }
+
+    @include on-event {
+      transform: scale(1.2);
     }
   }
 }

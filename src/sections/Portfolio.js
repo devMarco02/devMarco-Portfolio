@@ -145,7 +145,11 @@ const Portfolio = () => {
         </div>
 
         {/* VIEW ALL */}
-        <Link to="/portfolio" className="btn portfolio__view-btn">
+        <Link
+          to="/portfolio"
+          className="btn portfolio__view-btn"
+          onMouseDown={(e) => e.preventDefault()}
+        >
           VIEW ALL
         </Link>
 

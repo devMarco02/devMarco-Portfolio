@@ -8,7 +8,12 @@ const Hero = () => {
         <h1 className="hero__name">MARCO POLO</h1>
         <h3 className="hero__title">FRONT-END WEB DEVELOPER</h3>
         {/* <Button classNm="hero__btn" text="CONTACT ME" /> */}
-        <Link smooth to="/#contact" className="btn hero__btn">
+        <Link
+          smooth
+          to="/#contact"
+          className="btn hero__btn"
+          onMouseDown={(e) => e.preventDefault()}
+        >
           CONTACT ME
         </Link>
       </div>

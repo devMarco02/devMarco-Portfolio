@@ -75,6 +75,14 @@
     cursor: pointer;
     opacity: 0.5;
     transition: all 0.3s ease-out;
+    @include on-event {
+      opacity: 1;
+
+      &::after,
+      &::before {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
 
     &--opaque {
       opacity: 1;
@@ -108,15 +116,10 @@
       border-radius: 50%;
     }
 
-    &:hover,
-    &:active {
-      opacity: 1;
+    // &:hover,
+    // &:active {
 
-      &::after,
-      &::before {
-        transform: translate(-50%, -50%) scale(1);
-      }
-    }
+    // }
   }
 
   &__img {

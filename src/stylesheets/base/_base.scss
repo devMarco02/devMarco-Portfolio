@@ -15,6 +15,16 @@ html {
   padding: 0;
 }
 
+:focus {
+  outline: 2px solid $light-blue-green;
+  outline-offset: 5px;
+}
+
+input:focus,
+textarea:focus {
+  outline-offset: 0;
+}
+
 body {
   background: #1f2833;
   overflow-x: hidden;

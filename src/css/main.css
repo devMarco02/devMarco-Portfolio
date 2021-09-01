@@ -351,6 +351,16 @@ html {
   padding: 0;
 }
 
+:focus {
+  outline: 2px solid #49f1c1;
+  outline-offset: 5px;
+}
+
+input:focus,
+textarea:focus {
+  outline-offset: 0;
+}
+
 body {
   background: #1f2833;
   overflow-x: hidden;
@@ -390,7 +400,7 @@ li {
  */
 a {
   text-decoration: none;
-  color: #e7e3d4;
+  color: #dad4be;
 }
 
 body {
@@ -650,10 +660,16 @@ textarea::placeholder {
   color: #05c790;
 }
 
-.navbar {
+.navbar__item {
   text-align: center;
-  color: #e7e3d4;
+  color: #dad4be;
   font-family: "Lato", sans-serif;
+}
+.navbar__item a {
+  transition: all 150ms linear;
+}
+.navbar__item a:hover, .navbar__item a:active, .navbar__item a:focus {
+  color: white;
 }
 
 .hero__name {
@@ -2041,7 +2057,7 @@ textarea::placeholder {
   top: 50%;
   transform: translateY(-50%);
   z-index: 600;
-  transition: opacity 500ms linear;
+  transition: opacity 500ms linear, transform 150ms linear;
 }
 @media (min-width: 1024px) {
   .portfolio__arrow-btn {
@@ -2058,6 +2074,9 @@ textarea::placeholder {
     transform: translate(-50%, -50%);
   }
 }
+.portfolio__arrow-btn--left:hover, .portfolio__arrow-btn--left:active, .portfolio__arrow-btn--left:focus {
+  transform: translate(-50%, -50%) scale(1.2);
+}
 .portfolio__arrow-btn--right {
   right: 0px;
   transform: translate(100%, -50%);
@@ -2068,7 +2087,11 @@ textarea::placeholder {
     transform: translate(50%, -50%);
   }
 }
+.portfolio__arrow-btn--right:hover, .portfolio__arrow-btn--right:active, .portfolio__arrow-btn--right:focus {
+  transform: translate(50%, -50%) scale(1.2);
+}
 .portfolio__dots-nav {
+  pointer-events: all;
   position: absolute;
   bottom: -20%;
   left: 25%;
@@ -2346,10 +2369,34 @@ section {
 .navbar:hover {
   clip-path: inset(0% 0% 0% 0%);
 }
-.navbar__logo {
+.navbar__logo-link {
   height: 9vh;
   min-height: 54px;
   margin-right: auto;
+  margin-left: 8vw;
+}
+@media (min-width: 834px) {
+  .navbar__logo-link {
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+.navbar__logo-link:hover .navbar__logo .text, .navbar__logo-link:active .navbar__logo .text, .navbar__logo-link:focus .navbar__logo .text {
+  fill: white;
+}
+.navbar__logo-link .navbar__logo {
+  height: 90%;
+  width: auto;
+}
+@media (min-width: 834px) {
+  .navbar__logo-link .navbar__logo {
+    width: 100%;
+    height: auto;
+  }
+}
+.navbar__logo-link .navbar__logo .text {
+  transition: all 150ms linear;
 }
 .navbar__nav {
   margin-bottom: auto;
@@ -2357,6 +2404,47 @@ section {
 }
 .navbar__list > * + * {
   margin-top: 1rem;
+}
+.navbar__container-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar__facebook-link, .navbar__github-link {
+  display: grid;
+  place-items: center;
+}
+.navbar__facebook-link:hover .navbar__facebook,
+.navbar__facebook-link:hover .navbar__github, .navbar__facebook-link:active .navbar__facebook,
+.navbar__facebook-link:active .navbar__github, .navbar__facebook-link:focus .navbar__facebook,
+.navbar__facebook-link:focus .navbar__github, .navbar__github-link:hover .navbar__facebook,
+.navbar__github-link:hover .navbar__github, .navbar__github-link:active .navbar__facebook,
+.navbar__github-link:active .navbar__github, .navbar__github-link:focus .navbar__facebook,
+.navbar__github-link:focus .navbar__github {
+  transform: scale(1.1);
+}
+.navbar__facebook-link:hover .navbar__facebook path,
+.navbar__facebook-link:hover .navbar__github path, .navbar__facebook-link:active .navbar__facebook path,
+.navbar__facebook-link:active .navbar__github path, .navbar__facebook-link:focus .navbar__facebook path,
+.navbar__facebook-link:focus .navbar__github path, .navbar__github-link:hover .navbar__facebook path,
+.navbar__github-link:hover .navbar__github path, .navbar__github-link:active .navbar__facebook path,
+.navbar__github-link:active .navbar__github path, .navbar__github-link:focus .navbar__facebook path,
+.navbar__github-link:focus .navbar__github path {
+  fill: white;
+}
+.navbar__facebook-link .navbar__facebook,
+.navbar__facebook-link .navbar__github, .navbar__github-link .navbar__facebook,
+.navbar__github-link .navbar__github {
+  padding: 0 8px;
+  width: 40px;
+  height: auto;
+  transition: all 150ms linear;
+}
+.navbar__facebook-link .navbar__facebook path,
+.navbar__facebook-link .navbar__github path, .navbar__github-link .navbar__facebook path,
+.navbar__github-link .navbar__github path {
+  transition: all 150ms linear;
+  fill: #dad4be;
 }
 
 .skills {
@@ -2972,6 +3060,7 @@ section {
 }
 
 .btn {
+  transition: all 0.25s ease-in-out;
   cursor: pointer;
   background: transparent;
   width: max-content;
@@ -3026,6 +3115,10 @@ section {
     border-radius: 41.8px;
   }
 }
+.btn:hover, .btn:active, .btn:focus {
+  background: #ff4d5a;
+  color: white;
+}
 .btn--green {
   border-color: #05c790;
 }
@@ -3033,6 +3126,13 @@ section {
   .btn--green {
     border-width: 2.5px;
   }
+}
+.btn--green:hover, .btn--green:active, .btn--green:focus {
+  background: #05c790;
+  border-color: #05c790;
+}
+.btn--green:hover .btn__icon path, .btn--green:active .btn__icon path, .btn--green:focus .btn__icon path {
+  fill: white;
 }
 .btn--dl {
   display: flex;
@@ -3079,6 +3179,9 @@ section {
     margin-left: 16px;
   }
 }
+.btn--dl .btn__icon path {
+  transition: all 0.25s ease-in-out;
+}
 .btn--send {
   width: 144px;
   height: auto;
@@ -3120,6 +3223,9 @@ section {
   border: none;
   background: none;
 }
+.contact__btn:hover, .contact__btn:active, .contact__btn:focus {
+  opacity: 0.8;
+}
 
 .portfolio__arrow-btn {
   cursor: pointer;
@@ -3134,7 +3240,7 @@ section {
   height: 8px;
   background: #808080;
   margin: 0.5rem;
-  transition: linear 500ms;
+  transition: background-color linear 500ms, transform 150ms linear;
 }
 .portfolio__indicator--active {
   background: #49f1c1;
@@ -3173,6 +3279,9 @@ section {
     height: 18px;
     margin: 1.5rem;
   }
+}
+.portfolio__indicator:hover, .portfolio__indicator:active, .portfolio__indicator:focus {
+  transform: scale(1.2);
 }
 
 input,
@@ -3236,6 +3345,46 @@ textarea {
   }
 }
 
+.message {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  width: 90%;
+  padding: 0.5rem;
+  text-align: center;
+  background: #1f2833;
+  color: white;
+  z-index: 1000;
+  animation: message 0.25s ease-out;
+}
+.message__btn-close {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  transition: all 150ms linear;
+}
+.message__btn-close:hover, .message__btn-close:active, .message__btn-close:focus {
+  transform: translateY(-50%) scale(1.2);
+}
+.message__btn-close:hover path, .message__btn-close:active path, .message__btn-close:focus path {
+  fill: white;
+}
+.message__btn-close path {
+  transition: all 150ms linear;
+}
+
+@keyframes message {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 @media (min-width: 834px) {
   .home-page {
     display: flex;
@@ -3346,6 +3495,12 @@ textarea {
   opacity: 0.5;
   transition: all 0.3s ease-out;
 }
+.portfolio-page__img-container:hover, .portfolio-page__img-container:active, .portfolio-page__img-container:focus {
+  opacity: 1;
+}
+.portfolio-page__img-container:hover::after, .portfolio-page__img-container:hover::before, .portfolio-page__img-container:active::after, .portfolio-page__img-container:active::before, .portfolio-page__img-container:focus::after, .portfolio-page__img-container:focus::before {
+  transform: translate(-50%, -50%) scale(1);
+}
 .portfolio-page__img-container--opaque {
   opacity: 1;
 }
@@ -3374,12 +3529,6 @@ textarea {
   height: 85px;
   background: #49f1c1;
   border-radius: 50%;
-}
-.portfolio-page__img-container:hover, .portfolio-page__img-container:active {
-  opacity: 1;
-}
-.portfolio-page__img-container:hover::after, .portfolio-page__img-container:hover::before, .portfolio-page__img-container:active::after, .portfolio-page__img-container:active::before {
-  transform: translate(-50%, -50%) scale(1);
 }
 .portfolio-page__img {
   object-fit: cover;

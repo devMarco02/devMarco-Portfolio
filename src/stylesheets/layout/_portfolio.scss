@@ -332,7 +332,7 @@
     @include absolute($top: 50%);
     transform: translateY(-50%);
     z-index: 600;
-    transition: opacity 500ms linear;
+    transition: opacity 500ms linear, transform 150ms linear;
     @include mq(xlarge) {
       top: 50%;
     }
@@ -344,6 +344,10 @@
         left: -3.75%;
         transform: translate(-50%, -50%);
       }
+
+      @include on-event {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
     }
 
     &--right {
@@ -353,10 +357,15 @@
         right: -3.75%;
         transform: translate(50%, -50%);
       }
+
+      @include on-event {
+        transform: translate(50%, -50%) scale(1.2);
+      }
     }
   }
 
   &__dots-nav {
+    pointer-events: all;
     @include absolute($left: 25%, $bottom: -20%);
     transform: translateX(-50%);
     z-index: 50;

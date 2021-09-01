@@ -1,43 +1,78 @@
-import { HashLink as Link } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
+import { Logo, Facebook, Github } from "./components/Icons";
 
 const Navbar = () => {
   return (
     <aside className="navbar">
-      <Link smooth to="/#hero" className="navbar__logo">
-        logo
-      </Link>
+      <HashLink
+        smooth
+        to="/#hero"
+        className="navbar__logo-link"
+        onMouseDown={(e) => e.preventDefault()}
+      >
+        <div className="navbar__logo-container">
+          <Logo classNm={"navbar__logo"} />
+        </div>
+      </HashLink>
       <nav className="navbar__nav">
         <ul className="navbar__list">
           <li className="navbar__item navbar__item--about">
-            <Link
+            <HashLink
               smooth
               to="/#about"
-              // scroll={(el) =>
-              //   el.scrollIntoView({ behavior: "smooth", block: "center" })
-              // }
+              onMouseDown={(e) => e.preventDefault()}
             >
               About
-            </Link>
+            </HashLink>
           </li>
           <li className="navbar__item navbar__item--portfolio">
-            <Link smooth to="/#portfolio">
+            <HashLink
+              smooth
+              to="/#portfolio"
+              onMouseDown={(e) => e.preventDefault()}
+            >
               Portfolio
-            </Link>
+            </HashLink>
           </li>
           <li className="navbar__item navbar__item--skills">
-            <Link smooth to="/#skills">
+            <HashLink
+              smooth
+              to="/#skills"
+              onMouseDown={(e) => e.preventDefault()}
+            >
               My Skills
-            </Link>
+            </HashLink>
           </li>
           <li className="navbar__item navbar__item--contact">
-            <Link smooth to="/#contact">
+            <HashLink
+              smooth
+              to="/#contact"
+              onMouseDown={(e) => e.preventDefault()}
+            >
               Contact
-            </Link>
+            </HashLink>
           </li>
         </ul>
       </nav>
       <div className="navbar__container-icons">
-        <p className="navbar__social-icon">Social Icons</p>
+        <a
+          className="navbar__facebook-link"
+          href="https://web.facebook.com/MarcoAlpay"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseDown={(e) => e.preventDefault()}
+        >
+          <Facebook classNm={"navbar__facebook"} />
+        </a>
+        <a
+          className="navbar__github-link"
+          href="https://github.com/devMarco02"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseDown={(e) => e.preventDefault()}
+        >
+          <Github classNm={"navbar__github"} />
+        </a>
       </div>
     </aside>
   );

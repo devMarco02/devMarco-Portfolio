@@ -30,10 +30,38 @@
     clip-path: inset(0% 0% 0% 0%);
   }
 
-  &__logo {
+  &__logo-link {
     height: 9vh;
     min-height: 54px;
     margin-right: auto;
+    margin-left: 8vw;
+    @include mq(large) {
+      margin: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    @include on-event {
+      .navbar__logo {
+        .text {
+          fill: white;
+        }
+      }
+    }
+
+    //nested inside to overwrite the :focus & :active on <a> tag
+    .navbar__logo {
+      height: 90%;
+      width: auto;
+      @include mq(large) {
+        width: 100%;
+        height: auto;
+      }
+
+      .text {
+        transition: all 150ms linear;
+      }
+    }
   }
 
   &__nav {
@@ -43,5 +71,39 @@
 
   &__list > * + * {
     margin-top: 1rem;
+  }
+
+  &__container-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__facebook-link,
+  &__github-link {
+    display: grid;
+    place-items: center;
+    @include on-event {
+      .navbar__facebook,
+      .navbar__github {
+        transform: scale(1.1);
+        path {
+          fill: white;
+        }
+      }
+    }
+
+    .navbar__facebook,
+    .navbar__github {
+      padding: 0 8px;
+      width: 40px;
+      height: auto;
+      transition: all 150ms linear;
+
+      path {
+        transition: all 150ms linear;
+        fill: $light-grey-yellow;
+      }
+    }
   }
 }
