@@ -4,16 +4,16 @@ import { Logo, Facebook, Github } from "./components/Icons";
 const Navbar = () => {
   return (
     <aside className="navbar">
-      <HashLink
-        smooth
-        to="/#hero"
-        className="navbar__logo-link"
-        onMouseDown={(e) => e.preventDefault()}
-      >
-        <div className="navbar__logo-container">
+      <div className="navbar__logo-container">
+        <HashLink
+          smooth
+          to="/#hero"
+          className="navbar__logo-link"
+          onMouseDown={(e) => e.preventDefault()}
+        >
           <Logo classNm={"navbar__logo"} />
-        </div>
-      </HashLink>
+        </HashLink>
+      </div>
       <nav className="navbar__nav">
         <ul className="navbar__list">
           <li className="navbar__item navbar__item--about">

@@ -1,0 +1,76 @@
+.alert {
+  @include fixed($top: 0, $left: 10%);
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(31, 40, 51, 0.9);
+  z-index: 1000;
+  animation: message 0.25s ease-out;
+  text-align: center;
+
+  &__status {
+    display: flex;
+    align-items: center;
+    strong {
+      display: block;
+      color: white;
+      font-weight: bold;
+      margin-right: 0.75rem;
+    }
+  }
+
+  &__message {
+    color: $light-grey-yellow;
+  }
+
+  &__icon {
+    width: 20px;
+    @include mq(medium) {
+      width: 24px;
+    }
+    @include mq(wide) {
+      width: 28px;
+    }
+    @include mq(xwide) {
+      width: unset;
+    }
+    height: auto;
+  }
+
+  &__btn-close {
+    cursor: pointer;
+    @include absolute($top: 50%, $right: 4%);
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    transition: all 150ms linear;
+    height: 25%;
+
+    @include on-event {
+      transform: translateY(-50%) scale(1.2);
+      path {
+        fill: white;
+      }
+    }
+
+    path {
+      transition: all 150ms linear;
+    }
+  }
+
+  &__btn-close-icon {
+    height: 100%;
+    width: auto;
+  }
+}
+
+@keyframes message {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
