@@ -664,6 +664,52 @@ textarea::placeholder {
   text-align: center;
   color: #dad4be;
   font-family: "Lato", sans-serif;
+  font-size: 1rem;
+}
+@media (min-width: 500px) {
+  .navbar__item {
+    font-size: 1.15rem;
+  }
+}
+@media (min-width: 650px) {
+  .navbar__item {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .navbar__item {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 834px) {
+  .navbar__item {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar__item {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar__item {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1600px) {
+  .navbar__item {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .navbar__item {
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 2560px) {
+  .navbar__item {
+    font-size: 2.5rem;
+  }
 }
 .navbar__item a {
   transition: all 150ms linear;
@@ -2344,26 +2390,57 @@ section {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 40vh;
-  min-height: 240px;
-  clip-path: inset(0% 0% 77.5% 0%);
+  height: 45vh;
+  min-height: 320px;
+  clip-path: inset(0% 0% 82% 0%);
   transition: clip-path 0.5s ease-in-out;
 }
 @media (min-width: 834px) {
   .navbar {
+    padding: 1.25vw;
     justify-content: space-between;
     clip-path: unset;
     bottom: 0;
     right: unset;
-    padding: 1rem;
     width: 10vw;
     height: 100vh;
+    max-width: 320px;
+    min-height: 430px;
   }
-  .navbar__nav {
-    margin: 0;
-    position: absolute;
-    top: 50vh;
-    transform: translateY(-50%);
+}
+@media (min-width: 1024px) {
+  .navbar {
+    padding: 2vw;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar {
+    min-height: 500px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar {
+    min-height: 600px;
+  }
+}
+@media (min-width: 1600px) {
+  .navbar {
+    min-height: 650px;
+  }
+}
+@media (min-width: 1920px) {
+  .navbar {
+    min-height: 820px;
+  }
+}
+@media (min-width: 2560px) {
+  .navbar {
+    min-height: 1050px;
+  }
+}
+@media screen and (min-width: 3200px) {
+  .navbar {
+    padding: 64px;
   }
 }
 .navbar:hover {
@@ -2373,7 +2450,7 @@ section {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 22.5%;
+  height: 18%;
 }
 @media (min-width: 834px) {
   .navbar__logo-container {
@@ -2381,7 +2458,7 @@ section {
   }
 }
 .navbar__logo-link {
-  height: 60%;
+  height: 65%;
   display: grid;
   place-items: center;
   margin-left: 5vw;
@@ -2397,31 +2474,72 @@ section {
   fill: white;
 }
 .navbar__logo-link .navbar__logo {
+  transform: translateY(10%);
   height: 100%;
   width: auto;
 }
 @media (min-width: 834px) {
   .navbar__logo-link .navbar__logo {
+    transform: translateY(0);
     width: 100%;
     height: auto;
   }
 }
 .navbar__logo-link .navbar__logo .text {
+  display: none;
   transition: all 150ms linear;
 }
+@media (min-width: 834px) {
+  .navbar__logo-link .navbar__logo .text {
+    display: block;
+  }
+}
 .navbar__nav {
-  margin-bottom: auto;
   width: 100%;
+  height: 100%;
+}
+@media (min-width: 834px) {
+  .navbar__nav {
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
 }
 .navbar__list > * + * {
   margin-top: 1rem;
 }
 .navbar__container-icons {
-  width: 100%;
+  margin: 5vh 0;
+  width: 70px;
   display: flex;
   justify-content: space-between;
 }
+@media (min-width: 650px) {
+  .navbar__container-icons {
+    width: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar__container-icons {
+    width: 90px;
+  }
+}
+@media (min-width: 834px) {
+  .navbar__container-icons {
+    margin: 0;
+    width: 100%;
+  }
+}
 .navbar__facebook-link, .navbar__github-link {
+  width: 35%;
   display: grid;
   place-items: center;
 }
@@ -2443,11 +2561,16 @@ section {
 .navbar__github-link:focus .navbar__github path {
   fill: white;
 }
+@media (min-width: 1200px) {
+  .navbar__facebook-link, .navbar__github-link {
+    width: 45%;
+    padding: 0 5%;
+  }
+}
 .navbar__facebook-link .navbar__facebook,
 .navbar__facebook-link .navbar__github, .navbar__github-link .navbar__facebook,
 .navbar__github-link .navbar__github {
-  padding: 0 8px;
-  width: 40px;
+  width: 100%;
   height: auto;
   transition: all 150ms linear;
 }
@@ -3447,22 +3570,21 @@ textarea {
 }
 
 .portfolio-page {
-  background: #1f2833;
+  background: #27323f;
   width: 100%;
   display: grid;
   place-items: center;
-  margin-top: 9vh;
-  overflow-y: scroll;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 @media (min-width: 834px) {
   .portfolio-page {
-    margin: 0;
     margin-left: 10%;
     width: 90%;
   }
 }
 .portfolio-page__container {
+  margin-top: 9vh;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   display: grid;
   width: 100%;
@@ -3480,6 +3602,7 @@ textarea {
 @media (min-width: 834px) {
   .portfolio-page__container {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin: 0;
     height: 100vh;
     min-height: 700px;
     max-height: 1000px;

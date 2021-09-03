@@ -58,6 +58,7 @@ const PortfolioPage = () => {
   });
 
   return (
+    // <div className="portfolio-page__wrapper">
     <main className="portfolio-page">
       <div
         className={`portfolio-page__container ${
@@ -90,6 +91,7 @@ const PortfolioPage = () => {
         />
       )}
     </main>
+    // </div>
   );
 };
 

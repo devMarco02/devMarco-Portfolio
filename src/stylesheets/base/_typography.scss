@@ -179,6 +179,34 @@ textarea::placeholder {
     text-align: center;
     color: $light-grey-yellow;
     font-family: $ff-secondary;
+    font-size: 1rem;
+    @include mq(xsmall) {
+      font-size: 1.15rem;
+    }
+    @include mq(small) {
+      font-size: 1.25rem;
+    }
+    @include mq(medium) {
+      font-size: 1.5rem;
+    }
+    @include mq(large) {
+      font-size: 1rem;
+    }
+    @include mq(xxlarge) {
+      font-size: 1.2rem;
+    }
+    @include mq(xxxlarge) {
+      font-size: 1.4rem;
+    }
+    @include mq(wide) {
+      font-size: 1.5rem;
+    }
+    @include mq(xwide) {
+      font-size: 1.8rem;
+    }
+    @include mq(xxwide) {
+      font-size: 2.5rem;
+    }
 
     a {
       transition: all 150ms linear;
