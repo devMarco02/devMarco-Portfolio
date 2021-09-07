@@ -3,20 +3,12 @@
   width: 100%;
   display: grid;
   place-items: center;
-  // overflow-y: scroll;
-  // height: 100vh;
   height: 100%;
   min-height: 100vh;
   @include mq(large) {
     margin-left: 10%;
     width: 90%;
   }
-
-  // &__wrapper {
-  //   height: 100vh;
-  //   display: grid;
-  //   place-items: center;
-  // }
 
   &__container {
     margin-top: 9vh;
