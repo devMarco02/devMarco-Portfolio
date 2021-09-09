@@ -53,7 +53,7 @@
     }
     @include mq(wide) {
       max-width: 1230px;
-      min-height: 720px;
+      min-height: 740px;
     }
     @include mq(xwide) {
       max-width: 1440px;
@@ -61,7 +61,7 @@
     }
     @include mq(xxwide) {
       max-width: 1700px;
-      min-height: 1080px;
+      min-height: 1090px;
     }
   }
 
@@ -95,7 +95,7 @@
       height: auto;
     }
     @include mq(xxlarge) {
-      width: 310px;
+      width: 300px;
     }
     @include mq(wide) {
       width: 390px;
@@ -364,7 +364,7 @@
       height: 450px;
     }
     @include mq(xxlarge) {
-      height: 530px;
+      height: 520px;
     }
     @include mq(xxxlarge) {
       height: 540px;
@@ -373,7 +373,7 @@
       height: 660px;
     }
     @include mq(xwide) {
-      height: 870px;
+      height: 860px;
     }
     @include mq(xxwide) {
       height: 1140px;

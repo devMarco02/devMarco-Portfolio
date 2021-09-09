@@ -25,10 +25,10 @@ const About = () => {
               <Blobs classNm="about__blobs" />
             </div>
             <p className="about__body">
-              Hi, I’m Marco Polo Alpay, I’m a fresh graduate student with a
-              bachelor's degree in Information Technology. I have a serious
-              passion for web development; creating UI effects, animations,
-              illustrations, and responsive layout designs.
+              Hi, I’m Marco Polo Alpay, I’m a fresh graduate with a bachelor's
+              degree in Information Technology. I have a serious passion for web
+              development; creating UI effects, animations, illustrations, and
+              responsive layout designs.
               <br /> <br />
               I’m a well-organised person, problem solver, studious with high
               attention to detail. If I’m not using my laptop, I’m probably

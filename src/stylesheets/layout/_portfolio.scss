@@ -454,35 +454,35 @@
       height: 50%;
       max-width: unset;
       max-height: 320px;
-      // min-height: 300px;
+      min-height: 230px;
     }
     @include mq(large) {
       max-height: 340px;
-      // min-height: 300px;
+      min-height: 240px;
     }
     @include mq(xlarge) {
       max-height: 400px;
-      // min-height: 300px;
+      min-height: 280px;
     }
     @include mq(xxlarge) {
       max-height: 480px;
-      // min-height: 300px;
+      min-height: 320px;
     }
     @include mq(xxxlarge) {
       max-height: 550px;
-      min-height: 300px;
+      min-height: 340px;
     }
     @include mq(wide) {
       max-height: 600px;
-      // min-height: 300px;
+      min-height: 380px;
     }
     @include mq(xwide) {
       max-height: 650px;
-      // min-height: 300px;
+      min-height: 420px;
     }
     @include mq(xxwide) {
       max-height: 768px;
-      // min-height: 300px;
+      min-height: 580px;
     }
   }
 

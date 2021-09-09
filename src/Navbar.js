@@ -1,5 +1,5 @@
 import { HashLink } from "react-router-hash-link";
-import { Logo, Facebook, Github } from "./components/Icons";
+import { Logo, Facebook, Github, Hamburger } from "./components/Icons";
 
 const Navbar = () => {
   return (
@@ -13,6 +13,9 @@ const Navbar = () => {
         >
           <Logo classNm={"navbar__logo"} />
         </HashLink>
+        <button className="navbar__hamburger-btn">
+          <Hamburger classNm={"navbar__hamburger-icon"} />
+        </button>
       </div>
       <nav className="navbar__nav">
         <ul className="navbar__list">
