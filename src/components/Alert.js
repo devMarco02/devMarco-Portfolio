@@ -1,4 +1,5 @@
-import { Close, Success, Error } from "./Icons";
+import { Success, Error } from "./Icons";
+import { CloseButton } from "./Button";
 const Alert = ({ text, close }) => {
   return (
     <div className="alert">
@@ -11,9 +12,8 @@ const Alert = ({ text, close }) => {
         )}
       </div>
       <p className="alert__message">{text.message}</p>
-      <button className="alert__btn-close" onClick={close}>
-        <Close classNm="alert__btn-close-icon" />
-      </button>
+
+      <CloseButton classNm={"alert__btn-close"} func={close} />
     </div>
   );
 };

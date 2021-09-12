@@ -80,6 +80,7 @@
 
     //nested inside to overwrite the :focus & :active on <a> tag
     .navbar__logo {
+      display: block;
       transform: translateY(10%);
       height: 100%;
       width: auto;
@@ -100,6 +101,7 @@
   }
 
   &__hamburger-btn {
+    cursor: pointer;
     display: block;
     height: 40%;
     background: none;
@@ -107,11 +109,19 @@
     @include mq(large) {
       display: none;
     }
-  }
 
-  &__hamburger-icon {
-    height: 100%;
-    width: auto;
+    @include on-event {
+      .navbar__hamburger-icon {
+        path {
+          stroke: white;
+        }
+      }
+    }
+
+    .navbar__hamburger-icon {
+      height: 100%;
+      width: auto;
+    }
   }
 
   &__nav {
@@ -129,7 +139,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: space-around;
     justify-content: space-evenly;
     height: 100%;
   }
@@ -158,8 +167,6 @@
   &__facebook-link,
   &__github-link {
     width: 35%;
-    display: grid;
-    place-items: center;
     @include on-event {
       .navbar__facebook,
       .navbar__github {
@@ -176,6 +183,7 @@
 
     .navbar__facebook,
     .navbar__github {
+      display: block;
       width: 100%;
       height: auto;
       transition: all 150ms linear;

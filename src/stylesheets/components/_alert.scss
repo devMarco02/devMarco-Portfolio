@@ -40,29 +40,9 @@
   }
 
   &__btn-close {
-    cursor: pointer;
     @include absolute($top: 50%, $right: 4%);
     transform: translateY(-50%);
-    background: none;
-    border: none;
-    transition: all 150ms linear;
     height: 25%;
-
-    @include on-event {
-      transform: translateY(-50%) scale(1.2);
-      path {
-        fill: white;
-      }
-    }
-
-    path {
-      transition: all 150ms linear;
-    }
-  }
-
-  &__btn-close-icon {
-    height: 100%;
-    width: auto;
   }
 }
 

@@ -87,10 +87,12 @@ const Portfolio = () => {
 
   //EXIT MODAL
   const exitModal = (e) => {
-    if (
-      e.target.classList.contains("portfolio__modal") ||
-      e.target.classList.contains("portfolio__modal-close")
-    ) {
+    setModal(false);
+  };
+
+  //exit modal when clicked outside
+  const clickOutside = (e) => {
+    if (e.target.classList.contains("modal")) {
       setModal(false);
     }
   };
@@ -155,6 +157,7 @@ const Portfolio = () => {
 
         {modal && (
           <Modal
+            clickOutside={clickOutside}
             exitModal={exitModal}
             src={src}
             title={title}

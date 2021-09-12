@@ -45,7 +45,11 @@ const Navbar = () => {
         </HashLink>
         <button
           className="navbar__hamburger-btn"
-          onClick={() => setIsOpen(!isOpen)}
+          // onClick={() => setIsOpen(!isOpen)}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            setIsOpen(!isOpen);
+          }}
         >
           <Hamburger classNm={"navbar__hamburger-icon"} />
         </button>

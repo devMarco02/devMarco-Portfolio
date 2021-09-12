@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { ArrowLeft, ArrowRight } from "./Icons";
+import { ArrowLeft, ArrowRight, Close } from "./Icons";
 
 //===MAIN BUTTON
 
@@ -59,13 +59,11 @@ ArrowButton.propTypes = {
 export const IndicatorButton = ({ func, index, order }) => {
   let active = "portfolio__indicator--active";
   return (
-    <>
-      <button
-        className={`portfolio__indicator ${index === order && active}`}
-        onClick={func}
-        onMouseDown={(e) => e.preventDefault()}
-      ></button>
-    </>
+    <button
+      className={`portfolio__indicator ${index === order && active}`}
+      onClick={func}
+      onMouseDown={(e) => e.preventDefault()}
+    ></button>
   );
 };
 
@@ -73,6 +71,22 @@ IndicatorButton.propTypes = {
   func: PropTypes.func,
   index: PropTypes.number,
   order: PropTypes.number,
+};
+
+//CLOSE BUTTON
+
+export const CloseButton = ({ func, classNm }) => {
+  return (
+    <button
+      className={`btn-close ${classNm}`}
+      onMouseDown={(e) => {
+        func();
+        e.preventDefault();
+      }}
+    >
+      <Close classNm={"btn-close__icon"} />
+    </button>
+  );
 };
 
 //SEND BUTTON

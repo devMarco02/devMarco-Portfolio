@@ -141,6 +141,29 @@
     cursor: pointer;
     border: none;
     background: none;
+    width: 15px;
+    height: auto;
+    @include mq(xsmall) {
+      width: 18px;
+    }
+    @include mq(small) {
+      width: 20px;
+    }
+    @include mq(wide) {
+      width: 24px;
+    }
+    @include mq(wide) {
+      width: 28px;
+    }
+    @include mq(xxwide) {
+      width: 36px;
+    }
+
+    .arrow-btn {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
 
   &__indicator {
@@ -184,6 +207,36 @@
 
     @include on-event {
       transform: scale(1.2);
+    }
+  }
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 150ms linear;
+
+  @include on-event {
+    .btn-close__icon {
+      opacity: 1;
+      transform: scale(1.2);
+
+      path {
+        fill: white;
+      }
+    }
+  }
+
+  .btn-close__icon {
+    display: block;
+    opacity: 0.8;
+    transition: all 150ms linear;
+    height: 100%;
+    width: auto;
+
+    path {
+      transition: all 150ms linear;
     }
   }
 }
