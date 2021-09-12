@@ -45,7 +45,7 @@
     padding: 64px;
   }
 
-  &:hover {
+  &--open {
     clip-path: inset(0% 0% 0% 0%);
   }
 
@@ -64,8 +64,7 @@
 
   &__logo-link {
     height: 60%;
-    display: grid;
-    place-items: center;
+    width: auto;
     @include mq(large) {
       width: 100%;
       height: auto;

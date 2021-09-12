@@ -1,19 +1,52 @@
+import { useState, useEffect, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Logo, Facebook, Github, Hamburger } from "./components/Icons";
 
+// custom hooks
+const useClickOutside = (handler) => {
+  let domNode = useRef();
+
+  useEffect(() => {
+    let clicked = (e) => {
+      if (!domNode.current.contains(e.target)) handler();
+    };
+
+    document.addEventListener("mousedown", clicked);
+
+    return () => {
+      document.removeEventListener("mousedown", clicked);
+    };
+  });
+
+  return domNode;
+};
+
+//Navbar component
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  let domNode = useClickOutside(() => {
+    setIsOpen(false);
+  });
+
   return (
-    <aside className="navbar">
+    <aside className={`navbar ${isOpen && "navbar--open"}`} ref={domNode}>
       <div className="navbar__logo-container">
         <HashLink
           smooth
           to="/#hero"
           className="navbar__logo-link"
-          onMouseDown={(e) => e.preventDefault()}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            setIsOpen(false);
+          }}
         >
           <Logo classNm={"navbar__logo"} />
         </HashLink>
-        <button className="navbar__hamburger-btn">
+        <button
+          className="navbar__hamburger-btn"
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <Hamburger classNm={"navbar__hamburger-icon"} />
         </button>
       </div>
@@ -23,7 +56,10 @@ const Navbar = () => {
             <HashLink
               smooth
               to="/#about"
-              onMouseDown={(e) => e.preventDefault()}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+              }}
             >
               About
             </HashLink>
@@ -32,7 +68,10 @@ const Navbar = () => {
             <HashLink
               smooth
               to="/#portfolio"
-              onMouseDown={(e) => e.preventDefault()}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+              }}
             >
               Portfolio
             </HashLink>
@@ -41,7 +80,10 @@ const Navbar = () => {
             <HashLink
               smooth
               to="/#skills"
-              onMouseDown={(e) => e.preventDefault()}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+              }}
             >
               My Skills
             </HashLink>
@@ -50,7 +92,10 @@ const Navbar = () => {
             <HashLink
               smooth
               to="/#contact"
-              onMouseDown={(e) => e.preventDefault()}
+              onMouseDown={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+              }}
             >
               Contact
             </HashLink>
@@ -63,7 +108,10 @@ const Navbar = () => {
           href="https://web.facebook.com/MarcoAlpay"
           target="_blank"
           rel="noopener noreferrer"
-          onMouseDown={(e) => e.preventDefault()}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            setIsOpen(false);
+          }}
         >
           <Facebook classNm={"navbar__facebook"} />
         </a>
@@ -72,7 +120,10 @@ const Navbar = () => {
           href="https://github.com/devMarco02"
           target="_blank"
           rel="noopener noreferrer"
-          onMouseDown={(e) => e.preventDefault()}
+          onMouseDown={(e) => {
+            e.preventDefault();
+            setIsOpen(false);
+          }}
         >
           <Github classNm={"navbar__github"} />
         </a>
