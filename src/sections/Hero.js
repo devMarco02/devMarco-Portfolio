@@ -1,7 +1,22 @@
+import { useRef, useState } from "react";
+
 import ObjectsDesign from "../components/ObjectsDesign";
 import { HashLink as Link } from "react-router-hash-link";
 
 const Hero = () => {
+  const deg = 6;
+  let day = new Date();
+  const [hr, setHr] = useState(day.getHours() * 30); //1hr = 30deg
+  const [min, setMin] = useState(day.getMinutes() * deg); //5min = 30deg
+
+  const updateTime = () => {
+    let newDay = new Date();
+    setHr(newDay.getHours() * 30);
+    setMin(newDay.getMinutes() * deg);
+  };
+
+  setInterval(updateTime, 5000);
+
   return (
     <section className="hero" id="hero">
       <div className="hero__container-text">
@@ -17,7 +32,7 @@ const Hero = () => {
           CONTACT ME
         </Link>
       </div>
-      <ObjectsDesign />
+      <ObjectsDesign minDeg={min} hrDeg={hr + min / 12} />
     </section>
   );
 };
