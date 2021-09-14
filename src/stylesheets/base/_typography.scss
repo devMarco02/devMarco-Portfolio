@@ -149,19 +149,21 @@ textarea::placeholder {
 .navbar {
   &__item {
     text-align: center;
-    color: $light-grey-yellow;
+    color: $light-grey-blue;
     font-family: $ff-secondary;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
     @include mq(xsmall) {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
     }
     @include mq(small) {
-      font-size: 1.25rem;
+      font-size: 1.35rem;
     }
     @include mq(medium) {
       font-size: 1.5rem;
     }
     @include mq(large) {
+      letter-spacing: unset;
       font-size: 1rem;
     }
     @include mq(xxlarge) {

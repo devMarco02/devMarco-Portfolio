@@ -8,13 +8,17 @@
 <circle cx="481.141" cy="260.141" r="88.1415" fill="#F7F7F7"/>
 <circle cx="481.141" cy="260.141" r="86.1415" stroke="#1F2833" stroke-width="4"/>
 </g>
-<g id="hour">
+<g id="hour" clip-path="url(#clip0)">
 <rect width="80" height="80" transform="translate(441 220)" fill="white"/>
-<path id="line" d="M479 222.5C479 221.119 480.119 220 481.5 220V220C482.881 220 484 221.119 484 222.5V260H479V222.5Z" fill="#1F2833"/>
+<path id="line" d="M479 222.5C479 221.119 480.119 220 481.5 220C482.881 220 484 221.119 484 222.5V260H479V222.5Z" fill="#1F2833"/>
 </g>
-<g id="minute" clip-path="url(#clip0)">
-<rect width="130" height="130" transform="translate(416 195)" fill="white"/>
-<path id="line_2" d="M479 197C479 195.895 479.895 195 481 195V195C482.105 195 483 195.895 483 197V260H479V197Z" fill="#1F2833"/>
+<g id="minute" clip-path="url(#clip1)">
+<rect width="150" height="150" transform="translate(406 185)" fill="white"/>
+<path id="line_2" d="M479 187C479 185.895 479.895 185 481 185V185C482.105 185 483 185.895 483 187V260H479V187Z" fill="#1F2833"/>
+</g>
+<g id="sec">
+<rect width="150" height="150" transform="translate(406 185)" fill="white"/>
+<path id="line_3" d="M480 186C480 185.448 480.448 185 481 185V185C481.552 185 482 185.448 482 186V280H480V186Z" fill="#1F2833"/>
 </g>
 <circle id="middle-circle" cx="481" cy="260" r="4" fill="#1F2833"/>
 <g id="dash">
@@ -79,7 +83,10 @@
 <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
 </filter>
 <clipPath id="clip0">
-<rect width="130" height="130" fill="white" transform="translate(416 195)"/>
+<rect width="80" height="80" fill="white" transform="translate(441 220)"/>
+</clipPath>
+<clipPath id="clip1">
+<rect width="150" height="150" fill="white" transform="translate(406 185)"/>
 </clipPath>
 </defs>
 </svg>

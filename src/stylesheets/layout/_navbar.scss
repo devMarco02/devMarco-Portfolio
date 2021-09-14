@@ -149,14 +149,14 @@
 
   &__container-icons {
     margin: 1rem 0 5vh;
-    width: 70px;
+    width: 78px;
     display: flex;
     justify-content: space-between;
     @include mq(small) {
-      width: 80px;
+      width: 88px;
     }
     @include mq(medium) {
-      width: 90px;
+      width: 98px;
     }
     @include mq(large) {
       margin: 0;
@@ -190,7 +190,7 @@
 
       path {
         transition: all 150ms linear;
-        fill: $light-grey-yellow;
+        fill: $light-grey-blue;
       }
     }
   }
