@@ -7,6 +7,7 @@ import {
   ContactTriangleLeft,
   ContactTriangleRight,
 } from "../components/GreyShapes";
+import { Copyright } from "../components/Icons";
 
 const Contact = () => {
   const [isAlert, setIsAlert] = useState(false);
@@ -118,7 +119,10 @@ const Contact = () => {
       <ContactTriangleLeft />
       <ContactTriangleRight />
 
-      <footer className="contact__copyright">Copyright 2021 devMarco</footer>
+      <footer className="contact__copyright">
+        <Copyright />
+        Copyright 2021 devMarco
+      </footer>
 
       {isAlert && <Alert text={text} close={() => setIsAlert(false)} />}
     </section>

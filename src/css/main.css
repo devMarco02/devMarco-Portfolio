@@ -920,6 +920,7 @@ textarea::placeholder {
   font-weight: 400;
   text-align: center;
   font-size: 12px;
+  line-height: 1em;
 }
 @media (min-width: 768px) {
   .contact__copyright {
@@ -1542,8 +1543,18 @@ textarea::placeholder {
   }
 }
 .contact__copyright {
-  padding: 1rem;
+  padding: 32px;
   width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact__copyright-icon {
+  height: 1em;
+  width: auto;
+  display: block;
+  margin-right: 0.5em;
 }
 
 .hero {

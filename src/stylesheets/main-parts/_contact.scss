@@ -238,7 +238,18 @@
   }
 
   &__copyright {
-    padding: 1rem;
+    padding: 32px;
     width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__copyright-icon {
+    height: 1em;
+    width: auto;
+    display: block;
+    margin-right: 0.5em;
   }
 }

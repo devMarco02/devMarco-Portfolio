@@ -380,6 +380,7 @@ textarea::placeholder {
     font-weight: $fw-reg;
     text-align: center;
     font-size: 12px;
+    line-height: 1em;
     @include mq(medium) {
       font-size: 13.6px;
     }
