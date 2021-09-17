@@ -18,7 +18,7 @@ export const ArrowLeft = () => {
 export const ArrowRight = () => {
   return (
     <svg
-      className="arrow-btn"
+      className="arrow-btn-icon"
       width="20"
       height="32"
       viewBox="0 0 20 32"

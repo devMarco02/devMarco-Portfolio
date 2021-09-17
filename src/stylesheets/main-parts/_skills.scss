@@ -1,4 +1,5 @@
 .skills {
+  background: $light-grey-97;
   position: relative;
   height: auto;
   max-height: unset;
@@ -141,6 +142,8 @@
   }
 
   &__card {
+    background: white;
+    box-shadow: $bs-card;
     border-radius: 15px;
     width: 100%;
     padding: 2rem 8.5%;
@@ -203,7 +206,6 @@
       margin-bottom: 3.5rem;
       @include mq(xlarge) {
         margin: 0;
-        // top: calc(64px + 5rem);
         top: 50%;
         transform: translateY(-50%);
         left: 0;

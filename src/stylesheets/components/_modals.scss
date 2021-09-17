@@ -95,13 +95,11 @@
   }
 
   &__title {
-    color: $light-blue-green;
     width: 100%;
     margin-bottom: 0.5rem;
   }
 
   &__description {
-    color: white;
     margin-bottom: 5vh;
     @include mq(xxxlarge) {
       min-width: 720px;

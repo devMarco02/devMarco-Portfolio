@@ -11,6 +11,7 @@ const PortfolioPage = () => {
   const [link, setLink] = useState("");
   const [isTouchEnabled, setIsTouchEnabled] = useState(false);
 
+  //=== OPEN MODAL
   const openProject = (targetId) => {
     const project = data.find((project) => project.id === targetId);
     const { title, description, dataOriginal, dataLink } = project;
@@ -21,7 +22,7 @@ const PortfolioPage = () => {
     setLink(dataLink);
   };
 
-  //EXIT MODAL
+  //=== EXIT MODAL
   const exitModal = (e) => {
     setModal(false);
   };
@@ -33,7 +34,7 @@ const PortfolioPage = () => {
     }
   };
 
-  // check if using touch screen
+  //=== CHECK IF USING TOUCH SCREEN
   const checkIsTouchEnabled = () => {
     if (
       "ontouchstart" in Window ||

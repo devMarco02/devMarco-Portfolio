@@ -9,9 +9,10 @@
 // 3. Base stuff
 @import "base/base", "base/typography";
 
-// 4. Layout-related sections
-@import "layout/header", "layout/about", "layout/contact", "layout/hero",
-  "layout/portfolio", "layout/sections", "layout/navbar", "layout/skills";
+// 4. main-parts of the site
+@import "main-parts/about", "main-parts/contact", "main-parts/hero",
+  "main-parts/portfolio", "main-parts/sections", "main-parts/navbar",
+  "main-parts/skills";
 
 // 5. Components
 @import "components/button", "components/blobs", "components/form-input",

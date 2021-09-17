@@ -11,8 +11,8 @@ import resume from "../downloadable/Marco-Resume-2021.pdf";
 const About = () => {
   return (
     <>
-      {/*this divider centers the section when clicked on nav */}
       <div className="about-section-container">
+        {/*this divider centers the section on screen when clicked on nav */}
         <div className="about__divider"></div>
 
         <section className="about" id="about">

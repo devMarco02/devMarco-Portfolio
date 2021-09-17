@@ -42,7 +42,6 @@ const ObjectsDesign = ({ hrDeg = "0", minDeg = "0", secDeg = "0" }) => {
             className="hour"
             clipPath="url(#clip0)"
             style={{
-              transition: "0.25s linear",
               transform: `rotate(${hrDeg + "deg"})`,
               transformOrigin: "481px 260px",
             }}
@@ -63,7 +62,6 @@ const ObjectsDesign = ({ hrDeg = "0", minDeg = "0", secDeg = "0" }) => {
             className="minute"
             clipPath="url(#clip1)"
             style={{
-              transition: "0.25s linear",
               transform: `rotate(${minDeg + "deg"})`,
               transformOrigin: "481px 260px",
             }}
@@ -83,7 +81,6 @@ const ObjectsDesign = ({ hrDeg = "0", minDeg = "0", secDeg = "0" }) => {
           <g
             className="sec"
             style={{
-              transition: "0.05s linear",
               transform: `rotate(${secDeg + "deg"})`,
               transformOrigin: "481px 260px",
             }}

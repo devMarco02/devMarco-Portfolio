@@ -45,7 +45,6 @@ const Navbar = () => {
         </HashLink>
         <button
           className="navbar__hamburger-btn"
-          // onClick={() => setIsOpen(!isOpen)}
           onMouseDown={(e) => {
             e.preventDefault();
             setIsOpen(!isOpen);
@@ -54,6 +53,7 @@ const Navbar = () => {
           <Hamburger classNm={"navbar__hamburger-icon"} />
         </button>
       </div>
+
       <nav className="navbar__nav">
         <ul className="navbar__list">
           <li className="navbar__item navbar__item--about">
@@ -106,6 +106,7 @@ const Navbar = () => {
           </li>
         </ul>
       </nav>
+
       <div className="navbar__container-icons">
         <a
           className="navbar__facebook-link"

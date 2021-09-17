@@ -35,43 +35,11 @@ body {
   position: relative;
 }
 
-main {
-  background: $light-grey-97;
-}
-
-.navbar {
-  background: $dark-blue;
-}
-
-.skills {
-  background: $light-grey-97;
-
-  &__card {
-    background: white;
-    box-shadow: $bs-card;
-  }
-}
-
-.about {
-  // background: $light-grey-93;
-
-  &__container {
-    background: $light-grey-97;
-  }
-}
-
 li {
   list-style-type: none;
 }
 
-/**
- * Basic styles for links
- */
 a {
   text-decoration: none;
   color: $light-grey-blue;
-
-  // @include on-event {
-  //   text-decoration: underline;
-  // }
 }

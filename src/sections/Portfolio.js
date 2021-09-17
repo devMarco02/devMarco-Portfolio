@@ -9,18 +9,19 @@ import data from "./../data/featuredProjectsData";
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0); //index of project list
-  const [size, setSize] = useState(0);
-  const [opacity, setOpacity] = useState(0);
+  const [size, setSize] = useState(0); // height of thumbnail
+  const [opacity, setOpacity] = useState(0); //opacity of btns container
   const [modal, setModal] = useState(false);
-  const [src, setSrc] = useState("");
-  const [title, setTitle] = useState("");
-  const [desc, setDesc] = useState("");
-  const [link, setLink] = useState("");
+  const [src, setSrc] = useState(""); // modal's link src
+  const [title, setTitle] = useState(""); //modal title
+  const [desc, setDesc] = useState(""); //modal desc
+  const [link, setLink] = useState(""); //modal link
   const imgRef = useRef(null);
   const sliderRef = useRef(null);
-  let leftIsVisible = true;
+  let leftIsVisible = true; //arrow btn
   let rightIsVisible = true;
 
+  //OPEN MODAL
   const openProject = (targetId) => {
     const project = data.find((project) => project.id === targetId);
     const { title, description, dataOriginal, dataLink } = project;

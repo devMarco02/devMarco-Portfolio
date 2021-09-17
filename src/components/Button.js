@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import { ArrowLeft, ArrowRight, Close } from "./Icons";
 
 //===MAIN BUTTON
@@ -13,11 +12,6 @@ export const Button = ({ classNm, text = "text", children }) => {
       {children}
     </button>
   );
-};
-
-Button.propTypes = {
-  classNm: PropTypes.string,
-  text: PropTypes.any,
 };
 
 //===ARROW BUTTON
@@ -47,13 +41,6 @@ export const ArrowButton = ({ classNm, func, isVisible, isLeft = true }) => {
   );
 };
 
-ArrowButton.propTypes = {
-  classNm: PropTypes.string,
-  func: PropTypes.func,
-  isVisible: PropTypes.bool,
-  isLeft: PropTypes.bool,
-};
-
 //INDICATOR BUTTON
 
 export const IndicatorButton = ({ func, index, order }) => {
@@ -65,12 +52,6 @@ export const IndicatorButton = ({ func, index, order }) => {
       onMouseDown={(e) => e.preventDefault()}
     ></button>
   );
-};
-
-IndicatorButton.propTypes = {
-  func: PropTypes.func,
-  index: PropTypes.number,
-  order: PropTypes.number,
 };
 
 //CLOSE BUTTON

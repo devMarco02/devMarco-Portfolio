@@ -5,22 +5,22 @@ input,
 textarea {
   font-family: $ff-primary;
   font-weight: $fw-medium;
-  font-size: 1.05rem;
+  font-size: 16.8px;
   @include mq(medium) {
-    font-size: 1.15rem;
+    font-size: 18.4px;
   }
 
   @include mq(xlarge) {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
   @include mq(wide) {
-    font-size: 1.4rem;
+    font-size: 22.4px;
   }
   @include mq(xwide) {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
   @include mq(xxwide) {
-    font-size: 2rem;
+    font-size: 32px;
   }
 }
 
@@ -34,67 +34,67 @@ strong {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: $fw-reg;
   line-height: 1em;
   text-align: center;
 
   @include mq(xxsmall) {
-    font-size: 2.3rem;
+    font-size: 36.8px;
   }
   @include mq(xsmall) {
-    font-size: 2.75rem;
+    font-size: 44px;
   }
   @include mq(small) {
-    font-size: 3.3rem;
+    font-size: 52.8px;
   }
   @include mq(medium) {
-    font-size: 3.5rem;
+    font-size: 56px;
   }
   @include mq(xlarge) {
-    font-size: 3.75rem;
+    font-size: 60px;
   }
   @include mq(xxlarge) {
-    font-size: 4.2rem;
+    font-size: 67.2px;
   }
   @include mq(xxxlarge) {
-    font-size: 4.5rem;
+    font-size: 72px;
   }
   @include mq(wide) {
-    font-size: 5rem;
+    font-size: 80px;
   }
   @include mq(xwide) {
-    font-size: 6rem;
+    font-size: 96px;
   }
   @include mq(xxwide) {
-    font-size: 7.5rem;
+    font-size: 120px;
   }
 }
 
 h3 {
   font-weight: $fw-semi-bold;
   line-height: initial;
-  font-size: 1.25rem;
+  font-size: 20px;
   @include mq(xsmall) {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
   @include mq(small) {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
   @include mq(xlarge) {
-    font-size: 1.8rem;
+    font-size: 28.8px;
   }
   @include mq(xxxlarge) {
-    font-size: 2rem;
+    font-size: 32px;
   }
   @include mq(wide) {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
   @include mq(xwide) {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
   @include mq(xxwide) {
-    font-size: 3rem;
+    font-size: 48px;
   }
 }
 
@@ -108,29 +108,29 @@ textarea::placeholder {
   font-family: $ff-secondary;
   font-weight: $fw-semi-bold;
   line-height: initial;
-  font-size: 0.625rem;
+  font-size: 10px;
 
   @include mq(xsmall) {
-    font-size: 0.7rem;
+    font-size: 11.2px;
   }
   @include mq(small) {
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
   @include mq(medium) {
     font-weight: $fw-bold;
-    font-size: 0.85rem;
+    font-size: 13.6px;
   }
   @include mq(xlarge) {
-    font-size: 0.95rem;
+    font-size: 15.2px;
   }
   @include mq(wide) {
-    font-size: 1.05rem;
+    font-size: 16.8px;
   }
   @include mq(xwide) {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
   @include mq(xxwide) {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 
@@ -151,35 +151,35 @@ textarea::placeholder {
     text-align: center;
     color: $light-grey-blue;
     font-family: $ff-secondary;
-    font-size: 1.1rem;
+    font-size: 17.6px;
     letter-spacing: 0.05em;
     @include mq(xsmall) {
-      font-size: 1.25rem;
+      font-size: 20px;
     }
     @include mq(small) {
-      font-size: 1.35rem;
+      font-size: 21.6px;
     }
     @include mq(medium) {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
     @include mq(large) {
       letter-spacing: unset;
-      font-size: 1rem;
+      font-size: 16px;
     }
     @include mq(xxlarge) {
-      font-size: 1.2rem;
+      font-size: 19.2px;
     }
     @include mq(xxxlarge) {
-      font-size: 1.4rem;
+      font-size: 22.4px;
     }
     @include mq(wide) {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
     @include mq(xwide) {
-      font-size: 1.8rem;
+      font-size: 28.8px;
     }
     @include mq(xxwide) {
-      font-size: 2.5rem;
+      font-size: 40px;
     }
 
     a {
@@ -191,93 +191,94 @@ textarea::placeholder {
   }
 }
 
+//HERO
 .hero {
   &__name {
     font-weight: $fw-medium;
-    font-size: 2.5rem;
+    font-size: 40;
     line-height: 1em;
     @media screen and (min-width: 310px) {
-      font-size: 2.75rem;
+      font-size: 44px;
     }
     @include mq(xxsmall) {
-      font-size: 3.125rem;
+      font-size: 50px;
     }
     @media screen and (min-width: 400px) {
-      font-size: 3.6rem;
+      font-size: 57.6px;
     }
     @media screen and (min-width: 450px) {
-      font-size: 4rem;
+      font-size: 64px;
     }
     @include mq(xsmall) {
-      font-size: 4.5rem;
+      font-size: 72px;
     }
     @media screen and (min-width: 600px) {
-      font-size: 5.25rem;
+      font-size: 84px;
     }
     @include mq(small) {
-      font-size: 5.75rem;
+      font-size: 92px;
     }
     @include mq(medium) {
-      font-size: 6rem;
+      font-size: 96px;
     }
     @include mq(xlarge) {
-      font-size: 6.25rem;
+      font-size: 100px;
     }
     @include mq(xxlarge) {
-      font-size: 7rem;
+      font-size: 112px;
     }
     @include mq(wide) {
-      font-size: 8rem;
+      font-size: 128px;
     }
     @include mq(wide) {
-      font-size: 8.5rem;
+      font-size: 136px;
     }
     @include mq(xwide) {
-      font-size: 10rem;
+      font-size: 160px;
     }
     @include mq(xxwide) {
-      font-size: 13rem;
+      font-size: 208px;
     }
   }
 
   &__title {
-    font-size: 0.9rem;
+    font-size: 14.4px;
     letter-spacing: 0.1em;
     @include mq(xxsmall) {
-      font-size: 1rem;
+      font-size: 16px;
     }
     @media screen and (min-width: 400px) {
-      font-size: 1.05rem;
+      font-size: 16.8px;
     }
     @media screen and (min-width: 450px) {
-      font-size: 1.15rem;
+      font-size: 18.4px;
     }
     @include mq(xsmall) {
-      font-size: 1.3rem;
+      font-size: 20.8px;
     }
     @media screen and (min-width: 600px) {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
     @include mq(small) {
-      font-size: 1.65rem;
+      font-size: 26.4px;
     }
     @include mq(medium) {
-      font-size: 1.74rem;
+      font-size: 27.84px;
     }
     @include mq(xlarge) {
-      font-size: 1.82rem;
+      font-size: 29.12px;
     }
     @include mq(xxlarge) {
-      font-size: 2.03rem;
+      font-size: 32.48px;
     }
     @include mq(wide) {
-      font-size: 2.45rem;
+      font-size: 39.2px;
     }
     @include mq(xwide) {
-      font-size: 2.9rem;
+      font-size: 46.4px;
     }
     @include mq(xxwide) {
-      font-size: 3.75rem;
+      font-size: 60px;
     }
   }
 }
@@ -286,29 +287,29 @@ textarea::placeholder {
 .skills {
   &__card-title {
     @include mq(xlarge) {
-      font-size: 1.6rem;
+      font-size: 25.6px;
     }
     @include mq(xxlarge) {
-      font-size: 1.8rem;
+      font-size: 28.8px;
     }
     @include mq(xxlarge) {
-      font-size: 2rem;
+      font-size: 32px;
     }
     @include mq(wide) {
-      font-size: 2.25rem;
+      font-size: 36px;
     }
     @include mq(xwide) {
-      font-size: 2.5rem;
+      font-size: 40px;
     }
     @include mq(xxwide) {
-      font-size: 3rem;
+      font-size: 48px;
     }
   }
 
   &__level-list {
     font-size: 10px;
     line-height: 1em;
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.128em;
     @include mq(small) {
       font-size: 12px;
       font-weight: $fw-semi-bold;
@@ -325,10 +326,10 @@ textarea::placeholder {
   }
 
   &__tools-list {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1em;
     @include mq(small) {
-      font-size: 1.25rem;
+      font-size: 20px;
     }
     @include mq(wide) {
       font-size: 23px;
@@ -368,10 +369,7 @@ textarea::placeholder {
   }
 
   &__details-item {
-    line-height: 1rem;
-    @include mq(xlarge) {
-      line-height: 1.25rem;
-    }
+    line-height: 1em;
     strong {
       color: $light-red;
     }
@@ -381,21 +379,47 @@ textarea::placeholder {
     font-family: "Roboto", sans-serif;
     font-weight: $fw-reg;
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 12px;
     @include mq(medium) {
-      font-size: 0.85rem;
+      font-size: 13.6px;
     }
     @include mq(xlarge) {
-      font-size: 0.9rem;
+      font-size: 14.4px;
     }
     @include mq(wide) {
-      font-size: 1.05rem;
+      font-size: 16.8px;
     }
     @include mq(xwide) {
-      font-size: 1.15rem;
+      font-size: 18.4px;
     }
     @include mq(xxwide) {
-      font-size: 1.4rem;
+      font-size: 22.4px;
     }
+  }
+
+  .alert {
+    text-align: center;
+
+    &__status {
+      strong {
+        color: white;
+        font-weight: bold;
+      }
+    }
+
+    &__message {
+      color: $light-grey-blue;
+    }
+  }
+}
+
+//MODAL
+.modal {
+  &__title {
+    color: $light-blue-green;
+  }
+
+  &__description {
+    color: white;
   }
 }

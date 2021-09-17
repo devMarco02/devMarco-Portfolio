@@ -46,7 +46,6 @@
   }
 
   &--green {
-    // border: solid 2px $darker-blue-green;
     border-color: $darker-blue-green;
     @include mq(small) {
       border-width: 2.5px;
@@ -159,7 +158,7 @@
       width: 36px;
     }
 
-    .arrow-btn {
+    .arrow-btn-icon {
       display: block;
       width: 100%;
       height: auto;

@@ -371,33 +371,10 @@ body {
   position: relative;
 }
 
-main {
-  background: #f7f7f7;
-}
-
-.navbar {
-  background: #1f2833;
-}
-
-.skills {
-  background: #f7f7f7;
-}
-.skills__card {
-  background: white;
-  box-shadow: 5px 5px 10px 0 #e5e5e5;
-}
-
-.about__container {
-  background: #f7f7f7;
-}
-
 li {
   list-style-type: none;
 }
 
-/**
- * Basic styles for links
- */
 a {
   text-decoration: none;
   color: #c7cbd1;
@@ -410,7 +387,7 @@ input,
 textarea {
   font-family: "Darker Grotesque", sans-serif;
   font-weight: 500;
-  font-size: 1.05rem;
+  font-size: 16.8px;
 }
 @media (min-width: 768px) {
   body,
@@ -418,7 +395,7 @@ input::placeholder,
 textarea::placeholder,
 input,
 textarea {
-    font-size: 1.15rem;
+    font-size: 18.4px;
   }
 }
 @media (min-width: 1024px) {
@@ -427,7 +404,7 @@ input::placeholder,
 textarea::placeholder,
 input,
 textarea {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 }
 @media (min-width: 1600px) {
@@ -436,7 +413,7 @@ input::placeholder,
 textarea::placeholder,
 input,
 textarea {
-    font-size: 1.4rem;
+    font-size: 22.4px;
   }
 }
 @media (min-width: 1920px) {
@@ -445,7 +422,7 @@ input::placeholder,
 textarea::placeholder,
 input,
 textarea {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 }
 @media (min-width: 2560px) {
@@ -454,7 +431,7 @@ input::placeholder,
 textarea::placeholder,
 input,
 textarea {
-    font-size: 2rem;
+    font-size: 32px;
   }
 }
 
@@ -468,100 +445,100 @@ strong {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 400;
   line-height: 1em;
   text-align: center;
 }
 @media (min-width: 350px) {
   h2 {
-    font-size: 2.3rem;
+    font-size: 36.8px;
   }
 }
 @media (min-width: 500px) {
   h2 {
-    font-size: 2.75rem;
+    font-size: 44px;
   }
 }
 @media (min-width: 650px) {
   h2 {
-    font-size: 3.3rem;
+    font-size: 52.8px;
   }
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 3.5rem;
+    font-size: 56px;
   }
 }
 @media (min-width: 1024px) {
   h2 {
-    font-size: 3.75rem;
+    font-size: 60px;
   }
 }
 @media (min-width: 1200px) {
   h2 {
-    font-size: 4.2rem;
+    font-size: 67.2px;
   }
 }
 @media (min-width: 1440px) {
   h2 {
-    font-size: 4.5rem;
+    font-size: 72px;
   }
 }
 @media (min-width: 1600px) {
   h2 {
-    font-size: 5rem;
+    font-size: 80px;
   }
 }
 @media (min-width: 1920px) {
   h2 {
-    font-size: 6rem;
+    font-size: 96px;
   }
 }
 @media (min-width: 2560px) {
   h2 {
-    font-size: 7.5rem;
+    font-size: 120px;
   }
 }
 
 h3 {
   font-weight: 600;
   line-height: initial;
-  font-size: 1.25rem;
+  font-size: 20px;
 }
 @media (min-width: 500px) {
   h3 {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 @media (min-width: 650px) {
   h3 {
-    font-size: 1.75rem;
+    font-size: 28px;
   }
 }
 @media (min-width: 1024px) {
   h3 {
-    font-size: 1.8rem;
+    font-size: 28.8px;
   }
 }
 @media (min-width: 1440px) {
   h3 {
-    font-size: 2rem;
+    font-size: 32px;
   }
 }
 @media (min-width: 1600px) {
   h3 {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 }
 @media (min-width: 1920px) {
   h3 {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 }
 @media (min-width: 2560px) {
   h3 {
-    font-size: 3rem;
+    font-size: 48px;
   }
 }
 
@@ -575,49 +552,49 @@ textarea::placeholder {
   font-family: "Lato", sans-serif;
   font-weight: 600;
   line-height: initial;
-  font-size: 0.625rem;
+  font-size: 10px;
 }
 @media (min-width: 500px) {
   .btn,
 .portfolio__modal-close {
-    font-size: 0.7rem;
+    font-size: 11.2px;
   }
 }
 @media (min-width: 650px) {
   .btn,
 .portfolio__modal-close {
-    font-size: 0.8rem;
+    font-size: 12.8px;
   }
 }
 @media (min-width: 768px) {
   .btn,
 .portfolio__modal-close {
     font-weight: 700;
-    font-size: 0.85rem;
+    font-size: 13.6px;
   }
 }
 @media (min-width: 1024px) {
   .btn,
 .portfolio__modal-close {
-    font-size: 0.95rem;
+    font-size: 15.2px;
   }
 }
 @media (min-width: 1600px) {
   .btn,
 .portfolio__modal-close {
-    font-size: 1.05rem;
+    font-size: 16.8px;
   }
 }
 @media (min-width: 1920px) {
   .btn,
 .portfolio__modal-close {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 }
 @media (min-width: 2560px) {
   .btn,
 .portfolio__modal-close {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 
@@ -633,53 +610,53 @@ textarea::placeholder {
   text-align: center;
   color: #c7cbd1;
   font-family: "Lato", sans-serif;
-  font-size: 1.1rem;
+  font-size: 17.6px;
   letter-spacing: 0.05em;
 }
 @media (min-width: 500px) {
   .navbar__item {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 }
 @media (min-width: 650px) {
   .navbar__item {
-    font-size: 1.35rem;
+    font-size: 21.6px;
   }
 }
 @media (min-width: 768px) {
   .navbar__item {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 @media (min-width: 834px) {
   .navbar__item {
     letter-spacing: unset;
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
   .navbar__item {
-    font-size: 1.2rem;
+    font-size: 19.2px;
   }
 }
 @media (min-width: 1440px) {
   .navbar__item {
-    font-size: 1.4rem;
+    font-size: 22.4px;
   }
 }
 @media (min-width: 1600px) {
   .navbar__item {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 @media (min-width: 1920px) {
   .navbar__item {
-    font-size: 1.8rem;
+    font-size: 28.8px;
   }
 }
 @media (min-width: 2560px) {
   .navbar__item {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 }
 .navbar__item a {
@@ -691,178 +668,178 @@ textarea::placeholder {
 
 .hero__name {
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 40;
   line-height: 1em;
 }
 @media screen and (min-width: 310px) {
   .hero__name {
-    font-size: 2.75rem;
+    font-size: 44px;
   }
 }
 @media (min-width: 350px) {
   .hero__name {
-    font-size: 3.125rem;
+    font-size: 50px;
   }
 }
 @media screen and (min-width: 400px) {
   .hero__name {
-    font-size: 3.6rem;
+    font-size: 57.6px;
   }
 }
 @media screen and (min-width: 450px) {
   .hero__name {
-    font-size: 4rem;
+    font-size: 64px;
   }
 }
 @media (min-width: 500px) {
   .hero__name {
-    font-size: 4.5rem;
+    font-size: 72px;
   }
 }
 @media screen and (min-width: 600px) {
   .hero__name {
-    font-size: 5.25rem;
+    font-size: 84px;
   }
 }
 @media (min-width: 650px) {
   .hero__name {
-    font-size: 5.75rem;
+    font-size: 92px;
   }
 }
 @media (min-width: 768px) {
   .hero__name {
-    font-size: 6rem;
+    font-size: 96px;
   }
 }
 @media (min-width: 1024px) {
   .hero__name {
-    font-size: 6.25rem;
+    font-size: 100px;
   }
 }
 @media (min-width: 1200px) {
   .hero__name {
-    font-size: 7rem;
+    font-size: 112px;
   }
 }
 @media (min-width: 1600px) {
   .hero__name {
-    font-size: 8rem;
+    font-size: 128px;
   }
 }
 @media (min-width: 1600px) {
   .hero__name {
-    font-size: 8.5rem;
+    font-size: 136px;
   }
 }
 @media (min-width: 1920px) {
   .hero__name {
-    font-size: 10rem;
+    font-size: 160px;
   }
 }
 @media (min-width: 2560px) {
   .hero__name {
-    font-size: 13rem;
+    font-size: 208px;
   }
 }
 .hero__title {
-  font-size: 0.9rem;
+  font-size: 14.4px;
   letter-spacing: 0.1em;
 }
 @media (min-width: 350px) {
   .hero__title {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 400px) {
   .hero__title {
-    font-size: 1.05rem;
+    font-size: 16.8px;
   }
 }
 @media screen and (min-width: 450px) {
   .hero__title {
-    font-size: 1.15rem;
+    font-size: 18.4px;
   }
 }
 @media (min-width: 500px) {
   .hero__title {
-    font-size: 1.3rem;
+    font-size: 20.8px;
   }
 }
 @media screen and (min-width: 600px) {
   .hero__title {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 }
 @media (min-width: 650px) {
   .hero__title {
-    font-size: 1.65rem;
+    font-size: 26.4px;
   }
 }
 @media (min-width: 768px) {
   .hero__title {
-    font-size: 1.74rem;
+    font-size: 27.84px;
   }
 }
 @media (min-width: 1024px) {
   .hero__title {
-    font-size: 1.82rem;
+    font-size: 29.12px;
   }
 }
 @media (min-width: 1200px) {
   .hero__title {
-    font-size: 2.03rem;
+    font-size: 32.48px;
   }
 }
 @media (min-width: 1600px) {
   .hero__title {
-    font-size: 2.45rem;
+    font-size: 39.2px;
   }
 }
 @media (min-width: 1920px) {
   .hero__title {
-    font-size: 2.9rem;
+    font-size: 46.4px;
   }
 }
 @media (min-width: 2560px) {
   .hero__title {
-    font-size: 3.75rem;
+    font-size: 60px;
   }
 }
 
 @media (min-width: 1024px) {
   .skills__card-title {
-    font-size: 1.6rem;
+    font-size: 25.6px;
   }
 }
 @media (min-width: 1200px) {
   .skills__card-title {
-    font-size: 1.8rem;
+    font-size: 28.8px;
   }
 }
 @media (min-width: 1200px) {
   .skills__card-title {
-    font-size: 2rem;
+    font-size: 32px;
   }
 }
 @media (min-width: 1600px) {
   .skills__card-title {
-    font-size: 2.25rem;
+    font-size: 36px;
   }
 }
 @media (min-width: 1920px) {
   .skills__card-title {
-    font-size: 2.5rem;
+    font-size: 40px;
   }
 }
 @media (min-width: 2560px) {
   .skills__card-title {
-    font-size: 3rem;
+    font-size: 48px;
   }
 }
 .skills__level-list {
   font-size: 10px;
   line-height: 1em;
-  letter-spacing: 0.08rem;
+  letter-spacing: 0.128em;
 }
 @media (min-width: 650px) {
   .skills__level-list {
@@ -886,12 +863,12 @@ textarea::placeholder {
   }
 }
 .skills__tools-list {
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1em;
 }
 @media (min-width: 650px) {
   .skills__tools-list {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 }
 @media (min-width: 1600px) {
@@ -933,12 +910,7 @@ textarea::placeholder {
   text-align: center;
 }
 .contact__details-item {
-  line-height: 1rem;
-}
-@media (min-width: 1024px) {
-  .contact__details-item {
-    line-height: 1.25rem;
-  }
+  line-height: 1em;
 }
 .contact__details-item strong {
   color: #ff4d5a;
@@ -947,32 +919,49 @@ textarea::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   text-align: center;
-  font-size: 0.75rem;
+  font-size: 12px;
 }
 @media (min-width: 768px) {
   .contact__copyright {
-    font-size: 0.85rem;
+    font-size: 13.6px;
   }
 }
 @media (min-width: 1024px) {
   .contact__copyright {
-    font-size: 0.9rem;
+    font-size: 14.4px;
   }
 }
 @media (min-width: 1600px) {
   .contact__copyright {
-    font-size: 1.05rem;
+    font-size: 16.8px;
   }
 }
 @media (min-width: 1920px) {
   .contact__copyright {
-    font-size: 1.15rem;
+    font-size: 18.4px;
   }
 }
 @media (min-width: 2560px) {
   .contact__copyright {
-    font-size: 1.4rem;
+    font-size: 22.4px;
   }
+}
+.contact .alert {
+  text-align: center;
+}
+.contact .alert__status strong {
+  color: white;
+  font-weight: bold;
+}
+.contact .alert__message {
+  color: #c7cbd1;
+}
+
+.modal__title {
+  color: #49f1c1;
+}
+.modal__description {
+  color: white;
 }
 
 .about-section-container {
@@ -2204,6 +2193,7 @@ section {
 }
 
 .navbar {
+  background: #1f2833;
   position: fixed;
   top: 0;
   right: 0;
@@ -2429,6 +2419,7 @@ section {
 }
 
 .skills {
+  background: #f7f7f7;
   position: relative;
   height: auto;
   max-height: unset;
@@ -2612,6 +2603,8 @@ section {
   display: none;
 }
 .skills__card {
+  background: white;
+  box-shadow: 5px 5px 10px 0 #e5e5e5;
   border-radius: 15px;
   width: 100%;
   padding: 2rem 8.5%;
@@ -3240,7 +3233,7 @@ section {
     width: 36px;
   }
 }
-.portfolio__arrow-btn .arrow-btn {
+.portfolio__arrow-btn .arrow-btn-icon {
   display: block;
   width: 100%;
   height: auto;
@@ -3345,8 +3338,8 @@ textarea {
 .alert {
   position: fixed;
   top: 0;
-  left: 10%;
-  width: 90%;
+  left: 0;
+  width: 100%;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -3354,7 +3347,12 @@ textarea {
   background: rgba(31, 40, 51, 0.9);
   z-index: 1000;
   animation: message 0.25s ease-out;
-  text-align: center;
+}
+@media (min-width: 834px) {
+  .alert {
+    left: 10%;
+    width: 90%;
+  }
 }
 .alert__status {
   display: flex;
@@ -3362,12 +3360,7 @@ textarea {
 }
 .alert__status strong {
   display: block;
-  color: white;
-  font-weight: bold;
   margin-right: 0.75rem;
-}
-.alert__message {
-  color: #c7cbd1;
 }
 .alert__icon {
   width: 20px;
@@ -3531,12 +3524,10 @@ textarea {
   }
 }
 .modal__title {
-  color: #49f1c1;
   width: 100%;
   margin-bottom: 0.5rem;
 }
 .modal__description {
-  color: white;
   margin-bottom: 5vh;
 }
 @media (min-width: 1440px) {
@@ -3545,6 +3536,9 @@ textarea {
   }
 }
 
+.home-page {
+  background: #f7f7f7;
+}
 @media (min-width: 834px) {
   .home-page {
     display: flex;
@@ -3623,7 +3617,7 @@ textarea {
 }
 @media (min-width: 1920px) {
   .portfolio-page__container {
-    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
     max-height: 1296px;
     min-height: 1000px;
   }
@@ -3677,22 +3671,72 @@ textarea {
   transition: all 0.3s ease-out;
 }
 .portfolio-page__img-container::before {
-  content: "VIEW PROJECT";
+  content: "VIEW\aPROJECT";
+  white-space: pre-wrap;
   font-family: "Open Sans", sans-serif;
   z-index: 2;
   text-align: center;
-  font-size: 0.5rem;
+  font-size: 8px;
   font-weight: bold;
-  line-height: 0.8rem;
-  letter-spacing: 3px;
-  width: 80px;
+  line-height: 1.6em;
+  letter-spacing: 0.3em;
+}
+@media (min-width: 500px) {
+  .portfolio-page__img-container::before {
+    font-size: 9px;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio-page__img-container::before {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1600px) {
+  .portfolio-page__img-container::before {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1920px) {
+  .portfolio-page__img-container::before {
+    font-size: 16px;
+  }
+}
+@media (min-width: 2560px) {
+  .portfolio-page__img-container::before {
+    font-size: 20px;
+  }
 }
 .portfolio-page__img-container::after {
   content: "";
-  width: 85px;
-  height: 85px;
   background: #49f1c1;
   border-radius: 50%;
+  width: 40%;
+  height: 0;
+  padding-bottom: 40%;
+}
+@media (min-width: 650px) {
+  .portfolio-page__img-container::after {
+    width: 35%;
+    padding-bottom: 35%;
+  }
+}
+@media (min-width: 768px) {
+  .portfolio-page__img-container::after {
+    width: 30%;
+    padding-bottom: 30%;
+  }
+}
+@media (min-width: 1024px) {
+  .portfolio-page__img-container::after {
+    width: 35%;
+    padding-bottom: 35%;
+  }
+}
+@media (min-width: 1200px) {
+  .portfolio-page__img-container::after {
+    width: 30%;
+    padding-bottom: 30%;
+  }
 }
 .portfolio-page__img {
   object-fit: cover;
@@ -3705,13 +3749,17 @@ textarea {
 }
 
 .not-found-page {
+  background: #f7f7f7;
   display: grid;
   place-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+}
+@media (min-width: 834px) {
+  .not-found-page {
+    width: 90%;
+    margin-left: 10%;
+  }
 }
 .not-found-page__container {
   display: flex;
@@ -3719,7 +3767,7 @@ textarea {
   align-items: center;
 }
 .not-found-page__btn {
-  margin-top: 4rem;
+  margin-top: 64px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -119,6 +119,7 @@ const Contact = () => {
       <ContactTriangleRight />
 
       <footer className="contact__copyright">Copyright 2021 devMarco</footer>
+
       {isAlert && <Alert text={text} close={() => setIsAlert(false)} />}
     </section>
   );
