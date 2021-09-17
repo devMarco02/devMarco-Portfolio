@@ -1543,7 +1543,7 @@ textarea::placeholder {
   }
 }
 .contact__copyright {
-  padding: 32px;
+  padding: 24px;
   width: 100%;
   height: auto;
   display: flex;
