@@ -39,6 +39,7 @@
   }
 
   &__objects {
+    pointer-events: none;
     @include absolute($right: -2px, $bottom: 0);
     width: auto;
     max-width: 100%;

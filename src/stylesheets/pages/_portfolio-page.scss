@@ -16,9 +16,6 @@
     display: grid;
     width: 100%;
     @include mq(xsmall) {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-    @include mq(medium) {
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     @include mq(large) {
@@ -29,12 +26,12 @@
       max-height: 1000px;
     }
     @include mq(xlarge) {
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
       min-height: 640px;
       max-height: 690px;
     }
     @include mq(xxlarge) {
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
       max-height: 810px;
     }
     @include mq(xxxlarge) {
@@ -78,8 +75,11 @@
     @include on-event {
       opacity: 1;
 
-      &::after,
-      &::before {
+      .portfolio-page__img {
+        transform: scale(1.1);
+      }
+
+      .portfolio-page__view-project-icon {
         transform: translate(-50%, -50%) scale(1);
       }
     }
@@ -87,81 +87,31 @@
     //for touch screen device
     &--opaque {
       opacity: 1;
-      &::before,
-      &::after {
+      .portfolio-page__view-project-icon {
         display: none;
       }
     }
 
-    &::before,
-    &::after {
+    .portfolio-page__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease-out;
+    }
+
+    .portfolio-page__view-project-icon {
       pointer-events: none;
       @include absolute($top: 50%, $left: 50%);
       transform: translate(-50%, -50%) scale(0);
       transition: all 0.3s ease-out;
-    }
-
-    &::before {
-      content: "VIEW\aPROJECT";
-      white-space: pre-wrap; //this line adds a line break
-      font-family: "Open Sans", sans-serif;
-      z-index: 2;
-      text-align: center;
-      font-size: 8px;
-      font-weight: bold;
-      line-height: 1.6em;
-      letter-spacing: 0.3em;
-      @include mq(xsmall) {
-        font-size: 9px;
-      }
-      @include mq(xxlarge) {
-        font-size: 10px;
-      }
-      @include mq(wide) {
-        font-size: 12px;
-      }
-      @include mq(xwide) {
-        font-size: 16px;
-      }
-      @include mq(xxwide) {
-        font-size: 20px;
-      }
-    }
-
-    &::after {
-      content: "";
-      background: $light-blue-green;
-      border-radius: 50%;
-      width: 40%;
-      height: 0; //this two lines set the height size equal to width size.
-      padding-bottom: 40%; //
-      @include mq(small) {
-        width: 35%;
-        padding-bottom: 35%;
-      }
+      height: 50%;
+      width: auto;
       @include mq(medium) {
-        width: 30%;
-        padding-bottom: 30%;
+        height: 45%;
       }
-      @include mq(xlarge) {
-        width: 35%;
-        padding-bottom: 35%;
+      @include mq(large) {
+        height: 40%;
       }
-      @include mq(xxlarge) {
-        width: 30%;
-        padding-bottom: 30%;
-      }
-    }
-  }
-
-  &__img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transition: all 0.3s ease-out;
-
-    &:hover {
-      transform: scale(1.1);
     }
   }
 }

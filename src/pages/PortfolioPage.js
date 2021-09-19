@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
+import { ViewProject } from "../components/Icons";
 
 import data from "./../data/PortfolioPageData";
 
@@ -78,6 +79,7 @@ const PortfolioPage = () => {
               onClick={() => openProject(id)}
             >
               <img className="portfolio-page__img" src={image} alt={title} />
+              <ViewProject />
             </div>
           );
         })}

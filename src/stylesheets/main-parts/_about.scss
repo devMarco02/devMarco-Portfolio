@@ -58,10 +58,13 @@
 
   &__content {
     position: relative;
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     z-index: 50;
+    @include mq(medium) {
+      width: 85%;
+    }
     @include mq(xxlarge) {
       max-width: 1000px;
     }
