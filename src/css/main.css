@@ -3552,6 +3552,9 @@ textarea {
     min-width: 720px;
   }
 }
+.modal__frontend-mentor-link:hover, .modal__frontend-mentor-link:active, .modal__frontend-mentor-link:focus {
+  color: #49f1c1;
+}
 
 .home-page {
   background: #f7f7f7;

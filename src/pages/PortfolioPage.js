@@ -9,18 +9,21 @@ const PortfolioPage = () => {
   const [src, setSrc] = useState("");
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [isFM, setIsFM] = useState(false);
   const [link, setLink] = useState("");
   const [isTouchEnabled, setIsTouchEnabled] = useState(false);
 
   //=== OPEN MODAL
   const openProject = (targetId) => {
     const project = data.find((project) => project.id === targetId);
-    const { title, description, dataOriginal, dataLink } = project;
+    const { title, description, dataOriginal, dataLink, isFrontendMentor } =
+      project;
     setModal(true);
     setSrc(dataOriginal);
     setTitle(title);
     setDesc(description);
     setLink(dataLink);
+    setIsFM(isFrontendMentor);
   };
 
   //=== EXIT MODAL
@@ -93,6 +96,7 @@ const PortfolioPage = () => {
           title={title}
           desc={desc}
           link={link}
+          isFrontendMentor={isFM}
         />
       )}
     </main>

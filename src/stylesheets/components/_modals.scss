@@ -105,4 +105,10 @@
       min-width: 720px;
     }
   }
+
+  &__frontend-mentor-link {
+    @include on-event {
+      color: $light-blue-green;
+    }
+  }
 }
