@@ -38,6 +38,10 @@
     }
   }
 
+  &__btn {
+    display: block;
+  }
+
   &__objects {
     pointer-events: none;
     @include absolute($right: -2px, $bottom: 0);

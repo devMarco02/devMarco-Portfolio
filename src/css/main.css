@@ -6,6 +6,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -1616,6 +1617,9 @@ textarea::placeholder {
     margin-bottom: 6rem;
   }
 }
+.hero__btn {
+  display: block;
+}
 .hero__objects {
   pointer-events: none;
   position: absolute;
@@ -3051,7 +3055,7 @@ section {
 }
 
 .btn {
-  transition: all 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border-color 0.25s ease-in-out;
   cursor: pointer;
   background: transparent;
   width: max-content;
@@ -3556,6 +3560,129 @@ textarea {
   color: #49f1c1;
 }
 
+.laptop__text-container {
+  position: relative;
+}
+.laptop__text-code {
+  font-size: 40px;
+  font-family: "Source Code Pro", monospace;
+  line-height: 1em;
+  color: #49f1c1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.laptop__text-code::before, .laptop__text-code::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.laptop__text-code::before {
+  background: #43576f;
+  animation: typewriter 1s steps(6) 1.75s forwards;
+}
+.laptop__text-code::after {
+  background: #49f1c1;
+  width: 2px;
+  animation: typewriter 1s steps(6) 1.75s forwards, blink 6s;
+}
+.laptop__text-animate, .laptop__text-design, .laptop__text-cover {
+  display: none;
+}
+.laptop__text-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #43576f;
+  animation: slide 1s linear forwards;
+}
+
+@keyframes slide {
+  to {
+    right: 100%;
+  }
+}
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  0% {
+    background: #49f1c1;
+  }
+  8% {
+    background: #49f1c1;
+  }
+  9% {
+    background: transparent;
+  }
+  16% {
+    background: transparent;
+  }
+  17% {
+    background: #49f1c1;
+  }
+  24% {
+    background: #49f1c1;
+  }
+  25% {
+    background: transparent;
+  }
+  32% {
+    background: transparent;
+  }
+  33% {
+    background: #49f1c1;
+  }
+  56% {
+    background: #49f1c1;
+  }
+  57% {
+    background: transparent;
+  }
+  64% {
+    background: transparent;
+  }
+  65% {
+    background: #49f1c1;
+  }
+  72% {
+    background: #49f1c1;
+  }
+  73% {
+    background: transparent;
+  }
+  80% {
+    background: transparent;
+  }
+  81% {
+    background: #49f1c1;
+  }
+  88% {
+    background: #49f1c1;
+  }
+  89% {
+    background: transparent;
+  }
+  96% {
+    background: transparent;
+  }
+  97% {
+    background: #49f1c1;
+  }
+  100% {
+    background: #49f1c1;
+    transform: translateX(100%);
+  }
+}
 .home-page {
   background: #f7f7f7;
 }

@@ -6,6 +6,8 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 import data from "./../data/featuredProjectsData";
+// import { gsap } from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0); //index of project list
@@ -97,6 +99,21 @@ const Portfolio = () => {
       setModal(false);
     }
   };
+
+  //Animation
+  // useEffect(() => {
+  //   gsap.to(".portfolio__title", {
+  //     scrollTrigger: {
+  //       trigger: ".portfolio__btns-container",
+  //       toggleActions: "play pause resume pause",
+  //       // markers: true,
+  //       start: "top center",
+  //       end: "bottom center",
+  //     },
+  //     opacity: 0,
+  //     duration: 3,
+  //   });
+  // });
 
   return (
     <>
