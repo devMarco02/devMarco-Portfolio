@@ -8,9 +8,9 @@ import Blobs from "../components/Blobs";
 import { DownloadIcon } from "../components/Icons";
 import marco from "../images/marco.png";
 import resume from "../downloadable/Marco-Resume-2021.pdf";
-import { gsap, Power2 } from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react/cjs/react.development";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,19 +37,19 @@ const About = () => {
         x: () => 0,
         duration: 1,
         delay: 0.1,
-        ease: Power2.easeOut,
+        ease: "power2",
       }
     );
     tl.fromTo(
       ".about__body",
       { opacity: () => 0, x: () => -500 },
-      { opacity: () => 1, x: () => 0, duration: 1, ease: Power2.easeOut },
+      { opacity: () => 1, x: () => 0, duration: 1, ease: "power2" },
       0.25
     );
     tl.fromTo(
       ".about__btn",
       { opacity: () => 0, x: () => -500 },
-      { opacity: () => 1, x: () => 0, duration: 1, ease: Power2.easeOut },
+      { opacity: () => 1, x: () => 0, duration: 1, ease: "power2" },
       0.4
     );
 
@@ -63,7 +63,7 @@ const About = () => {
         x: () => 0,
         duration: 1.3,
         delay: 0.1,
-        ease: Power2.easeOut,
+        ease: "power2",
         stagger: 0.15,
         scrollTrigger: {
           trigger: ".about",

@@ -1,5 +1,3 @@
-import { gsap, Power2 } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Blobs from "./../components/Blobs";
 import Laptop from "../components/Laptop";
 import { ThreeLines, ZigzagBig, Dots } from "../components/BackgroundShapes";
@@ -11,7 +9,9 @@ import {
   SkillsLeftTriangle,
   SkillsRightTriangle,
 } from "../components/GreyShapes";
-import { useEffect } from "react/cjs/react.development";
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,7 +33,7 @@ const Skills = () => {
         opacity: () => 0,
         x: () => -1000,
       },
-      { opacity: 1, x: () => 0, duration: 0.5, ease: Power2.easeOut }
+      { opacity: 1, x: () => 0, duration: 0.5, ease: "power2" }
     );
     tl.fromTo(
       ".skills__triangle-right",
@@ -45,7 +45,7 @@ const Skills = () => {
         opacity: () => 1,
         x: () => 0,
         duration: 0.5,
-        ease: Power2.easeOut,
+        ease: "power2",
       },
       0.25
     );
@@ -57,7 +57,7 @@ const Skills = () => {
       },
       {
         opacity: () => 1,
-        ease: Power2.easeOut,
+        ease: "power2",
         duration: 0.5,
       },
       0.5
@@ -73,7 +73,7 @@ const Skills = () => {
         opacity: () => 1,
         x: () => 0,
         duration: 0.7,
-        ease: Power2.easeOut,
+        ease: "power2",
       },
       0.5
     );
@@ -88,7 +88,7 @@ const Skills = () => {
         opacity: () => 1,
         x: () => 0,
         duration: 0.7,
-        ease: Power2.easeOut,
+        ease: "power2",
       },
       0.5
     );

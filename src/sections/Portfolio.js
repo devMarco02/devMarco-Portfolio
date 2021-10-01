@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 import data from "./../data/featuredProjectsData";
-import { gsap, Power2 } from "gsap";
+import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -121,7 +121,7 @@ const Portfolio = () => {
         },
         opacity: () => 1,
         duration: 0.75,
-        ease: Power2.easeInOut,
+        ease: "power2.inOut",
         stagger: 0.25,
       }
     );

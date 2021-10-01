@@ -1,12 +1,12 @@
-import { gsap, Power2, SteppedEase } from "gsap";
-import CSSRulePlugin from "gsap/CSSRulePlugin";
+import { gsap } from "gsap";
+import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
 gsap.registerPlugin(CSSRulePlugin);
 
 export const objectsAnim = (tl, laptopTl) => {
   const textCodeCover = CSSRulePlugin.getRule(".laptop__text-code:before");
   const textCodeLine = CSSRulePlugin.getRule(".laptop__text-code:after");
-  const steps = new SteppedEase.config(6);
+  const steps = "steps(6)";
 
   //===texts
   tl.fromTo(
@@ -20,7 +20,7 @@ export const objectsAnim = (tl, laptopTl) => {
       x: () => 0,
       duration: 1,
       delay: 0.25,
-      ease: Power2.easeOut,
+      ease: "power2",
       stagger: 0.15,
     }
   );
@@ -35,7 +35,7 @@ export const objectsAnim = (tl, laptopTl) => {
       opacity: () => 1,
       x: () => 0,
       duration: 1.3,
-      ease: Power2.easeOut,
+      ease: "power2",
     },
     0.25
   );
@@ -53,7 +53,7 @@ export const objectsAnim = (tl, laptopTl) => {
       cssRule: {
         opacity: () => 0,
       },
-      ease: SteppedEase.config(1),
+      ease: "steps(1)",
       duration: 1,
       repeat: 2,
     },
@@ -89,7 +89,7 @@ export const objectsAnim = (tl, laptopTl) => {
       cssRule: {
         opacity: () => 0,
       },
-      ease: SteppedEase.config(1),
+      ease: "steps(1)",
       duration: 1,
       repeat: 2,
     }
@@ -102,7 +102,7 @@ export const objectsAnim = (tl, laptopTl) => {
     },
     {
       opacity: () => 0,
-      ease: SteppedEase.config(1),
+      ease: "steps(1)",
     }
   );
   //==animate text
@@ -114,7 +114,7 @@ export const objectsAnim = (tl, laptopTl) => {
     },
     {
       opacity: () => 1,
-      ease: SteppedEase.config(1),
+      ease: "steps(1)",
     }
   );
   //fill
@@ -220,7 +220,7 @@ export const objectsAnim = (tl, laptopTl) => {
     },
     {
       opacity: () => 0,
-      ease: SteppedEase.config(1),
+      ease: "steps(1)",
       delay: 1,
     }
   );
@@ -234,7 +234,7 @@ export const objectsAnim = (tl, laptopTl) => {
     },
     {
       opacity: () => 1,
-      ease: SteppedEase.config(1),
+      ease: "steps(1)",
     }
   );
   //move
@@ -246,7 +246,7 @@ export const objectsAnim = (tl, laptopTl) => {
     {
       xPercent: () => 100,
       duration: 3,
-      ease: Power2.easeOut,
+      ease: "power2",
     }
   );
 };

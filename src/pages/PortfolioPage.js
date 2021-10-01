@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { ViewProject } from "../components/Icons";
-import { gsap, Power1 } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
 import data from "./../data/PortfolioPageData";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,7 +78,7 @@ const PortfolioPage = () => {
         duration: 1,
         delay: 0.5,
         stagger: 0.1,
-        ease: Power1.easeOut,
+        ease: "power1",
       }
     );
 
