@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import Alert from "../components/Alert";
 import { SendButton } from "../components/Button";
@@ -8,10 +8,16 @@ import {
   ContactTriangleRight,
 } from "../components/GreyShapes";
 import { Copyright } from "../components/Icons";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
   const [isAlert, setIsAlert] = useState(false);
   const [text, setText] = useState("");
+  let formRef = useRef(null);
+  let detailsListRef = useRef(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -44,6 +50,60 @@ const Contact = () => {
     e.target.reset();
   };
 
+  //animations
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".contact",
+        toggleActions: "restart none none reverse",
+        start: () => "top center",
+        invalidateOnRefresh: true,
+      },
+    });
+    const formChildren = formRef.current.childNodes;
+    const details = detailsListRef.current.childNodes;
+
+    //title
+    tl.fromTo(
+      ".contact__title",
+      { opacity: () => 0, scale: () => 0 },
+      { opacity: () => 1, scale: () => 1, duration: 0.3, delay: 0.1 }
+    );
+    //form
+    tl.fromTo(
+      formChildren,
+      { opacity: () => 0, scale: () => 0 },
+      {
+        opacity: () => 1,
+        scale: () => 1,
+        duration: 0.6,
+        stagger: 0.1,
+      },
+      0.4
+    );
+    //details title
+    tl.fromTo(
+      ".contact__details-title",
+      { opacity: () => 0, scale: () => 0 },
+      { opacity: () => 1, scale: () => 1, duration: 0.3 },
+      0.4
+    );
+    //details list
+    tl.fromTo(
+      details,
+      { opacity: () => 0, scale: () => 0 },
+      {
+        opacity: () => 1,
+        scale: () => 1,
+        duration: 0.6,
+        stagger: 0.1,
+      },
+      0.5
+    );
+
+    return () => tl.kill();
+  }, []);
+
   return (
     <section className="contact" id="contact">
       <h2 className="contact__title">
@@ -51,7 +111,7 @@ const Contact = () => {
       </h2>
       <div className="contact__container">
         <div className="contact__left-grid">
-          <form className="contact__form" onSubmit={sendEmail}>
+          <form className="contact__form" onSubmit={sendEmail} ref={formRef}>
             <h3 className="contact__form-title">Contact Me</h3>
             <input
               type="text"
@@ -96,7 +156,7 @@ const Contact = () => {
         <div className="contact__right-grid">
           <div className="contact__details">
             <h3 className="contact__details-title">My Contact Details</h3>
-            <ul className="contact__details-list">
+            <ul className="contact__details-list" ref={detailsListRef}>
               <li className="contact__details-item">
                 <strong>Email</strong>
                 devmarco.02@gmail.com

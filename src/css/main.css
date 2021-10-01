@@ -1167,9 +1167,8 @@ textarea::placeholder {
   width: 105%;
   height: auto;
   position: absolute;
-  top: 50%;
+  top: -10%;
   left: 0;
-  transform: translateY(-50%);
 }
 .about__marco-img {
   width: 100%;
@@ -3574,7 +3573,7 @@ textarea {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.laptop__text-code::before, .laptop__text-code::after {
+.laptop__text-code:before, .laptop__text-code:after {
   content: "";
   position: absolute;
   top: 0;
@@ -3582,17 +3581,17 @@ textarea {
   bottom: 0;
   left: 0;
 }
-.laptop__text-code::before {
+.laptop__text-code:before {
   background: #43576f;
-  animation: typewriter 1s steps(6) 1.75s forwards;
 }
-.laptop__text-code::after {
-  background: #49f1c1;
-  width: 2px;
-  animation: typewriter 1s steps(6) 1.75s forwards, blink 6s;
+.laptop__text-code:after {
+  background: #43576f;
+  border-left: 2px solid #49f1c1;
+  outline: 4px solid #43576f;
+  z-index: 5;
 }
 .laptop__text-animate, .laptop__text-design, .laptop__text-cover {
-  display: none;
+  opacity: 0;
 }
 .laptop__text-cover {
   position: absolute;
@@ -3601,88 +3600,8 @@ textarea {
   right: 0;
   bottom: 0;
   background: #43576f;
-  animation: slide 1s linear forwards;
 }
 
-@keyframes slide {
-  to {
-    right: 100%;
-  }
-}
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-@keyframes blink {
-  0% {
-    background: #49f1c1;
-  }
-  8% {
-    background: #49f1c1;
-  }
-  9% {
-    background: transparent;
-  }
-  16% {
-    background: transparent;
-  }
-  17% {
-    background: #49f1c1;
-  }
-  24% {
-    background: #49f1c1;
-  }
-  25% {
-    background: transparent;
-  }
-  32% {
-    background: transparent;
-  }
-  33% {
-    background: #49f1c1;
-  }
-  56% {
-    background: #49f1c1;
-  }
-  57% {
-    background: transparent;
-  }
-  64% {
-    background: transparent;
-  }
-  65% {
-    background: #49f1c1;
-  }
-  72% {
-    background: #49f1c1;
-  }
-  73% {
-    background: transparent;
-  }
-  80% {
-    background: transparent;
-  }
-  81% {
-    background: #49f1c1;
-  }
-  88% {
-    background: #49f1c1;
-  }
-  89% {
-    background: transparent;
-  }
-  96% {
-    background: transparent;
-  }
-  97% {
-    background: #49f1c1;
-  }
-  100% {
-    background: #49f1c1;
-    transform: translateX(100%);
-  }
-}
 .home-page {
   background: #f7f7f7;
 }
@@ -3811,7 +3730,7 @@ textarea {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  transition: all 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 .portfolio-page__img-container .portfolio-page__view-project-icon {
   pointer-events: none;

@@ -16,28 +16,28 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    &::before,
-    &::after {
+    &:before,
+    &:after {
       content: "";
       @include absolute($top: 0, $right: 0, $bottom: 0, $left: 0);
     }
 
-    &::before {
+    &:before {
       background: $grey-dark-blue;
-      animation: typewriter 1s steps(6) 1.75s forwards;
     }
 
-    &::after {
-      background: $light-blue-green;
-      width: 2px;
-      animation: typewriter 1s steps(6) 1.75s forwards, blink 6s;
+    &:after {
+      background: $grey-dark-blue;
+      border-left: 2px solid $light-blue-green;
+      outline: 4px solid $grey-dark-blue; //covers the red line glitch
+      z-index: 5;
     }
   }
 
   &__text-animate,
   &__text-design,
   &__text-cover {
-    display: none;
+    opacity: 0;
   }
 
   &__text-cover {
@@ -47,88 +47,5 @@
     right: 0;
     bottom: 0;
     background: $grey-dark-blue;
-    animation: slide 1s linear forwards;
-  }
-}
-
-@keyframes slide {
-  to {
-    right: 100%;
-  }
-}
-
-@keyframes typewriter {
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes blink {
-  0% {
-    background: $light-blue-green;
-  }
-  8% {
-    background: $light-blue-green;
-  }
-  9% {
-    background: transparent;
-  }
-  16% {
-    background: transparent;
-  }
-  17% {
-    background: $light-blue-green;
-  }
-  24% {
-    background: $light-blue-green;
-  }
-  25% {
-    background: transparent;
-  }
-  32% {
-    background: transparent;
-  }
-  33% {
-    background: $light-blue-green;
-  }
-  56% {
-    background: $light-blue-green;
-  }
-  57% {
-    background: transparent;
-  }
-  64% {
-    background: transparent;
-  }
-  65% {
-    background: $light-blue-green;
-  }
-  72% {
-    background: $light-blue-green;
-  }
-  73% {
-    background: transparent;
-  }
-  80% {
-    background: transparent;
-  }
-  81% {
-    background: $light-blue-green;
-  }
-  88% {
-    background: $light-blue-green;
-  }
-  89% {
-    background: transparent;
-  }
-  96% {
-    background: transparent;
-  }
-  97% {
-    background: $light-blue-green;
-  }
-  100% {
-    background: $light-blue-green;
-    transform: translateX(100%);
   }
 }

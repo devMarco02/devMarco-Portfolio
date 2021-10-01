@@ -6,8 +6,10 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 import data from "./../data/featuredProjectsData";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, Power2 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0); //index of project list
@@ -20,6 +22,7 @@ const Portfolio = () => {
   const [link, setLink] = useState(""); //modal link
   const imgRef = useRef(null);
   const sliderRef = useRef(null);
+  const sectionRef = useRef(null);
   let leftIsVisible = true; //arrow btn
   let rightIsVisible = true;
 
@@ -100,25 +103,36 @@ const Portfolio = () => {
     }
   };
 
-  //Animation
-  // useEffect(() => {
-  //   gsap.to(".portfolio__title", {
-  //     scrollTrigger: {
-  //       trigger: ".portfolio__btns-container",
-  //       toggleActions: "play pause resume pause",
-  //       // markers: true,
-  //       start: "top center",
-  //       end: "bottom center",
-  //     },
-  //     opacity: 0,
-  //     duration: 3,
-  //   });
-  // });
+  //Animations
+  useEffect(() => {
+    const children = sectionRef.current.childNodes;
+
+    gsap.fromTo(
+      children,
+      {
+        opacity: () => 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: ".portfolio",
+          toggleActions: "restart reverse restart reverse",
+          start: () => "top center",
+          invalidateOnRefresh: true,
+        },
+        opacity: () => 1,
+        duration: 0.75,
+        ease: Power2.easeInOut,
+        stagger: 0.25,
+      }
+    );
+
+    return () => gsap.killTweensOf(children);
+  }, []);
 
   return (
     <>
       <TopDivider />
-      <section className="portfolio" id="portfolio">
+      <section className="portfolio" id="portfolio" ref={sectionRef}>
         <h2 className="portfolio__title">
           My <strong>Portfolio</strong>
         </h2>

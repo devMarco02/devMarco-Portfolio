@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
 import Modal from "../components/Modal";
 import { ViewProject } from "../components/Icons";
+import { gsap, Power1 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import data from "./../data/PortfolioPageData";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const PortfolioPage = () => {
   const [modal, setModal] = useState(false);
@@ -63,6 +67,23 @@ const PortfolioPage = () => {
       window.removeEventListener("resize", checkIsTouchEnabled);
     };
   });
+
+  //animations
+  useEffect(() => {
+    gsap.fromTo(
+      ".portfolio-page__img",
+      { opacity: () => 0 },
+      {
+        opacity: () => 1,
+        duration: 1,
+        delay: 0.5,
+        stagger: 0.1,
+        ease: Power1.easeOut,
+      }
+    );
+
+    return () => gsap.killTweensOf(".portfolio-page__img");
+  }, []);
 
   return (
     <main className="portfolio-page">

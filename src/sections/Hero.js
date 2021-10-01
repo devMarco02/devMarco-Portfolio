@@ -1,9 +1,11 @@
 import { useState, useEffect, useRef } from "react";
-import { gsap, Power2 } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { objectsAnim } from "../animations";
 
 import ObjectsDesign from "../components/ObjectsDesign";
 import { HashLink as Link } from "react-router-hash-link";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,52 +33,37 @@ const Hero = () => {
   }, []);
 
   //Animation
-  // const tl = gsap.timeline();
-
   useEffect(() => {
-    const text = textsRef.current.childNodes;
-    //text
-    gsap.from(text, {
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero",
         toggleActions: "restart pause restart pause",
-        start: "top bottom",
-        end: "bottom top",
-      },
-      opacity: 0,
-      x: -500,
-      duration: 1,
-      delay: 0.1,
-      ease: Power2.easeOut,
-      stagger: {
-        each: 0.15,
+        start: () => "top bottom",
+        invalidateOnRefresh: true,
       },
     });
-    //objects
-    gsap.from(".hero__objects", {
-      scrollTrigger: {
-        trigger: ".hero",
-        toggleActions: "restart pause restart pause",
-        start: "top bottom",
-        end: "bottom top",
-      },
-      opacity: 0,
-      x: 500,
-      duration: 1.3,
-      delay: 0.1,
-      ease: Power2.easeOut,
+    const laptopTl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 1,
     });
+
+    objectsAnim(tl, laptopTl);
+
+    return () => {
+      tl.kill();
+      laptopTl.kill();
+    };
   }, []);
 
   return (
     <section className="hero" id="hero" ref={section}>
-      <div className="hero__container-text" ref={textsRef}>
-        <h1 className="hero__name">MARCO POLO</h1>
-        <h3 className="hero__title">FRONT-END WEB DEVELOPER</h3>
+      <div className="hero__container-text hero-text" ref={textsRef}>
+        <h1 className="hero__name hero-text">MARCO POLO</h1>
+        <h3 className="hero__title hero-text">FRONT-END WEB DEVELOPER</h3>
         <Link
           smooth
           to="/#contact"
-          className="btn hero__btn"
+          className="btn hero__btn hero-text"
           onMouseDown={(e) => e.preventDefault()}
         >
           CONTACT ME

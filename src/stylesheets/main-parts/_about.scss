@@ -148,8 +148,7 @@
   &__blobs {
     width: 105%;
     height: auto;
-    @include absolute($top: 50%, $left: 0);
-    transform: translateY(-50%);
+    @include absolute($top: -10%, $left: 0);
   }
 
   &__marco-img {

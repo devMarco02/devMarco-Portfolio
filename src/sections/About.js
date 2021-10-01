@@ -8,7 +8,77 @@ import Blobs from "../components/Blobs";
 import { DownloadIcon } from "../components/Icons";
 import marco from "../images/marco.png";
 import resume from "../downloadable/Marco-Resume-2021.pdf";
+import { gsap, Power2 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react/cjs/react.development";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const About = () => {
+  let imgContainerRef = useRef(null);
+
+  useEffect(() => {
+    //Animations
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about",
+        toggleActions: "restart reverse restart reverse",
+        start: () => "top center",
+        invalidateOnRefresh: true,
+      },
+    });
+
+    //texts timeline
+    tl.fromTo(
+      ".about__title",
+      { opacity: () => 0, x: () => -500 },
+      {
+        opacity: () => 1,
+        x: () => 0,
+        duration: 1,
+        delay: 0.1,
+        ease: Power2.easeOut,
+      }
+    );
+    tl.fromTo(
+      ".about__body",
+      { opacity: () => 0, x: () => -500 },
+      { opacity: () => 1, x: () => 0, duration: 1, ease: Power2.easeOut },
+      0.25
+    );
+    tl.fromTo(
+      ".about__btn",
+      { opacity: () => 0, x: () => -500 },
+      { opacity: () => 1, x: () => 0, duration: 1, ease: Power2.easeOut },
+      0.4
+    );
+
+    //image animation
+    const children = imgContainerRef.current.childNodes;
+    gsap.fromTo(
+      children,
+      { opacity: () => 0, x: () => 500 },
+      {
+        opacity: () => 1,
+        x: () => 0,
+        duration: 1.3,
+        delay: 0.1,
+        ease: Power2.easeOut,
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: ".about",
+          toggleActions: "restart reverse restart reverse",
+          start: () => "top center",
+          invalidateOnRefresh: true,
+        },
+      }
+    );
+
+    return () => {
+      tl.kill();
+      gsap.killTweensOf(children);
+    };
+  }, []);
   return (
     <>
       <div className="about-section-container">
@@ -20,7 +90,7 @@ const About = () => {
             <h2 className="about__title">
               About <strong>Me</strong>
             </h2>
-            <div className="about__img-container">
+            <div className="about__img-container" ref={imgContainerRef}>
               <img className="about__marco-img" src={marco} alt="Marco Alpay" />
               <Blobs classNm="about__blobs" />
             </div>
