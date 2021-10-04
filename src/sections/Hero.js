@@ -37,7 +37,7 @@ const Hero = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".hero",
-        toggleActions: "restart pause restart pause",
+        toggleActions: "play pause restart pause",
         start: () => "top bottom",
         invalidateOnRefresh: true,
       },
