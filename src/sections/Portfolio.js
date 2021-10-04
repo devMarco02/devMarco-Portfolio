@@ -6,10 +6,6 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
 import data from "./../data/featuredProjectsData";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
   const [index, setIndex] = useState(0); //index of project list
@@ -102,32 +98,6 @@ const Portfolio = () => {
       setModal(false);
     }
   };
-
-  //Animations
-  useEffect(() => {
-    const children = sectionRef.current.childNodes;
-
-    gsap.fromTo(
-      children,
-      {
-        opacity: () => 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: ".portfolio",
-          toggleActions: "restart reverse restart reverse",
-          start: () => "top center",
-          invalidateOnRefresh: true,
-        },
-        opacity: () => 1,
-        duration: 0.75,
-        ease: "power2.inOut",
-        stagger: 0.25,
-      }
-    );
-
-    return () => gsap.killTweensOf(children);
-  }, []);
 
   return (
     <>

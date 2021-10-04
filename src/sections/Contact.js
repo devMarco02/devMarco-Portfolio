@@ -63,42 +63,34 @@ const Contact = () => {
     const formChildren = formRef.current.childNodes;
     const details = detailsListRef.current.childNodes;
 
-    //title
-    tl.fromTo(
-      ".contact__title",
-      { opacity: () => 0, scale: () => 0 },
-      { opacity: () => 1, scale: () => 1, duration: 0.3, delay: 0.1 }
-    );
     //form
     tl.fromTo(
       formChildren,
-      { opacity: () => 0, scale: () => 0 },
+      { scale: () => 0 },
       {
-        opacity: () => 1,
         scale: () => 1,
         duration: 0.6,
+        delay: 0.1,
         stagger: 0.1,
-      },
-      0.4
+      }
     );
     //details title
     tl.fromTo(
       ".contact__details-title",
-      { opacity: () => 0, scale: () => 0 },
-      { opacity: () => 1, scale: () => 1, duration: 0.3 },
-      0.4
+      { scale: () => 0 },
+      { scale: () => 1, duration: 0.3, delay: 0.1 },
+      "<"
     );
     //details list
     tl.fromTo(
       details,
-      { opacity: () => 0, scale: () => 0 },
+      { scale: () => 0 },
       {
-        opacity: () => 1,
         scale: () => 1,
         duration: 0.6,
         stagger: 0.1,
       },
-      0.5
+      "<"
     );
 
     return () => tl.kill();

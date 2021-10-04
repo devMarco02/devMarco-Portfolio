@@ -214,6 +214,11 @@
     cursor: pointer;
     width: 100%;
     height: auto;
+    transition: transform 150ms linear;
+
+    @include on-event {
+      transform: scale(1.02);
+    }
   }
 
   &__text-container {

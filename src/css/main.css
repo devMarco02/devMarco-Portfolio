@@ -1918,6 +1918,10 @@ textarea::placeholder {
   cursor: pointer;
   width: 100%;
   height: auto;
+  transition: transform 150ms linear;
+}
+.portfolio__img:hover, .portfolio__img:active, .portfolio__img:focus {
+  transform: scale(1.02);
 }
 .portfolio__text-container {
   position: relative;

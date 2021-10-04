@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Logo, Facebook, Github, Hamburger } from "./components/Icons";
-import { gsap } from "gsap";
 
 // custom hooks
 const useClickOutside = (handler) => {
@@ -32,38 +31,6 @@ const Navbar = () => {
   let domNode = useClickOutside(() => {
     setIsOpen(false);
   });
-
-  //animations
-  useEffect(() => {
-    const links = listRef.current.childNodes;
-    const social = socialRef.current.childNodes;
-    const tl = gsap.timeline();
-    tl.fromTo(
-      ".navbar__logo-container",
-      {
-        opacity: () => 0,
-        scale: () => 0,
-      },
-      {
-        opacity: () => 1,
-        scale: () => 1,
-        duration: 0.3,
-        delay: 0.5,
-      }
-    );
-    tl.fromTo(
-      links,
-      { opacity: () => 0, scale: () => 0 },
-      { opacity: () => 1, scale: () => 1, duration: 0.3, stagger: 0.12 }
-    );
-    tl.fromTo(
-      social,
-      { opacity: () => 0, scale: () => 0 },
-      { opacity: () => 1, scale: () => 1, duration: 0.3, stagger: 0.12 }
-    );
-
-    return () => tl.kill();
-  }, []);
 
   return (
     <aside className={`navbar ${isOpen && "navbar--open"}`} ref={domNode}>
