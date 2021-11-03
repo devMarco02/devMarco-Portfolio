@@ -965,6 +965,12 @@ textarea::placeholder {
 .modal__description {
   color: white;
 }
+.modal__frontend-mentor-link {
+  color: #49f1c1;
+}
+.modal__frontend-mentor-link:hover, .modal__frontend-mentor-link:active, .modal__frontend-mentor-link:focus {
+  text-decoration: underline;
+}
 
 .about-section-container {
   width: 100%;
@@ -1692,16 +1698,16 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 640px;
+  min-height: 700px;
 }
 @media (min-width: 500px) {
   .portfolio {
-    min-height: 720px;
+    min-height: 750px;
   }
 }
 @media (min-width: 650px) {
   .portfolio {
-    min-height: 900px;
+    min-height: 850px;
   }
 }
 @media (min-width: 834px) {
@@ -1812,7 +1818,6 @@ textarea::placeholder {
   z-index: 5;
   display: flex;
   flex-direction: column;
-  height: max-content;
   width: 100%;
   padding: 0 10vw;
   opacity: 0;
@@ -1919,6 +1924,7 @@ textarea::placeholder {
   width: 100%;
   height: auto;
   transition: transform 150ms linear;
+  border-radius: 5px;
 }
 .portfolio__img:hover, .portfolio__img:active, .portfolio__img:focus {
   transform: scale(1.02);
@@ -1956,17 +1962,11 @@ textarea::placeholder {
     margin-bottom: 1.5rem;
   }
 }
-.portfolio__project-description {
-  height: 20vh;
-  min-height: 75px;
-  max-height: 75px;
-  overflow-y: hidden;
+.portfolio__frontend-mentor-link {
+  color: #42b091;
 }
-@media screen and (min-height: 731px), (min-width: 650px) {
-  .portfolio__project-description {
-    height: auto;
-    max-height: unset;
-  }
+.portfolio__frontend-mentor-link:hover, .portfolio__frontend-mentor-link:active, .portfolio__frontend-mentor-link:focus {
+  text-decoration: underline;
 }
 .portfolio__blobs {
   width: 72.2222%;
@@ -3558,9 +3558,6 @@ textarea {
   .modal__description {
     min-width: 720px;
   }
-}
-.modal__frontend-mentor-link:hover, .modal__frontend-mentor-link:active, .modal__frontend-mentor-link:focus {
-  color: #49f1c1;
 }
 
 .laptop__text-container {

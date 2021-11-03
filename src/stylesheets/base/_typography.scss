@@ -423,4 +423,11 @@ textarea::placeholder {
   &__description {
     color: white;
   }
+
+  &__frontend-mentor-link {
+    color: $light-blue-green;
+    @include on-event {
+      text-decoration: underline;
+    }
+  }
 }

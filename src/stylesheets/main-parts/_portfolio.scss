@@ -33,12 +33,12 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 640px;
+  min-height: 700px;
   @include mq(xsmall) {
-    min-height: 720px;
+    min-height: 750px;
   }
   @include mq(small) {
-    min-height: 900px;
+    min-height: 850px;
   }
 
   @include mq(large) {
@@ -123,7 +123,6 @@
     z-index: 5;
     display: flex;
     flex-direction: column;
-    height: max-content;
     width: 100%;
     padding: 0 10vw;
     opacity: 0;
@@ -135,7 +134,6 @@
       padding: 0;
       display: grid;
       grid-template-columns: auto max-content;
-      // height: 375px;
       height: 100%;
       align-items: center;
     }
@@ -215,6 +213,7 @@
     width: 100%;
     height: auto;
     transition: transform 150ms linear;
+    border-radius: 5px;
 
     @include on-event {
       transform: scale(1.02);
@@ -249,14 +248,10 @@
     }
   }
 
-  &__project-description {
-    height: 20vh;
-    min-height: 75px;
-    max-height: 75px;
-    overflow-y: hidden;
-    @media screen and (min-height: 731px), (min-width: 650px) {
-      height: auto;
-      max-height: unset;
+  &__frontend-mentor-link {
+    color: $darkest-blue-green;
+    @include on-event {
+      text-decoration: underline;
     }
   }
 

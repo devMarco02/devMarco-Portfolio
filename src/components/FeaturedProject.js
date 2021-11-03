@@ -6,8 +6,15 @@ const FeaturedProject = React.forwardRef(
     return (
       <>
         {data.map((project, index) => {
-          const { id, title, description, image, dataOriginal, dataLink } =
-            project;
+          const {
+            id,
+            title,
+            description,
+            image,
+            dataOriginal,
+            dataLink,
+            isFrontendMentor,
+          } = project;
           let position = "portfolio__project--next";
 
           if (indexValue === index) {
@@ -24,6 +31,17 @@ const FeaturedProject = React.forwardRef(
                   <h3 className="portfolio__project-title">{title}</h3>
                   <p className="portfolio__project-description">
                     {description}
+                    {isFrontendMentor && (
+                      <a
+                        className="portfolio__frontend-mentor-link"
+                        href="https://www.frontendmentor.io/"
+                        onMouseDown={(e) => e.preventDefault()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Frontend Mentor.
+                      </a>
+                    )}
                   </p>
                 </div>
               </div>

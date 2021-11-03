@@ -3,42 +3,11 @@ import { CSSRulePlugin } from "gsap/CSSRulePlugin";
 
 gsap.registerPlugin(CSSRulePlugin);
 
-export const objectsAnim = (tl, laptopTl) => {
+export const objectsAnim = (laptopTl) => {
   const textCodeCover = CSSRulePlugin.getRule(".laptop__text-code:before");
   const textCodeLine = CSSRulePlugin.getRule(".laptop__text-code:after");
   const steps = "steps(6)";
 
-  //===texts
-  tl.fromTo(
-    ".hero-text",
-    {
-      opacity: () => 0,
-      x: () => -500,
-    },
-    {
-      opacity: () => 1,
-      x: () => 0,
-      duration: 1,
-      delay: 0.25,
-      ease: "power2",
-      stagger: 0.15,
-    }
-  );
-  //===objects
-  tl.fromTo(
-    ".hero__objects",
-    {
-      opacity: () => 0,
-      x: () => 500,
-    },
-    {
-      opacity: () => 1,
-      x: () => 0,
-      duration: 1.3,
-      ease: "power2",
-    },
-    0.25
-  );
   //===laptop
   //=text line
   //line blink

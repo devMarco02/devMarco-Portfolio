@@ -16,6 +16,7 @@ const Portfolio = () => {
   const [title, setTitle] = useState(""); //modal title
   const [desc, setDesc] = useState(""); //modal desc
   const [link, setLink] = useState(""); //modal link
+  const [isFm, setIsFm] = useState(false); //add frontend-mentor link
   const imgRef = useRef(null);
   const sliderRef = useRef(null);
   const sectionRef = useRef(null);
@@ -25,12 +26,14 @@ const Portfolio = () => {
   //OPEN MODAL
   const openProject = (targetId) => {
     const project = data.find((project) => project.id === targetId);
-    const { title, description, dataOriginal, dataLink } = project;
+    const { title, description, dataOriginal, dataLink, isFrontendMentor } =
+      project;
     setModal(true);
     setSrc(dataOriginal);
     setTitle(title);
     setDesc(description);
     setLink(dataLink);
+    setIsFm(isFrontendMentor);
   };
 
   //setsize once image loaded
@@ -165,6 +168,7 @@ const Portfolio = () => {
             title={title}
             desc={desc}
             link={link}
+            isFrontendMentor={isFm}
           />
         )}
       </section>

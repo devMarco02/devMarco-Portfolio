@@ -34,23 +34,14 @@ const Hero = () => {
 
   //Animation
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".hero",
-        toggleActions: "play pause restart pause",
-        start: () => "top bottom",
-        invalidateOnRefresh: true,
-      },
-    });
     const laptopTl = gsap.timeline({
       repeat: -1,
       repeatDelay: 1,
     });
 
-    objectsAnim(tl, laptopTl);
+    objectsAnim(laptopTl);
 
     return () => {
-      tl.kill();
       laptopTl.kill();
     };
   }, []);
