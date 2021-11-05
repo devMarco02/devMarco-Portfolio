@@ -2325,7 +2325,23 @@ section {
   .navbar__logo-link .navbar__logo {
     transform: translateY(0);
     width: 100%;
+    padding: 2px;
     height: auto;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar__logo-link .navbar__logo {
+    padding: 0;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar__logo-link .navbar__logo {
+    padding: 5px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar__logo-link .navbar__logo {
+    padding: 10px;
   }
 }
 .navbar__logo-link .navbar__logo .text {
@@ -2380,64 +2396,113 @@ section {
 }
 .navbar__container-icons {
   margin: 1rem 0 5vh;
-  width: 78px;
+  width: 140px;
   display: flex;
   justify-content: space-between;
 }
 @media (min-width: 650px) {
   .navbar__container-icons {
-    width: 88px;
-  }
-}
-@media (min-width: 768px) {
-  .navbar__container-icons {
-    width: 98px;
+    width: 160px;
   }
 }
 @media (min-width: 834px) {
   .navbar__container-icons {
     margin: 0;
     width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
-.navbar__facebook-link, .navbar__github-link {
-  width: 35%;
+@media (min-width: 1440px) {
+  .navbar__container-icons {
+    flex-direction: row;
+  }
+}
+.navbar__facebook-link, .navbar__github-link, .navbar__linkedin-link {
+  width: 28px;
+}
+@media (min-width: 650px) {
+  .navbar__facebook-link, .navbar__github-link, .navbar__linkedin-link {
+    width: 32px;
+  }
+}
+@media (min-width: 834px) {
+  .navbar__facebook-link, .navbar__github-link, .navbar__linkedin-link {
+    width: 24px;
+    margin-top: 12px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar__facebook-link, .navbar__github-link, .navbar__linkedin-link {
+    margin: 0;
+  }
+}
+@media (min-width: 1920px) {
+  .navbar__facebook-link, .navbar__github-link, .navbar__linkedin-link {
+    width: 32px;
+  }
 }
 .navbar__facebook-link:hover .navbar__facebook,
-.navbar__facebook-link:hover .navbar__github, .navbar__facebook-link:active .navbar__facebook,
-.navbar__facebook-link:active .navbar__github, .navbar__facebook-link:focus .navbar__facebook,
-.navbar__facebook-link:focus .navbar__github, .navbar__github-link:hover .navbar__facebook,
-.navbar__github-link:hover .navbar__github, .navbar__github-link:active .navbar__facebook,
-.navbar__github-link:active .navbar__github, .navbar__github-link:focus .navbar__facebook,
-.navbar__github-link:focus .navbar__github {
+.navbar__facebook-link:hover .navbar__github,
+.navbar__facebook-link:hover .navbar__linkedin, .navbar__facebook-link:active .navbar__facebook,
+.navbar__facebook-link:active .navbar__github,
+.navbar__facebook-link:active .navbar__linkedin, .navbar__facebook-link:focus .navbar__facebook,
+.navbar__facebook-link:focus .navbar__github,
+.navbar__facebook-link:focus .navbar__linkedin, .navbar__github-link:hover .navbar__facebook,
+.navbar__github-link:hover .navbar__github,
+.navbar__github-link:hover .navbar__linkedin, .navbar__github-link:active .navbar__facebook,
+.navbar__github-link:active .navbar__github,
+.navbar__github-link:active .navbar__linkedin, .navbar__github-link:focus .navbar__facebook,
+.navbar__github-link:focus .navbar__github,
+.navbar__github-link:focus .navbar__linkedin, .navbar__linkedin-link:hover .navbar__facebook,
+.navbar__linkedin-link:hover .navbar__github,
+.navbar__linkedin-link:hover .navbar__linkedin, .navbar__linkedin-link:active .navbar__facebook,
+.navbar__linkedin-link:active .navbar__github,
+.navbar__linkedin-link:active .navbar__linkedin, .navbar__linkedin-link:focus .navbar__facebook,
+.navbar__linkedin-link:focus .navbar__github,
+.navbar__linkedin-link:focus .navbar__linkedin {
   transform: scale(1.1);
 }
 .navbar__facebook-link:hover .navbar__facebook path,
-.navbar__facebook-link:hover .navbar__github path, .navbar__facebook-link:active .navbar__facebook path,
-.navbar__facebook-link:active .navbar__github path, .navbar__facebook-link:focus .navbar__facebook path,
-.navbar__facebook-link:focus .navbar__github path, .navbar__github-link:hover .navbar__facebook path,
-.navbar__github-link:hover .navbar__github path, .navbar__github-link:active .navbar__facebook path,
-.navbar__github-link:active .navbar__github path, .navbar__github-link:focus .navbar__facebook path,
-.navbar__github-link:focus .navbar__github path {
+.navbar__facebook-link:hover .navbar__github path,
+.navbar__facebook-link:hover .navbar__linkedin path, .navbar__facebook-link:active .navbar__facebook path,
+.navbar__facebook-link:active .navbar__github path,
+.navbar__facebook-link:active .navbar__linkedin path, .navbar__facebook-link:focus .navbar__facebook path,
+.navbar__facebook-link:focus .navbar__github path,
+.navbar__facebook-link:focus .navbar__linkedin path, .navbar__github-link:hover .navbar__facebook path,
+.navbar__github-link:hover .navbar__github path,
+.navbar__github-link:hover .navbar__linkedin path, .navbar__github-link:active .navbar__facebook path,
+.navbar__github-link:active .navbar__github path,
+.navbar__github-link:active .navbar__linkedin path, .navbar__github-link:focus .navbar__facebook path,
+.navbar__github-link:focus .navbar__github path,
+.navbar__github-link:focus .navbar__linkedin path, .navbar__linkedin-link:hover .navbar__facebook path,
+.navbar__linkedin-link:hover .navbar__github path,
+.navbar__linkedin-link:hover .navbar__linkedin path, .navbar__linkedin-link:active .navbar__facebook path,
+.navbar__linkedin-link:active .navbar__github path,
+.navbar__linkedin-link:active .navbar__linkedin path, .navbar__linkedin-link:focus .navbar__facebook path,
+.navbar__linkedin-link:focus .navbar__github path,
+.navbar__linkedin-link:focus .navbar__linkedin path {
   fill: white;
 }
-@media (min-width: 1200px) {
-  .navbar__facebook-link, .navbar__github-link {
-    width: 45%;
-    padding: 0 5%;
-  }
-}
 .navbar__facebook-link .navbar__facebook,
-.navbar__facebook-link .navbar__github, .navbar__github-link .navbar__facebook,
-.navbar__github-link .navbar__github {
+.navbar__facebook-link .navbar__github,
+.navbar__facebook-link .navbar__linkedin, .navbar__github-link .navbar__facebook,
+.navbar__github-link .navbar__github,
+.navbar__github-link .navbar__linkedin, .navbar__linkedin-link .navbar__facebook,
+.navbar__linkedin-link .navbar__github,
+.navbar__linkedin-link .navbar__linkedin {
   display: block;
   width: 100%;
   height: auto;
   transition: all 150ms linear;
 }
 .navbar__facebook-link .navbar__facebook path,
-.navbar__facebook-link .navbar__github path, .navbar__github-link .navbar__facebook path,
-.navbar__github-link .navbar__github path {
+.navbar__facebook-link .navbar__github path,
+.navbar__facebook-link .navbar__linkedin path, .navbar__github-link .navbar__facebook path,
+.navbar__github-link .navbar__github path,
+.navbar__github-link .navbar__linkedin path, .navbar__linkedin-link .navbar__facebook path,
+.navbar__linkedin-link .navbar__github path,
+.navbar__linkedin-link .navbar__linkedin path {
   transition: all 150ms linear;
   fill: #c7cbd1;
 }

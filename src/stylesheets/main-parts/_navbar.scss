@@ -88,7 +88,17 @@
       @include mq(large) {
         transform: translateY(0);
         width: 100%;
+        padding: 2px;
         height: auto;
+      }
+      @include mq(xlarge) {
+        padding: 0;
+      }
+      @include mq(xxlarge) {
+        padding: 5px;
+      }
+      @include mq(xxxlarge) {
+        padding: 10px;
       }
 
       .text {
@@ -150,40 +160,54 @@
 
   &__container-icons {
     margin: 1rem 0 5vh;
-    width: 78px;
+    width: 140px;
     display: flex;
     justify-content: space-between;
     @include mq(small) {
-      width: 88px;
-    }
-    @include mq(medium) {
-      width: 98px;
+      width: 160px;
     }
     @include mq(large) {
       margin: 0;
       width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+    @include mq(xxxlarge) {
+      flex-direction: row;
     }
   }
 
   &__facebook-link,
-  &__github-link {
-    width: 35%;
+  &__github-link,
+  &__linkedin-link {
+    width: 28px;
+    @include mq(small) {
+      width: 32px;
+    }
+    @include mq(large) {
+      width: 24px;
+      margin-top: 12px;
+    }
+    @include mq(xxxlarge) {
+      margin: 0;
+    }
+    @include mq(xwide) {
+      width: 32px;
+    }
     @include on-event {
       .navbar__facebook,
-      .navbar__github {
+      .navbar__github,
+      .navbar__linkedin {
         transform: scale(1.1);
         path {
           fill: white;
         }
       }
     }
-    @include mq(xxlarge) {
-      width: 45%;
-      padding: 0 5%;
-    }
 
     .navbar__facebook,
-    .navbar__github {
+    .navbar__github,
+    .navbar__linkedin {
       display: block;
       width: 100%;
       height: auto;

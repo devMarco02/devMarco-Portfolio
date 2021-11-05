@@ -1,6 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
-import { Logo, Facebook, Github, Hamburger } from "./components/Icons";
+import {
+  Logo,
+  Facebook,
+  Github,
+  Hamburger,
+  LinkedIn,
+} from "./components/Icons";
 
 // custom hooks
 const useClickOutside = (handler) => {
@@ -134,6 +140,19 @@ const Navbar = () => {
           }}
         >
           <Github classNm={"navbar__github"} />
+        </a>
+
+        <a
+          className="navbar__linkedin-link"
+          href="https://www.linkedin.com/in/marco-polo-alpay-876015225/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onMouseDown={(e) => {
+            e.preventDefault();
+            setIsOpen(false);
+          }}
+        >
+          <LinkedIn classNm={"navbar__linkedin"} />
         </a>
       </div>
     </aside>
