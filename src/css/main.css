@@ -2325,7 +2325,7 @@ section {
   .navbar__logo-link .navbar__logo {
     transform: translateY(0);
     width: 100%;
-    padding: 2px;
+    padding: 0 2px;
     height: auto;
   }
 }
@@ -2336,12 +2336,12 @@ section {
 }
 @media (min-width: 1200px) {
   .navbar__logo-link .navbar__logo {
-    padding: 5px;
+    padding: 0 5px;
   }
 }
 @media (min-width: 1440px) {
   .navbar__logo-link .navbar__logo {
-    padding: 10px;
+    padding: 0 10px;
   }
 }
 .navbar__logo-link .navbar__logo .text {
