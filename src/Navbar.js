@@ -120,6 +120,7 @@ const Navbar = () => {
         <a
           className="navbar__facebook-link"
           href="https://web.facebook.com/MarcoAlpay"
+          title="Facebook"
           target="_blank"
           rel="noopener noreferrer"
           onMouseDown={(e) => {
@@ -132,6 +133,7 @@ const Navbar = () => {
         <a
           className="navbar__github-link"
           href="https://github.com/devMarco02"
+          title="GitHub"
           target="_blank"
           rel="noopener noreferrer"
           onMouseDown={(e) => {
@@ -145,6 +147,7 @@ const Navbar = () => {
         <a
           className="navbar__linkedin-link"
           href="https://www.linkedin.com/in/marco-polo-alpay-876015225/"
+          title="LinkedIn"
           target="_blank"
           rel="noopener noreferrer"
           onMouseDown={(e) => {
